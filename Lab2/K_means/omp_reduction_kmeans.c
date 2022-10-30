@@ -4,7 +4,7 @@
 /*
  * TODO: include openmp header file
  */ 
-
+#include "omp.h"
 // square of Euclid distance between two multi-dimensional points
 inline static float euclid_dist_2(int    numdims,  /* no. dimensions */
                                  float * coord1,   /* [numdims] */
@@ -89,6 +89,7 @@ void kmeans(float * objects,          /* in: [numObjs][numCoords] */
 
     timing = wtime();
     do {
+
         // before each loop, set cluster data to 0
         for (i=0; i<numClusters; i++) {
             for (j=0; j<numCoords; j++)
@@ -101,35 +102,56 @@ void kmeans(float * objects,          /* in: [numObjs][numCoords] */
         /* 
          * TODO: Initiliaze local cluster data to zero (separate for each thread)
          */
-        
-        for (i=0; i<numObjs; i++)
+        #pragma omp parallel
         {
-            // find the array index of nearest cluster center 
-            index = find_nearest_cluster(numClusters, numCoords, &objects[i*numCoords], clusters);
-            
-            // if membership changes, increase delta by 1 
-            if (membership[i] != index)
-                delta += 1.0;
-            
-            // assign the membership to object i 
-            membership[i] = index;
-            
-            // update new cluster centers : sum of all objects located within (average will be performed later) 
-            /* 
-             * TODO: Collect cluster data in local arrays (local to each thread)
-             *       Replace global arrays with local per-thread
-             */
-            newClusterSize[index]++;
-            for (j=0; j<numCoords; j++)
-                newClusters[index*numCoords + j] += objects[i*numCoords + j];
+            const int ithread = omp_get_thread_num();
 
+            memset(local_newClusters[ithread], 0.0, numClusters*numCoords);
+            memset(local_newClusterSize[ithread], 0, numClusters);
+
+            #pragma omp for private(i, j, index)
+            for (i=0; i<numObjs; i++)
+            {
+
+                
+                // find the array index of nearest cluster center 
+                index = find_nearest_cluster(numClusters, numCoords, &objects[i*numCoords], clusters);
+                
+                // if membership changes, increase delta by 1 
+                if (membership[i] != index)
+                    delta += 1.0;
+                
+                // assign the membership to object i 
+                membership[i] = index;
+                
+                // update new cluster centers : sum of all objects located within (average will be performed later) 
+                /* 
+                * TODO: Collect cluster data in local arrays (local to each thread)
+                *       Replace global arrays with local per-thread
+                */
+                local_newClusterSize[ithread][index]++;
+                for (j=0; j<numCoords; j++)
+                    local_newClusters[ithread][index*numCoords + j] += objects[i*numCoords + j];
+
+            }
         }
 
         /*
-         * TODO: Reduction of cluster data from local arrays to shared.
-         *       This operation will be performed by one thread
-         */
+        * TODO: Reduction of cluster data from local arrays to shared.
+        *       This operation will be performed by one thread
+        */
 
+        for(int k = 0; k < nthreads; k++){
+            for (i=0; i<numClusters; i++) {
+                for (j=0; j<numCoords; j++) {
+                    newClusters[i*numCoords+j] += local_newClusters[k][i*numCoords+j];
+                   
+                }
+
+                newClusterSize[i] += local_newClusterSize[k][i];
+                
+            }
+        }
 
         // average the sum and replace old cluster centers with newClusters 
         for (i=0; i<numClusters; i++) {
