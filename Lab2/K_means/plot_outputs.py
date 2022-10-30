@@ -15,9 +15,9 @@ while line:
     if("total = " in line):
         time_line = line.split("total = ")[1]
         time = time_line[:7]
-        print(time)
-        data["sequential"] = float(time)
-        break
+        seq_time = float(time)
+        data["sequential"] = 1
+    line = fp.readline()
 fp.close() 
 
 
@@ -29,8 +29,7 @@ while line:
     if("total = " in line):
         time_line = line.split("total = ")[1]
         time = time_line[:7]
-        print(time)
-        data[threads[index]] = float(time)
+        data[threads[index]] = seq_time/float(time)
         index+=1
     line = fp.readline()
 fp.close() 
@@ -53,7 +52,7 @@ while line:
         time_line = line.split("total = ")[1]
         time = time_line[:7]
         print(time)
-        data[threads[index]] = float(time)
+        data[threads[index]] = seq_time/float(time)
         index+=1
     line = fp.readline()
 
@@ -67,8 +66,8 @@ plt.legend( (bar_with_aff, bar_without_aff), ('affinity', 'no affinity') )
 
 plt.xticks(np.arange(len(threads)) + 0.1, threads)
 plt.xlabel("Number of Threads")
-plt.ylabel("Time (in sec)")
-plt.title("K-means")
+plt.ylabel("speedup")
+plt.title("K-means (naive parallel)")
 plt.show()
-
+plt.savefig("plots/speedup_naive_kmeans.png", bbox_inches="tight")
 
