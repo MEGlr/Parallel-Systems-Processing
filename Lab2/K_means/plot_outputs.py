@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import sys
 import numpy as np
 import matplotlib
-#matplotlib.use('Agg')
+matplotlib.use('Agg')
 
 threads = ["sequential", "1", "2", "4", "8", "16", "32", "64"]
 index = 1
