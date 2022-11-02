@@ -6,7 +6,7 @@
 #include <fcntl.h>
 #include <unistd.h>     /* read(), close() */
 // TODO: remove comment from following line
-// #include <omp.h>
+#include <omp.h>
 
 #include "kmeans.h"
 
@@ -18,14 +18,22 @@ float * dataset_generation(int numObjs, int numCoords)
     float val_range = 10;
 
     /* allocate space for objects[][] and read all objects */
+
+    /*
+
+    objects[numObjs*numCoords] -> local_objects[threadID][numObjs*numCoords]
+    episis to malloc h calloc prepei na ginei sto antistoixo thread prokeimenou to row toy na paei sto DIKO tou NUMA NODE
+
+    */
+
     objects = (typeof(objects)) malloc(numObjs * numCoords * sizeof(*objects));
- 
+    // int nthreads = omp_get_max_threads();
     /*
      * Hint : Could dataset generation be performed in a more "NUMA-Aware" way?
      *        Need to place data "close" to the threads that will perform operations on them.
      *        reminder : First-touch data placement policy
      */
-
+    #pragma omp parallel for private(i, j)
     for (i=0; i<numObjs; i++)
     {
         unsigned int seed = i;
@@ -39,3 +47,4 @@ float * dataset_generation(int numObjs, int numCoords)
 
     return objects;
 }
+

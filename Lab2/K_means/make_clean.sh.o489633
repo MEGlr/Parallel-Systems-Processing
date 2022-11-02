@@ -1,0 +1,1 @@
+rm -rf *.o kmeans_seq kmeans_omp_naive kmeans_omp_reduction

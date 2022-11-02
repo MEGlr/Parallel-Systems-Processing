@@ -86,9 +86,8 @@ void kmeans(float * objects,          /* in: [numObjs][numCoords] */
         /* 
          * TODO: Detect parallelizable region and use appropriate OpenMP pragmas
          */
-
-        #pragma omp parallel for shared(numClust,numCoords,objects,clusters,membershipt,delta,newClusterSize,newClusters,numObjs) private(i, index, j)
-        
+	
+	#pragma omp parallel for shared(objects,clusters,membership,delta,newClusterSize,newClusters) private(i, index, j) firstprivate(numObjs, numCoords, numClusters)
         for (i=0; i<numObjs; i++) {
             // find the array index of nearest cluster center 
             index = find_nearest_cluster(numClusters, numCoords, &objects[i*numCoords], clusters);
@@ -104,14 +103,15 @@ void kmeans(float * objects,          /* in: [numObjs][numCoords] */
             /*
              * TODO: enforce atomic access to shared "newClusterSize" array
              */
-            #pragma omp atomic
-                newClusterSize[index]++;
-            for (j=0; j<numCoords; j++)
+	    #pragma omp atomic	
+	      	newClusterSize[index]++;
+            for (j=0; j<numCoords; j++){
                 /*
                  * TODO: enforce atomic access to shared "newClusters" array
                  */
-                #pragma omp atomic
-                    newClusters[index*numCoords + j] += objects[i*numCoords + j];
+		 #pragma omp atomic
+		 	newClusters[index*numCoords + j] += objects[i*numCoords + j];
+	    }
         }
 
         // average the sum and replace old cluster centers with newClusters 

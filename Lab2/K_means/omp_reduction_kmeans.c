@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "kmeans.h"
+#include <string.h>
 /*
  * TODO: include openmp header file
  */ 
@@ -81,6 +82,9 @@ void kmeans(float * objects,          /* in: [numObjs][numCoords] */
      * Allocate local cluster data with a "first-touch" policy.
      */
     // Initialize local (per-thread) arrays (and later collect result on global arrays)
+
+
+    #pragma omp parallel for private(k)
     for (k=0; k<nthreads; k++)
     {
         local_newClusterSize[k] = (typeof(*local_newClusterSize)) calloc(numClusters, sizeof(**local_newClusterSize));
@@ -141,7 +145,7 @@ void kmeans(float * objects,          /* in: [numObjs][numCoords] */
         *       This operation will be performed by one thread
         */
 
-        for(int k = 0; k < nthreads; k++){
+        for(k = 0; k < nthreads; k++){
             for (i=0; i<numClusters; i++) {
                 for (j=0; j<numCoords; j++) {
                     newClusters[i*numCoords+j] += local_newClusters[k][i*numCoords+j];
@@ -179,3 +183,4 @@ void kmeans(float * objects,          /* in: [numObjs][numCoords] */
     free(newClusters);
     free(newClusterSize);
 }
+
