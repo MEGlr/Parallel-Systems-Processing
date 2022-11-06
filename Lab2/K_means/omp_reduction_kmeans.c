@@ -149,7 +149,6 @@ void kmeans(float * objects,          /* in: [numObjs][numCoords] */
             for (i=0; i<numClusters; i++) {
                 for (j=0; j<numCoords; j++) {
                     newClusters[i*numCoords+j] += local_newClusters[k][i*numCoords+j];
-                   
                 }
 
                 newClusterSize[i] += local_newClusterSize[k][i];

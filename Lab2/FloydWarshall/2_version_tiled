@@ -1,0 +1,103 @@
+
+ΟΠΩΣ ΣΤΟ PAPER:
+
+	for(k=0;k<N;k+=B){
+		FW(A,k,k,k,B);
+
+		#pragma omp parallel
+		{
+
+			//uses black box as intemidiate (all of them)
+			#pragma omp for private(i) nowait
+			for(i=0; i<k; i+=B)
+				FW(A,k,i,k,B);
+
+			#pragma omp for private(i) nowait
+			for(i=k+B; i<N; i+=B)
+				FW(A,k,i,k,B);
+
+			#pragma omp for private(j) nowait
+			for(j=0; j<k; j+=B)
+				FW(A,k,k,j,B);
+
+			#pragma omp for private(j) //ΛΕΙΠΕΙ ΤΟ NOWAIT ΠΡΟΚΕΙΜΕΝΟΥ ΝΑ ΜΠΕΙ BARRIER ΚΑΙ ΝΑ ΣΥΓΧΟΡΝΙΣΤΟΥΝ
+			for(j=k+B; j<N; j+=B)
+				FW(A,k,k,j,B);
+
+			//pragma omp for private(i, j) nowait
+			for(i=0; i<k; i+=B)
+				#pragma omp for private(j) nowait
+				for(j=0; j<k; j+=B)
+					FW(A,k,i,j,B);
+
+			//pragma omp for private(i, j) nowait
+			for(i=0; i<k; i+=B)
+				#pragma omp for private(j) nowait
+				for(j=k+B; j<N; j+=B)
+					FW(A,k,i,j,B);
+
+			//pragma omp for private(i, j) nowait
+			for(i=k+B; i<N; i+=B)
+				#pragma omp for private(j) nowait
+				for(j=0; j<k; j+=B)
+					FW(A,k,i,j,B);
+
+			//pragma omp for private(i, j) nowait
+			for(i=k+B; i<N; i+=B)
+				#pragma omp for private(j) nowait
+				for(j=k+B; j<N; j+=B)
+					FW(A,k,i,j,B);
+		}		
+	}
+	
+ΔΙΚΟ ΜΑΣ VERSION (ΑΦΟΥ ΔΕΝ ΥΠΑΡΧΕΙ ΕΞΑΡΤΗΣΗ ΑΠΟ ΤΗ 2Η ΤΕΤΡΑΔΑ ΤΩΝ LOOPS ΠΡΟΣ ΤΗ 1Η):
+	
+	for(k=0;k<N;k+=B){
+		FW(A,k,k,k,B);
+
+		#pragma omp parallel
+		{
+
+			//uses black box as intemidiate (all of them)
+			#pragma omp for private(i) nowait
+			for(i=0; i<k; i+=B)
+				FW(A,k,i,k,B);
+
+			#pragma omp for private(i) nowait
+			for(i=k+B; i<N; i+=B)
+				FW(A,k,i,k,B);
+
+			#pragma omp for private(j) nowait
+			for(j=0; j<k; j+=B)
+				FW(A,k,k,j,B);
+
+			#pragma omp for private(j) nowait //ΠΡΟΚΕΙΜΕΝΟΥ ΝΑ ΜΗΝ ΣΥΓΧΡΟΝΙΣΤΟΥΝ (ΟΧΙ BARRIER) ΚΑΙ ΝΑ ΣΥΝΕΧΙΣΟΥΝ ΚΑΝΟΝΙΚΑ ΝΑ ΠΑΝΕ ΣΤΗ 2Η ΤΕΤΡΑΔΑ)
+			for(j=k+B; j<N; j+=B)
+				FW(A,k,k,j,B);
+
+			//pragma omp for private(i, j) nowait
+			for(i=0; i<k; i+=B)
+				#pragma omp for private(j) nowait
+				for(j=0; j<k; j+=B)
+					FW(A,k,i,j,B);
+
+			//pragma omp for private(i, j) nowait
+			for(i=0; i<k; i+=B)
+				#pragma omp for private(j) nowait
+				for(j=k+B; j<N; j+=B)
+					FW(A,k,i,j,B);
+
+			//pragma omp for private(i, j) nowait
+			for(i=k+B; i<N; i+=B)
+				#pragma omp for private(j) nowait
+				for(j=0; j<k; j+=B)
+					FW(A,k,i,j,B);
+
+			//pragma omp for private(i, j) nowait
+			for(i=k+B; i<N; i+=B)
+				#pragma omp for private(j) nowait
+				for(j=k+B; j<N; j+=B)
+					FW(A,k,i,j,B);
+		}		
+	}
+	
