@@ -6,20 +6,18 @@ matplotlib.use('Agg')
 
 threads = ["sequential", "1", "2", "4", "8", "16", "32", "64"]
 
+seq_time = {"1024":1.3720, "2048":11.3550,"4096":96.1754}
 def plot_time_speedup(title_, input_loc1,output):
         
         table_block = {}
-        fp = open("run_fw_tiled_seq.out")
         for table_size in [1024, 2048, 4096]: 
                 table_block["table size = "+str(table_size)] = {}
-        line = fp.readline()
+        #line = fp.readline()
         for block_size in [16, 32, 64, 128, 256]:
             for table_size in [1024, 2048, 4096]: 
                     print(block_size, table_size)
-                    seq_time = float(line.split(",")[-1])
-                    table_block["table size = "+str(table_size)][str(block_size)] = {"sequential":seq_time}
-                    line = fp.readline()
-        fp.close()
+                    table_block["table size = "+str(table_size)][str(block_size)] = {"sequential":seq_time[str(table_size)]}
+                    #line = fp.readline()
 
         fp = open(input_loc1+"/run_fw.out")
         line = fp.readline()
