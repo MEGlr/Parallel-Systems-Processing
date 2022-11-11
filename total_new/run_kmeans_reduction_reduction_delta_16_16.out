@@ -1,0 +1,449 @@
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16
+Initial cluster centers:
+clusters[0] =   0.00   8.00   8.35   1.07   7.63   6.35   4.28  10.00   6.72   3.34   2.51   5.59   2.44   3.35   5.44   2.78
+clusters[1] =   1.06   3.44   4.49   5.51   1.72   6.81   2.74   0.34   9.66   5.11   3.94   8.26   0.26   8.72   2.65   0.79
+clusters[2] =   1.09   5.65   8.40   5.51   1.24   2.93   6.59   1.55   0.63   7.55   5.17   7.26   1.66   8.13   1.58   5.64
+clusters[3] =   2.19   3.31   8.45   9.95   4.84   9.53   8.89   3.10   4.54   1.75   7.82   8.93   0.88   2.90   7.73   8.51
+clusters[4] =   2.22   5.52   2.35   9.95   4.36   5.66   2.74   4.31   5.50   4.19   9.05   7.92   2.28   2.31   6.67   3.35
+clusters[5] =   3.28   0.97   8.50   4.40   8.45   6.13   1.20   4.66   8.45   5.95   0.48   0.60   0.11   7.68   3.88   1.37
+clusters[6] =   3.32   3.19   2.41   4.40   7.96   2.26   5.05   5.86   9.41   8.38   1.70   9.59   1.50   7.08   2.82   6.21
+clusters[7] =   4.40   0.84   2.46   8.84   1.56   8.85   7.35   7.42   3.32   2.59   4.35   1.26   0.73   1.86   8.96   9.07
+clusters[8] =   4.43   3.06   6.37   8.84   1.07   4.98   1.20   8.62   4.28   5.03   5.57   0.26   2.12   1.26   7.90   3.92
+clusters[9] =   5.53   0.72   6.42   3.29   4.68   1.58   3.51   0.18   8.19   9.23   8.23   1.93   1.34   6.04   4.04   6.79
+clusters[10] =   6.62   8.38   6.47   7.73   8.29   8.17   5.81   1.73   2.10   3.43   0.88   3.60   0.57   0.81   0.19   9.65
+clusters[11] =   6.66   0.59   0.38   7.73   7.80   4.30   9.67   2.93   3.07   5.87   2.11   2.59   1.97   0.22   9.12   4.50
+clusters[12] =   7.75   8.25   0.42   2.18   1.40   0.90   1.97   4.48   6.97   0.07   4.76   4.26   1.19   4.99   5.27   7.36
+clusters[13] =   8.84   5.90   0.48   6.62   5.01   7.49   4.28   6.03   0.88   4.27   7.41   5.93   0.41   9.77   1.42   0.22
+clusters[14] =   8.87   8.12   4.39   6.62   4.52   3.62   8.13   7.24   1.85   6.71   8.63   4.92   1.81   9.17   0.35   5.07
+clusters[15] =   9.97   5.78   4.44   1.06   8.12   0.21   0.43   8.79   5.76   0.90   1.29   6.59   1.04   3.95   6.50   7.93
+
+OpenMP Kmeans - Reduction	(number of threads: 1)
+local_newClusterSize[0] = 0x24e7fb0, local_newClusters[0] = 0x24e8000
+
+
+
+	completed loop 1	completed loop 2	completed loop 3	completed loop 4	completed loop 5	completed loop 6	completed loop 7	completed loop 8	completed loop 9	completed loop 10
+        nloops =  10   (total = 13.8711s)  (per loop =  1.3871s)
+
+Final cluster centers:
+clusters[0] =   2.80   6.93   6.09   2.60   6.17   5.87   6.09   6.99   5.49   4.80   5.65   4.60   5.51   3.67   5.25   3.60 
+clusters[1] =   4.89   4.96   5.57   4.94   2.35   6.64   5.24   3.59   7.48   4.90   3.65   6.65   4.82   5.43   4.12   2.93 
+clusters[2] =   2.81   5.32   6.36   4.45   3.20   3.31   5.13   3.57   2.27   5.87   4.11   6.22   5.12   6.18   4.58   5.17 
+clusters[3] =   5.11   3.95   7.39   6.19   5.70   6.20   6.73   4.19   5.51   3.47   6.83   7.01   4.77   5.49   6.51   6.46 
+clusters[4] =   3.61   5.80   3.33   7.10   5.34   5.09   3.65   4.52   5.26   4.85   7.28   6.65   5.48   3.52   5.86   4.12 
+clusters[5] =   4.50   3.46   6.66   5.24   7.17   5.74   3.57   4.71   6.15   4.98   3.08   2.65   4.38   6.85   4.70   3.34 
+clusters[6] =   4.26   4.14   3.41   4.86   6.38   3.84   5.38   6.00   7.01   6.89   3.30   7.21   5.05   5.96   4.03   6.07 
+clusters[7] =   4.26   3.34   3.20   5.44   3.24   7.01   6.59   6.59   4.45   4.01   4.52   3.39   4.51   4.90   6.04   7.32 
+clusters[8] =   5.24   4.31   6.45   6.58   2.84   4.66   3.10   7.03   4.56   5.60   5.05   2.91   5.33   3.45   6.04   4.21 
+clusters[9] =   5.55   3.33   5.83   3.52   5.12   3.82   4.46   2.88   6.50   6.85   7.29   3.27   5.04   5.09   4.80   6.07 
+clusters[10] =   5.84   6.84   5.73   5.97   6.41   6.61   4.93   3.27   4.01   4.61   3.30   4.19   4.70   3.12   2.87   6.85 
+clusters[11] =   5.94   3.64   3.18   5.42   6.45   4.19   7.32   3.68   3.89   5.64   3.57   3.99   5.41   3.22   6.79   3.74 
+clusters[12] =   6.05   6.95   2.95   3.35   2.95   3.30   4.13   4.20   6.12   2.88   4.89   4.23   4.96   5.16   5.32   6.04 
+clusters[13] =   6.65   4.68   2.89   4.69   5.35   6.93   3.99   5.28   2.81   4.35   5.79   5.54   4.36   6.95   3.91   2.72 
+clusters[14] =   7.01   6.75   5.31   5.71   5.01   4.17   7.03   6.74   4.12   6.05   6.88   4.52   5.35   6.64   3.40   5.20 
+clusters[15] =   7.22   4.74   5.86   3.52   6.77   3.24   3.06   6.72   4.36   3.46   3.85   6.46   4.78   4.52   6.12   6.22 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16
+Initial cluster centers:
+clusters[0] =   0.00   8.00   8.35   1.07   7.63   6.35   4.28  10.00   6.72   3.34   2.51   5.59   2.44   3.35   5.44   2.78
+clusters[1] =   1.06   3.44   4.49   5.51   1.72   6.81   2.74   0.34   9.66   5.11   3.94   8.26   0.26   8.72   2.65   0.79
+clusters[2] =   1.09   5.65   8.40   5.51   1.24   2.93   6.59   1.55   0.63   7.55   5.17   7.26   1.66   8.13   1.58   5.64
+clusters[3] =   2.19   3.31   8.45   9.95   4.84   9.53   8.89   3.10   4.54   1.75   7.82   8.93   0.88   2.90   7.73   8.51
+clusters[4] =   2.22   5.52   2.35   9.95   4.36   5.66   2.74   4.31   5.50   4.19   9.05   7.92   2.28   2.31   6.67   3.35
+clusters[5] =   3.28   0.97   8.50   4.40   8.45   6.13   1.20   4.66   8.45   5.95   0.48   0.60   0.11   7.68   3.88   1.37
+clusters[6] =   3.32   3.19   2.41   4.40   7.96   2.26   5.05   5.86   9.41   8.38   1.70   9.59   1.50   7.08   2.82   6.21
+clusters[7] =   4.40   0.84   2.46   8.84   1.56   8.85   7.35   7.42   3.32   2.59   4.35   1.26   0.73   1.86   8.96   9.07
+clusters[8] =   4.43   3.06   6.37   8.84   1.07   4.98   1.20   8.62   4.28   5.03   5.57   0.26   2.12   1.26   7.90   3.92
+clusters[9] =   5.53   0.72   6.42   3.29   4.68   1.58   3.51   0.18   8.19   9.23   8.23   1.93   1.34   6.04   4.04   6.79
+clusters[10] =   6.62   8.38   6.47   7.73   8.29   8.17   5.81   1.73   2.10   3.43   0.88   3.60   0.57   0.81   0.19   9.65
+clusters[11] =   6.66   0.59   0.38   7.73   7.80   4.30   9.67   2.93   3.07   5.87   2.11   2.59   1.97   0.22   9.12   4.50
+clusters[12] =   7.75   8.25   0.42   2.18   1.40   0.90   1.97   4.48   6.97   0.07   4.76   4.26   1.19   4.99   5.27   7.36
+clusters[13] =   8.84   5.90   0.48   6.62   5.01   7.49   4.28   6.03   0.88   4.27   7.41   5.93   0.41   9.77   1.42   0.22
+clusters[14] =   8.87   8.12   4.39   6.62   4.52   3.62   8.13   7.24   1.85   6.71   8.63   4.92   1.81   9.17   0.35   5.07
+clusters[15] =   9.97   5.78   4.44   1.06   8.12   0.21   0.43   8.79   5.76   0.90   1.29   6.59   1.04   3.95   6.50   7.93
+
+OpenMP Kmeans - Reduction	(number of threads: 2)
+local_newClusterSize[0] = 0x19921f0, local_newClusters[0] = 0x1992240
+local_newClusterSize[1] = 0x7f68e80008c0, local_newClusters[1] = 0x7f68e8000910
+
+
+
+	completed loop 1	completed loop 2	completed loop 3	completed loop 4	completed loop 5	completed loop 6	completed loop 7	completed loop 8	completed loop 9	completed loop 10
+        nloops =  10   (total =  6.9298s)  (per loop =  0.6930s)
+
+Final cluster centers:
+clusters[0] =   2.80   6.93   6.09   2.60   6.17   5.87   6.09   6.99   5.50   4.80   5.65   4.60   5.51   3.67   5.25   3.60 
+clusters[1] =   4.89   4.97   5.58   4.94   2.35   6.65   5.24   3.59   7.48   4.90   3.65   6.65   4.82   5.43   4.12   2.93 
+clusters[2] =   2.81   5.32   6.36   4.45   3.20   3.31   5.14   3.57   2.27   5.87   4.11   6.22   5.12   6.18   4.59   5.17 
+clusters[3] =   5.11   3.96   7.39   6.20   5.70   6.21   6.73   4.19   5.51   3.47   6.83   7.01   4.77   5.49   6.51   6.46 
+clusters[4] =   3.61   5.80   3.33   7.09   5.33   5.09   3.65   4.52   5.26   4.85   7.26   6.64   5.48   3.52   5.86   4.12 
+clusters[5] =   4.50   3.46   6.65   5.24   7.16   5.74   3.57   4.71   6.15   4.98   3.08   2.65   4.38   6.85   4.70   3.34 
+clusters[6] =   4.26   4.14   3.41   4.86   6.37   3.84   5.38   6.00   7.01   6.88   3.30   7.20   5.05   5.95   4.04   6.07 
+clusters[7] =   4.26   3.34   3.20   5.44   3.24   7.01   6.59   6.59   4.45   4.01   4.52   3.39   4.51   4.90   6.04   7.31 
+clusters[8] =   5.24   4.32   6.44   6.58   2.84   4.66   3.10   7.03   4.56   5.60   5.05   2.91   5.33   3.45   6.03   4.21 
+clusters[9] =   5.55   3.33   5.83   3.52   5.12   3.82   4.46   2.88   6.49   6.85   7.28   3.27   5.04   5.09   4.80   6.06 
+clusters[10] =   5.84   6.84   5.73   5.97   6.41   6.60   4.93   3.27   4.01   4.61   3.30   4.19   4.70   3.12   2.87   6.84 
+clusters[11] =   5.94   3.64   3.18   5.42   6.45   4.19   7.32   3.68   3.89   5.64   3.57   3.99   5.41   3.22   6.78   3.74 
+clusters[12] =   6.05   6.95   2.95   3.35   2.95   3.30   4.13   4.20   6.12   2.89   4.89   4.23   4.96   5.16   5.32   6.04 
+clusters[13] =   6.65   4.68   2.90   4.69   5.35   6.93   3.99   5.28   2.81   4.36   5.79   5.54   4.36   6.94   3.91   2.72 
+clusters[14] =   7.00   6.74   5.30   5.71   5.01   4.17   7.02   6.73   4.12   6.04   6.88   4.52   5.35   6.63   3.41   5.20 
+clusters[15] =   7.21   4.74   5.86   3.52   6.76   3.24   3.06   6.72   4.36   3.46   3.85   6.46   4.78   4.52   6.12   6.22 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16
+Initial cluster centers:
+clusters[0] =   0.00   8.00   8.35   1.07   7.63   6.35   4.28  10.00   6.72   3.34   2.51   5.59   2.44   3.35   5.44   2.78
+clusters[1] =   1.06   3.44   4.49   5.51   1.72   6.81   2.74   0.34   9.66   5.11   3.94   8.26   0.26   8.72   2.65   0.79
+clusters[2] =   1.09   5.65   8.40   5.51   1.24   2.93   6.59   1.55   0.63   7.55   5.17   7.26   1.66   8.13   1.58   5.64
+clusters[3] =   2.19   3.31   8.45   9.95   4.84   9.53   8.89   3.10   4.54   1.75   7.82   8.93   0.88   2.90   7.73   8.51
+clusters[4] =   2.22   5.52   2.35   9.95   4.36   5.66   2.74   4.31   5.50   4.19   9.05   7.92   2.28   2.31   6.67   3.35
+clusters[5] =   3.28   0.97   8.50   4.40   8.45   6.13   1.20   4.66   8.45   5.95   0.48   0.60   0.11   7.68   3.88   1.37
+clusters[6] =   3.32   3.19   2.41   4.40   7.96   2.26   5.05   5.86   9.41   8.38   1.70   9.59   1.50   7.08   2.82   6.21
+clusters[7] =   4.40   0.84   2.46   8.84   1.56   8.85   7.35   7.42   3.32   2.59   4.35   1.26   0.73   1.86   8.96   9.07
+clusters[8] =   4.43   3.06   6.37   8.84   1.07   4.98   1.20   8.62   4.28   5.03   5.57   0.26   2.12   1.26   7.90   3.92
+clusters[9] =   5.53   0.72   6.42   3.29   4.68   1.58   3.51   0.18   8.19   9.23   8.23   1.93   1.34   6.04   4.04   6.79
+clusters[10] =   6.62   8.38   6.47   7.73   8.29   8.17   5.81   1.73   2.10   3.43   0.88   3.60   0.57   0.81   0.19   9.65
+clusters[11] =   6.66   0.59   0.38   7.73   7.80   4.30   9.67   2.93   3.07   5.87   2.11   2.59   1.97   0.22   9.12   4.50
+clusters[12] =   7.75   8.25   0.42   2.18   1.40   0.90   1.97   4.48   6.97   0.07   4.76   4.26   1.19   4.99   5.27   7.36
+clusters[13] =   8.84   5.90   0.48   6.62   5.01   7.49   4.28   6.03   0.88   4.27   7.41   5.93   0.41   9.77   1.42   0.22
+clusters[14] =   8.87   8.12   4.39   6.62   4.52   3.62   8.13   7.24   1.85   6.71   8.63   4.92   1.81   9.17   0.35   5.07
+clusters[15] =   9.97   5.78   4.44   1.06   8.12   0.21   0.43   8.79   5.76   0.90   1.29   6.59   1.04   3.95   6.50   7.93
+
+OpenMP Kmeans - Reduction	(number of threads: 4)
+local_newClusterSize[0] = 0x13125f0, local_newClusters[0] = 0x1312640
+local_newClusterSize[2] = 0x7fbeb40008c0, local_newClusters[2] = 0x7fbeb4000910
+local_newClusterSize[1] = 0x7fbec40008c0, local_newClusters[1] = 0x7fbec4000910
+local_newClusterSize[3] = 0x7fbebc0008c0, local_newClusters[3] = 0x7fbebc000910
+
+
+
+	completed loop 1	completed loop 2	completed loop 3	completed loop 4	completed loop 5	completed loop 6	completed loop 7	completed loop 8	completed loop 9	completed loop 10
+        nloops =  10   (total =  3.6044s)  (per loop =  0.3604s)
+
+Final cluster centers:
+clusters[0] =   2.80   6.93   6.09   2.60   6.17   5.87   6.09   6.99   5.50   4.80   5.65   4.60   5.51   3.67   5.25   3.60 
+clusters[1] =   4.89   4.97   5.58   4.94   2.35   6.65   5.24   3.59   7.48   4.90   3.65   6.65   4.82   5.43   4.12   2.93 
+clusters[2] =   2.81   5.32   6.36   4.45   3.20   3.31   5.14   3.57   2.27   5.87   4.11   6.22   5.12   6.19   4.59   5.17 
+clusters[3] =   5.11   3.96   7.39   6.20   5.70   6.21   6.73   4.19   5.51   3.47   6.83   7.01   4.77   5.49   6.51   6.46 
+clusters[4] =   3.61   5.80   3.33   7.08   5.33   5.09   3.65   4.52   5.26   4.85   7.26   6.64   5.48   3.52   5.85   4.12 
+clusters[5] =   4.50   3.46   6.65   5.24   7.16   5.74   3.57   4.71   6.15   4.98   3.08   2.65   4.38   6.85   4.70   3.34 
+clusters[6] =   4.26   4.14   3.41   4.86   6.37   3.84   5.38   6.00   7.00   6.88   3.30   7.20   5.05   5.95   4.04   6.07 
+clusters[7] =   4.26   3.34   3.20   5.44   3.24   7.00   6.59   6.59   4.45   4.01   4.52   3.39   4.51   4.90   6.04   7.31 
+clusters[8] =   5.24   4.32   6.44   6.58   2.84   4.66   3.10   7.02   4.56   5.60   5.05   2.91   5.33   3.45   6.03   4.21 
+clusters[9] =   5.55   3.33   5.83   3.52   5.12   3.82   4.46   2.88   6.49   6.85   7.28   3.27   5.04   5.09   4.80   6.06 
+clusters[10] =   5.84   6.84   5.73   5.97   6.41   6.60   4.93   3.27   4.01   4.61   3.30   4.19   4.70   3.12   2.87   6.84 
+clusters[11] =   5.94   3.64   3.18   5.42   6.45   4.19   7.31   3.68   3.89   5.64   3.57   3.99   5.41   3.22   6.78   3.74 
+clusters[12] =   6.05   6.95   2.95   3.35   2.95   3.30   4.13   4.20   6.12   2.89   4.89   4.23   4.96   5.16   5.32   6.04 
+clusters[13] =   6.65   4.68   2.90   4.69   5.35   6.93   3.99   5.28   2.81   4.36   5.79   5.54   4.36   6.94   3.91   2.72 
+clusters[14] =   7.00   6.74   5.30   5.71   5.01   4.17   7.02   6.73   4.12   6.04   6.87   4.52   5.35   6.63   3.41   5.20 
+clusters[15] =   7.21   4.74   5.86   3.52   6.76   3.24   3.06   6.72   4.36   3.46   3.85   6.46   4.78   4.52   6.12   6.22 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16
+Initial cluster centers:
+clusters[0] =   0.00   8.00   8.35   1.07   7.63   6.35   4.28  10.00   6.72   3.34   2.51   5.59   2.44   3.35   5.44   2.78
+clusters[1] =   1.06   3.44   4.49   5.51   1.72   6.81   2.74   0.34   9.66   5.11   3.94   8.26   0.26   8.72   2.65   0.79
+clusters[2] =   1.09   5.65   8.40   5.51   1.24   2.93   6.59   1.55   0.63   7.55   5.17   7.26   1.66   8.13   1.58   5.64
+clusters[3] =   2.19   3.31   8.45   9.95   4.84   9.53   8.89   3.10   4.54   1.75   7.82   8.93   0.88   2.90   7.73   8.51
+clusters[4] =   2.22   5.52   2.35   9.95   4.36   5.66   2.74   4.31   5.50   4.19   9.05   7.92   2.28   2.31   6.67   3.35
+clusters[5] =   3.28   0.97   8.50   4.40   8.45   6.13   1.20   4.66   8.45   5.95   0.48   0.60   0.11   7.68   3.88   1.37
+clusters[6] =   3.32   3.19   2.41   4.40   7.96   2.26   5.05   5.86   9.41   8.38   1.70   9.59   1.50   7.08   2.82   6.21
+clusters[7] =   4.40   0.84   2.46   8.84   1.56   8.85   7.35   7.42   3.32   2.59   4.35   1.26   0.73   1.86   8.96   9.07
+clusters[8] =   4.43   3.06   6.37   8.84   1.07   4.98   1.20   8.62   4.28   5.03   5.57   0.26   2.12   1.26   7.90   3.92
+clusters[9] =   5.53   0.72   6.42   3.29   4.68   1.58   3.51   0.18   8.19   9.23   8.23   1.93   1.34   6.04   4.04   6.79
+clusters[10] =   6.62   8.38   6.47   7.73   8.29   8.17   5.81   1.73   2.10   3.43   0.88   3.60   0.57   0.81   0.19   9.65
+clusters[11] =   6.66   0.59   0.38   7.73   7.80   4.30   9.67   2.93   3.07   5.87   2.11   2.59   1.97   0.22   9.12   4.50
+clusters[12] =   7.75   8.25   0.42   2.18   1.40   0.90   1.97   4.48   6.97   0.07   4.76   4.26   1.19   4.99   5.27   7.36
+clusters[13] =   8.84   5.90   0.48   6.62   5.01   7.49   4.28   6.03   0.88   4.27   7.41   5.93   0.41   9.77   1.42   0.22
+clusters[14] =   8.87   8.12   4.39   6.62   4.52   3.62   8.13   7.24   1.85   6.71   8.63   4.92   1.81   9.17   0.35   5.07
+clusters[15] =   9.97   5.78   4.44   1.06   8.12   0.21   0.43   8.79   5.76   0.90   1.29   6.59   1.04   3.95   6.50   7.93
+
+OpenMP Kmeans - Reduction	(number of threads: 8)
+local_newClusterSize[0] = 0x1f62df0, local_newClusters[0] = 0x1f62e40
+local_newClusterSize[4] = 0x7fcb500008c0, local_newClusters[4] = 0x7fcb50000910
+local_newClusterSize[7] = 0x7fcb680008c0, local_newClusters[7] = 0x7fcb68000910
+local_newClusterSize[5] = 0x7fcb580008c0, local_newClusters[5] = 0x7fcb58000910
+local_newClusterSize[2] = 0x7fcb600008c0, local_newClusters[2] = 0x7fcb60000910
+local_newClusterSize[3] = 0x7fcb380008c0, local_newClusters[3] = 0x7fcb38000910
+local_newClusterSize[1] = 0x7fcb400008c0, local_newClusters[1] = 0x7fcb40000910
+local_newClusterSize[6] = 0x7fcb480008c0, local_newClusters[6] = 0x7fcb48000910
+
+
+
+	completed loop 1	completed loop 2	completed loop 3	completed loop 4	completed loop 5	completed loop 6	completed loop 7	completed loop 8	completed loop 9	completed loop 10
+        nloops =  10   (total =  1.9659s)  (per loop =  0.1966s)
+
+Final cluster centers:
+clusters[0] =   2.80   6.93   6.09   2.60   6.17   5.87   6.09   6.99   5.50   4.80   5.65   4.60   5.51   3.67   5.25   3.60 
+clusters[1] =   4.89   4.97   5.58   4.94   2.35   6.65   5.24   3.59   7.48   4.90   3.65   6.65   4.82   5.43   4.12   2.93 
+clusters[2] =   2.81   5.32   6.36   4.45   3.20   3.31   5.14   3.57   2.27   5.87   4.11   6.22   5.12   6.19   4.59   5.17 
+clusters[3] =   5.11   3.96   7.39   6.20   5.71   6.21   6.73   4.19   5.51   3.47   6.83   7.01   4.77   5.49   6.51   6.46 
+clusters[4] =   3.61   5.80   3.33   7.08   5.33   5.09   3.65   4.52   5.26   4.85   7.26   6.64   5.48   3.52   5.85   4.12 
+clusters[5] =   4.50   3.46   6.65   5.24   7.16   5.74   3.57   4.71   6.15   4.98   3.08   2.65   4.38   6.85   4.70   3.34 
+clusters[6] =   4.26   4.14   3.41   4.86   6.37   3.84   5.38   6.00   7.00   6.88   3.30   7.20   5.05   5.95   4.04   6.07 
+clusters[7] =   4.26   3.34   3.20   5.44   3.24   7.00   6.59   6.59   4.45   4.01   4.52   3.39   4.51   4.90   6.04   7.31 
+clusters[8] =   5.24   4.32   6.44   6.58   2.84   4.66   3.10   7.02   4.56   5.60   5.05   2.91   5.33   3.45   6.03   4.21 
+clusters[9] =   5.55   3.33   5.83   3.52   5.12   3.82   4.46   2.88   6.49   6.85   7.28   3.27   5.04   5.09   4.80   6.06 
+clusters[10] =   5.84   6.84   5.73   5.97   6.41   6.60   4.93   3.27   4.01   4.61   3.30   4.19   4.70   3.12   2.87   6.84 
+clusters[11] =   5.94   3.64   3.18   5.42   6.45   4.19   7.31   3.68   3.89   5.64   3.57   3.99   5.41   3.22   6.78   3.74 
+clusters[12] =   6.05   6.94   2.95   3.35   2.95   3.30   4.13   4.20   6.12   2.89   4.89   4.23   4.96   5.16   5.32   6.04 
+clusters[13] =   6.65   4.68   2.90   4.69   5.35   6.93   3.99   5.28   2.81   4.36   5.79   5.54   4.36   6.94   3.91   2.72 
+clusters[14] =   7.00   6.74   5.30   5.71   5.01   4.17   7.02   6.73   4.12   6.04   6.87   4.52   5.35   6.63   3.41   5.20 
+clusters[15] =   7.21   4.74   5.86   3.52   6.76   3.24   3.06   6.72   4.36   3.46   3.85   6.46   4.78   4.52   6.12   6.22 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16
+Initial cluster centers:
+clusters[0] =   0.00   8.00   8.35   1.07   7.63   6.35   4.28  10.00   6.72   3.34   2.51   5.59   2.44   3.35   5.44   2.78
+clusters[1] =   1.06   3.44   4.49   5.51   1.72   6.81   2.74   0.34   9.66   5.11   3.94   8.26   0.26   8.72   2.65   0.79
+clusters[2] =   1.09   5.65   8.40   5.51   1.24   2.93   6.59   1.55   0.63   7.55   5.17   7.26   1.66   8.13   1.58   5.64
+clusters[3] =   2.19   3.31   8.45   9.95   4.84   9.53   8.89   3.10   4.54   1.75   7.82   8.93   0.88   2.90   7.73   8.51
+clusters[4] =   2.22   5.52   2.35   9.95   4.36   5.66   2.74   4.31   5.50   4.19   9.05   7.92   2.28   2.31   6.67   3.35
+clusters[5] =   3.28   0.97   8.50   4.40   8.45   6.13   1.20   4.66   8.45   5.95   0.48   0.60   0.11   7.68   3.88   1.37
+clusters[6] =   3.32   3.19   2.41   4.40   7.96   2.26   5.05   5.86   9.41   8.38   1.70   9.59   1.50   7.08   2.82   6.21
+clusters[7] =   4.40   0.84   2.46   8.84   1.56   8.85   7.35   7.42   3.32   2.59   4.35   1.26   0.73   1.86   8.96   9.07
+clusters[8] =   4.43   3.06   6.37   8.84   1.07   4.98   1.20   8.62   4.28   5.03   5.57   0.26   2.12   1.26   7.90   3.92
+clusters[9] =   5.53   0.72   6.42   3.29   4.68   1.58   3.51   0.18   8.19   9.23   8.23   1.93   1.34   6.04   4.04   6.79
+clusters[10] =   6.62   8.38   6.47   7.73   8.29   8.17   5.81   1.73   2.10   3.43   0.88   3.60   0.57   0.81   0.19   9.65
+clusters[11] =   6.66   0.59   0.38   7.73   7.80   4.30   9.67   2.93   3.07   5.87   2.11   2.59   1.97   0.22   9.12   4.50
+clusters[12] =   7.75   8.25   0.42   2.18   1.40   0.90   1.97   4.48   6.97   0.07   4.76   4.26   1.19   4.99   5.27   7.36
+clusters[13] =   8.84   5.90   0.48   6.62   5.01   7.49   4.28   6.03   0.88   4.27   7.41   5.93   0.41   9.77   1.42   0.22
+clusters[14] =   8.87   8.12   4.39   6.62   4.52   3.62   8.13   7.24   1.85   6.71   8.63   4.92   1.81   9.17   0.35   5.07
+clusters[15] =   9.97   5.78   4.44   1.06   8.12   0.21   0.43   8.79   5.76   0.90   1.29   6.59   1.04   3.95   6.50   7.93
+
+OpenMP Kmeans - Reduction	(number of threads: 16)
+local_newClusterSize[0] = 0x677df0, local_newClusters[0] = 0x677e40
+local_newClusterSize[5] = 0x7f0cec0008c0, local_newClusters[5] = 0x7f0cec000910
+local_newClusterSize[8] = 0x7f0cf40008c0, local_newClusters[8] = 0x7f0cf4000910
+local_newClusterSize[10] = 0x7f0d0c0008c0, local_newClusters[10] = 0x7f0d0c000910
+local_newClusterSize[9] = 0x7f0d140008c0, local_newClusters[9] = 0x7f0d14000910
+local_newClusterSize[11] = 0x7f0cfc0008c0, local_newClusters[11] = 0x7f0cfc000910
+local_newClusterSize[14] = 0x7f0d240008c0, local_newClusters[14] = 0x7f0d24000910
+local_newClusterSize[12] = 0x7f0d040008c0, local_newClusters[12] = 0x7f0d04000910
+local_newClusterSize[7] = 0x7f0d2c0008c0, local_newClusters[7] = 0x7f0d2c000910
+local_newClusterSize[1] = 0x7f0ccc0008c0, local_newClusters[1] = 0x7f0ccc000910
+local_newClusterSize[6] = 0x7f0cdc0008c0, local_newClusters[6] = 0x7f0cdc000910
+local_newClusterSize[4] = 0x7f0cc40008c0, local_newClusters[4] = 0x7f0cc4000910
+local_newClusterSize[3] = 0x7f0ce40008c0, local_newClusters[3] = 0x7f0ce4000910
+local_newClusterSize[13] = 0x7f0cc80008c0, local_newClusters[13] = 0x7f0cc8000910
+local_newClusterSize[2] = 0x7f0cd40008c0, local_newClusters[2] = 0x7f0cd4000910
+local_newClusterSize[15] = 0x7f0d1c0008c0, local_newClusters[15] = 0x7f0d1c000910
+
+
+
+	completed loop 1	completed loop 2	completed loop 3	completed loop 4	completed loop 5	completed loop 6	completed loop 7	completed loop 8	completed loop 9	completed loop 10
+        nloops =  10   (total =  1.0090s)  (per loop =  0.1009s)
+
+Final cluster centers:
+clusters[0] =   2.80   6.93   6.09   2.60   6.17   5.87   6.09   6.99   5.50   4.80   5.65   4.60   5.51   3.67   5.25   3.60 
+clusters[1] =   4.89   4.97   5.58   4.94   2.35   6.65   5.24   3.59   7.48   4.90   3.65   6.65   4.82   5.43   4.12   2.93 
+clusters[2] =   2.81   5.32   6.36   4.45   3.20   3.31   5.14   3.57   2.27   5.87   4.11   6.22   5.12   6.19   4.59   5.17 
+clusters[3] =   5.11   3.96   7.39   6.20   5.71   6.21   6.73   4.19   5.51   3.47   6.83   7.01   4.77   5.49   6.51   6.46 
+clusters[4] =   3.61   5.80   3.33   7.08   5.33   5.09   3.65   4.52   5.26   4.85   7.26   6.64   5.48   3.52   5.85   4.12 
+clusters[5] =   4.50   3.46   6.65   5.24   7.16   5.74   3.58   4.71   6.15   4.98   3.08   2.65   4.38   6.85   4.70   3.34 
+clusters[6] =   4.26   4.14   3.41   4.86   6.37   3.84   5.38   6.00   7.00   6.88   3.30   7.20   5.05   5.95   4.04   6.07 
+clusters[7] =   4.26   3.34   3.20   5.44   3.24   7.00   6.59   6.59   4.45   4.01   4.52   3.39   4.51   4.90   6.04   7.31 
+clusters[8] =   5.24   4.32   6.44   6.58   2.84   4.66   3.10   7.02   4.56   5.60   5.05   2.91   5.33   3.45   6.03   4.21 
+clusters[9] =   5.55   3.33   5.83   3.52   5.12   3.82   4.46   2.88   6.49   6.85   7.28   3.27   5.04   5.09   4.80   6.06 
+clusters[10] =   5.84   6.84   5.73   5.97   6.41   6.60   4.93   3.27   4.01   4.61   3.30   4.19   4.70   3.12   2.87   6.84 
+clusters[11] =   5.94   3.64   3.18   5.42   6.45   4.19   7.31   3.68   3.89   5.64   3.57   3.99   5.41   3.22   6.78   3.74 
+clusters[12] =   6.05   6.94   2.95   3.35   2.95   3.30   4.13   4.20   6.12   2.89   4.89   4.23   4.96   5.16   5.32   6.04 
+clusters[13] =   6.65   4.68   2.90   4.69   5.35   6.93   3.99   5.28   2.81   4.36   5.79   5.54   4.36   6.94   3.91   2.72 
+clusters[14] =   7.00   6.74   5.30   5.71   5.01   4.17   7.02   6.73   4.12   6.04   6.87   4.52   5.35   6.63   3.41   5.20 
+clusters[15] =   7.21   4.74   5.86   3.52   6.76   3.24   3.06   6.72   4.36   3.46   3.85   6.46   4.78   4.52   6.12   6.22 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16
+Initial cluster centers:
+clusters[0] =   0.00   8.00   8.35   1.07   7.63   6.35   4.28  10.00   6.72   3.34   2.51   5.59   2.44   3.35   5.44   2.78
+clusters[1] =   1.06   3.44   4.49   5.51   1.72   6.81   2.74   0.34   9.66   5.11   3.94   8.26   0.26   8.72   2.65   0.79
+clusters[2] =   1.09   5.65   8.40   5.51   1.24   2.93   6.59   1.55   0.63   7.55   5.17   7.26   1.66   8.13   1.58   5.64
+clusters[3] =   2.19   3.31   8.45   9.95   4.84   9.53   8.89   3.10   4.54   1.75   7.82   8.93   0.88   2.90   7.73   8.51
+clusters[4] =   2.22   5.52   2.35   9.95   4.36   5.66   2.74   4.31   5.50   4.19   9.05   7.92   2.28   2.31   6.67   3.35
+clusters[5] =   3.28   0.97   8.50   4.40   8.45   6.13   1.20   4.66   8.45   5.95   0.48   0.60   0.11   7.68   3.88   1.37
+clusters[6] =   3.32   3.19   2.41   4.40   7.96   2.26   5.05   5.86   9.41   8.38   1.70   9.59   1.50   7.08   2.82   6.21
+clusters[7] =   4.40   0.84   2.46   8.84   1.56   8.85   7.35   7.42   3.32   2.59   4.35   1.26   0.73   1.86   8.96   9.07
+clusters[8] =   4.43   3.06   6.37   8.84   1.07   4.98   1.20   8.62   4.28   5.03   5.57   0.26   2.12   1.26   7.90   3.92
+clusters[9] =   5.53   0.72   6.42   3.29   4.68   1.58   3.51   0.18   8.19   9.23   8.23   1.93   1.34   6.04   4.04   6.79
+clusters[10] =   6.62   8.38   6.47   7.73   8.29   8.17   5.81   1.73   2.10   3.43   0.88   3.60   0.57   0.81   0.19   9.65
+clusters[11] =   6.66   0.59   0.38   7.73   7.80   4.30   9.67   2.93   3.07   5.87   2.11   2.59   1.97   0.22   9.12   4.50
+clusters[12] =   7.75   8.25   0.42   2.18   1.40   0.90   1.97   4.48   6.97   0.07   4.76   4.26   1.19   4.99   5.27   7.36
+clusters[13] =   8.84   5.90   0.48   6.62   5.01   7.49   4.28   6.03   0.88   4.27   7.41   5.93   0.41   9.77   1.42   0.22
+clusters[14] =   8.87   8.12   4.39   6.62   4.52   3.62   8.13   7.24   1.85   6.71   8.63   4.92   1.81   9.17   0.35   5.07
+clusters[15] =   9.97   5.78   4.44   1.06   8.12   0.21   0.43   8.79   5.76   0.90   1.29   6.59   1.04   3.95   6.50   7.93
+
+OpenMP Kmeans - Reduction	(number of threads: 32)
+local_newClusterSize[0] = 0xda6df0, local_newClusters[0] = 0xda6e40
+local_newClusterSize[2] = 0x7f1b400008c0, local_newClusters[2] = 0x7f1b40000910
+local_newClusterSize[6] = 0x7f1b480008c0, local_newClusters[6] = 0x7f1b48000910
+local_newClusterSize[7] = 0x7f1b280008c0, local_newClusters[7] = 0x7f1b28000910
+local_newClusterSize[5] = 0x7f1b300008c0, local_newClusters[5] = 0x7f1b30000910
+local_newClusterSize[3] = 0x7f1b380008c0, local_newClusters[3] = 0x7f1b38000910
+local_newClusterSize[31] = 0x7f1b500008c0, local_newClusters[31] = 0x7f1b50000910
+local_newClusterSize[4] = 0x7f1b580008c0, local_newClusters[4] = 0x7f1b58000910
+local_newClusterSize[1] = 0x7f1b200008c0, local_newClusters[1] = 0x7f1b20000910
+local_newClusterSize[26] = 0x7f1b540008c0, local_newClusters[26] = 0x7f1b54000910
+local_newClusterSize[18] = 0x7f1b240008c0, local_newClusters[18] = 0x7f1b24000910
+local_newClusterSize[27] = 0x7f1b180008c0, local_newClusters[27] = 0x7f1b18000910
+local_newClusterSize[15] = 0x7f1b0c0008c0, local_newClusters[15] = 0x7f1b0c000910
+local_newClusterSize[10] = 0x7f1b000008c0, local_newClusters[10] = 0x7f1b00000910
+local_newClusterSize[25] = 0x7f1b1c0008c0, local_newClusters[25] = 0x7f1b1c000910
+local_newClusterSize[23] = 0x7f1afc0008c0, local_newClusters[23] = 0x7f1afc000910
+local_newClusterSize[29] = 0x7f1b080008c0, local_newClusters[29] = 0x7f1b08000910
+local_newClusterSize[12] = 0x7f1af00008c0, local_newClusters[12] = 0x7f1af0000910
+local_newClusterSize[20] = 0x7f1b3c0008c0, local_newClusters[20] = 0x7f1b3c000910
+local_newClusterSize[19] = 0x7f1b340008c0, local_newClusters[19] = 0x7f1b34000910
+local_newClusterSize[24] = 0x7f1aec0008c0, local_newClusters[24] = 0x7f1aec000910
+local_newClusterSize[22] = 0x7f1b440008c0, local_newClusters[22] = 0x7f1b44000910
+local_newClusterSize[17] = 0x7f1ae80008c0, local_newClusters[17] = 0x7f1ae8000910
+local_newClusterSize[11] = 0x7f1ae40008c0, local_newClusters[11] = 0x7f1ae4000910
+local_newClusterSize[30] = 0x7f1b4c0008c0, local_newClusters[30] = 0x7f1b4c000910
+local_newClusterSize[28] = 0x7f1af40008c0, local_newClusters[28] = 0x7f1af4000910
+local_newClusterSize[16] = 0x7f1af80008c0, local_newClusters[16] = 0x7f1af8000910
+local_newClusterSize[9] = 0x7f1b040008c0, local_newClusters[9] = 0x7f1b04000910
+local_newClusterSize[8] = 0x7f1b100008c0, local_newClusters[8] = 0x7f1b10000910
+local_newClusterSize[14] = 0x7f1b140008c0, local_newClusters[14] = 0x7f1b14000910
+local_newClusterSize[13] = 0x7f1b2c0008c0, local_newClusters[13] = 0x7f1b2c000910
+local_newClusterSize[21] = 0x7f1ae00008c0, local_newClusters[21] = 0x7f1ae0000910
+
+
+
+	completed loop 1	completed loop 2	completed loop 3	completed loop 4	completed loop 5	completed loop 6	completed loop 7	completed loop 8	completed loop 9	completed loop 10
+        nloops =  10   (total =  0.5168s)  (per loop =  0.0517s)
+
+Final cluster centers:
+clusters[0] =   2.80   6.93   6.09   2.60   6.17   5.87   6.09   6.99   5.50   4.80   5.65   4.60   5.51   3.67   5.25   3.60 
+clusters[1] =   4.89   4.97   5.58   4.94   2.35   6.65   5.24   3.59   7.48   4.90   3.65   6.65   4.82   5.43   4.12   2.93 
+clusters[2] =   2.81   5.32   6.36   4.45   3.20   3.31   5.14   3.57   2.27   5.87   4.11   6.22   5.12   6.19   4.59   5.17 
+clusters[3] =   5.11   3.96   7.39   6.20   5.71   6.21   6.73   4.19   5.51   3.47   6.83   7.01   4.77   5.49   6.51   6.46 
+clusters[4] =   3.61   5.80   3.33   7.08   5.33   5.09   3.65   4.52   5.26   4.85   7.26   6.64   5.48   3.52   5.85   4.12 
+clusters[5] =   4.50   3.46   6.65   5.24   7.16   5.74   3.57   4.71   6.15   4.98   3.08   2.65   4.38   6.85   4.70   3.34 
+clusters[6] =   4.26   4.14   3.41   4.86   6.37   3.84   5.38   6.00   7.00   6.88   3.30   7.20   5.05   5.95   4.04   6.07 
+clusters[7] =   4.26   3.34   3.20   5.44   3.24   7.00   6.59   6.59   4.45   4.01   4.52   3.39   4.51   4.90   6.04   7.31 
+clusters[8] =   5.24   4.32   6.44   6.58   2.84   4.66   3.10   7.02   4.56   5.60   5.05   2.91   5.33   3.45   6.03   4.21 
+clusters[9] =   5.55   3.33   5.83   3.52   5.12   3.82   4.46   2.88   6.49   6.84   7.28   3.27   5.04   5.09   4.80   6.06 
+clusters[10] =   5.84   6.84   5.73   5.97   6.41   6.60   4.93   3.27   4.01   4.61   3.30   4.19   4.70   3.12   2.87   6.84 
+clusters[11] =   5.94   3.64   3.18   5.42   6.45   4.19   7.31   3.68   3.89   5.64   3.57   3.99   5.41   3.22   6.78   3.74 
+clusters[12] =   6.05   6.94   2.95   3.35   2.95   3.30   4.13   4.20   6.12   2.89   4.89   4.23   4.96   5.16   5.32   6.04 
+clusters[13] =   6.65   4.68   2.90   4.69   5.35   6.93   3.99   5.28   2.81   4.36   5.79   5.54   4.36   6.94   3.91   2.72 
+clusters[14] =   7.00   6.74   5.30   5.71   5.01   4.17   7.02   6.73   4.12   6.04   6.87   4.52   5.35   6.63   3.41   5.20 
+clusters[15] =   7.21   4.74   5.86   3.52   6.76   3.24   3.06   6.72   4.36   3.46   3.85   6.46   4.78   4.52   6.12   6.22 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16
+Initial cluster centers:
+clusters[0] =   0.00   8.00   8.35   1.07   7.63   6.35   4.28  10.00   6.72   3.34   2.51   5.59   2.44   3.35   5.44   2.78
+clusters[1] =   1.06   3.44   4.49   5.51   1.72   6.81   2.74   0.34   9.66   5.11   3.94   8.26   0.26   8.72   2.65   0.79
+clusters[2] =   1.09   5.65   8.40   5.51   1.24   2.93   6.59   1.55   0.63   7.55   5.17   7.26   1.66   8.13   1.58   5.64
+clusters[3] =   2.19   3.31   8.45   9.95   4.84   9.53   8.89   3.10   4.54   1.75   7.82   8.93   0.88   2.90   7.73   8.51
+clusters[4] =   2.22   5.52   2.35   9.95   4.36   5.66   2.74   4.31   5.50   4.19   9.05   7.92   2.28   2.31   6.67   3.35
+clusters[5] =   3.28   0.97   8.50   4.40   8.45   6.13   1.20   4.66   8.45   5.95   0.48   0.60   0.11   7.68   3.88   1.37
+clusters[6] =   3.32   3.19   2.41   4.40   7.96   2.26   5.05   5.86   9.41   8.38   1.70   9.59   1.50   7.08   2.82   6.21
+clusters[7] =   4.40   0.84   2.46   8.84   1.56   8.85   7.35   7.42   3.32   2.59   4.35   1.26   0.73   1.86   8.96   9.07
+clusters[8] =   4.43   3.06   6.37   8.84   1.07   4.98   1.20   8.62   4.28   5.03   5.57   0.26   2.12   1.26   7.90   3.92
+clusters[9] =   5.53   0.72   6.42   3.29   4.68   1.58   3.51   0.18   8.19   9.23   8.23   1.93   1.34   6.04   4.04   6.79
+clusters[10] =   6.62   8.38   6.47   7.73   8.29   8.17   5.81   1.73   2.10   3.43   0.88   3.60   0.57   0.81   0.19   9.65
+clusters[11] =   6.66   0.59   0.38   7.73   7.80   4.30   9.67   2.93   3.07   5.87   2.11   2.59   1.97   0.22   9.12   4.50
+clusters[12] =   7.75   8.25   0.42   2.18   1.40   0.90   1.97   4.48   6.97   0.07   4.76   4.26   1.19   4.99   5.27   7.36
+clusters[13] =   8.84   5.90   0.48   6.62   5.01   7.49   4.28   6.03   0.88   4.27   7.41   5.93   0.41   9.77   1.42   0.22
+clusters[14] =   8.87   8.12   4.39   6.62   4.52   3.62   8.13   7.24   1.85   6.71   8.63   4.92   1.81   9.17   0.35   5.07
+clusters[15] =   9.97   5.78   4.44   1.06   8.12   0.21   0.43   8.79   5.76   0.90   1.29   6.59   1.04   3.95   6.50   7.93
+
+OpenMP Kmeans - Reduction	(number of threads: 64)
+local_newClusterSize[0] = 0x1f71df0, local_newClusters[0] = 0x1f71e40
+local_newClusterSize[1] = 0x7ff5f00008c0, local_newClusters[1] = 0x7ff5f0000910
+local_newClusterSize[32] = 0x7ff5d80008c0, local_newClusters[32] = 0x7ff5d8000910
+local_newClusterSize[3] = 0x7ff6000008c0, local_newClusters[3] = 0x7ff600000910
+local_newClusterSize[34] = 0x7ff6300008c0, local_newClusters[34] = 0x7ff630000910
+local_newClusterSize[38] = 0x7ff5f80008c0, local_newClusters[38] = 0x7ff5f8000910
+local_newClusterSize[39] = 0x7ff6100008c0, local_newClusters[39] = 0x7ff610000910
+local_newClusterSize[35] = 0x7ff6080008c0, local_newClusters[35] = 0x7ff608000910
+local_newClusterSize[2] = 0x7ff6200008c0, local_newClusters[2] = 0x7ff620000910
+local_newClusterSize[36] = 0x7ff5e00008c0, local_newClusters[36] = 0x7ff5e0000910
+local_newClusterSize[6] = 0x7ff6280008c0, local_newClusters[6] = 0x7ff628000910
+local_newClusterSize[7] = 0x7ff6180008c0, local_newClusters[7] = 0x7ff618000910
+local_newClusterSize[4] = 0x7ff5e80008c0, local_newClusters[4] = 0x7ff5e8000910
+local_newClusterSize[37] = 0x7ff6380008c0, local_newClusters[37] = 0x7ff638000910
+local_newClusterSize[5] = 0x7ff6400008c0, local_newClusters[5] = 0x7ff640000910
+local_newClusterSize[33] = 0x7ff5d00008c0, local_newClusters[33] = 0x7ff5d0000910
+local_newClusterSize[48] = 0x7ff5d40008c0, local_newClusters[48] = 0x7ff5d4000910
+local_newClusterSize[16] = 0x7ff63c0008c0, local_newClusters[16] = 0x7ff63c000910
+local_newClusterSize[11] = 0x7ff5c80008c0, local_newClusters[11] = 0x7ff5c8000910
+local_newClusterSize[21] = 0x7ff6340008c0, local_newClusters[21] = 0x7ff634000910
+local_newClusterSize[53] = 0x7ff5cc0008c0, local_newClusters[53] = 0x7ff5cc000910
+local_newClusterSize[40] = 0x7ff5b80008c0, local_newClusters[40] = 0x7ff5b8000910
+local_newClusterSize[43] = 0x7ff4d00008c0, local_newClusters[43] = 0x7ff4d0000910
+local_newClusterSize[31] = 0x7ff5780008c0, local_newClusters[31] = 0x7ff578000910
+local_newClusterSize[47] = 0x7ff4b80008c0, local_newClusters[47] = 0x7ff4b8000910
+local_newClusterSize[29] = 0x7ff5580008c0, local_newClusters[29] = 0x7ff558000910
+local_newClusterSize[58] = 0x7ff5500008c0, local_newClusters[58] = 0x7ff550000910
+local_newClusterSize[26] = 0x7ff5480008c0, local_newClusters[26] = 0x7ff548000910
+local_newClusterSize[30] = 0x7ff61c0008c0, local_newClusters[30] = 0x7ff61c000910
+local_newClusterSize[42] = 0x7ff5b00008c0, local_newClusters[42] = 0x7ff5b0000910
+local_newClusterSize[52] = 0x7ff4a80008c0, local_newClusters[52] = 0x7ff4a8000910
+local_newClusterSize[56] = 0x7ff5c40008c0, local_newClusters[56] = 0x7ff5c4000910
+local_newClusterSize[62] = 0x7ff5bc0008c0, local_newClusters[62] = 0x7ff5bc000910
+local_newClusterSize[46] = 0x7ff5a00008c0, local_newClusters[46] = 0x7ff5a0000910
+local_newClusterSize[60] = 0x7ff6240008c0, local_newClusters[60] = 0x7ff624000910
+local_newClusterSize[28] = 0x7ff6140008c0, local_newClusters[28] = 0x7ff614000910
+local_newClusterSize[18] = 0x7ff5100008c0, local_newClusters[18] = 0x7ff510000910
+local_newClusterSize[27] = 0x7ff5880008c0, local_newClusters[27] = 0x7ff588000910
+local_newClusterSize[61] = 0x7ff5800008c0, local_newClusters[61] = 0x7ff580000910
+local_newClusterSize[44] = 0x7ff4b00008c0, local_newClusters[44] = 0x7ff4b0000910
+local_newClusterSize[19] = 0x7ff5180008c0, local_newClusters[19] = 0x7ff518000910
+local_newClusterSize[51] = 0x7ff5200008c0, local_newClusters[51] = 0x7ff520000910
+local_newClusterSize[50] = 0x7ff5080008c0, local_newClusters[50] = 0x7ff508000910
+local_newClusterSize[9] = 0x7ff4f00008c0, local_newClusters[9] = 0x7ff4f0000910
+local_newClusterSize[63] = 0x7ff5900008c0, local_newClusters[63] = 0x7ff590000910
+local_newClusterSize[41] = 0x7ff4e80008c0, local_newClusters[41] = 0x7ff4e8000910
+local_newClusterSize[54] = 0x7ff5380008c0, local_newClusters[54] = 0x7ff538000910
+local_newClusterSize[22] = 0x7ff5400008c0, local_newClusters[22] = 0x7ff540000910
+local_newClusterSize[17] = 0x7ff5280008c0, local_newClusters[17] = 0x7ff528000910
+local_newClusterSize[59] = 0x7ff5700008c0, local_newClusters[59] = 0x7ff570000910
+local_newClusterSize[25] = 0x7ff5600008c0, local_newClusters[25] = 0x7ff560000910
+local_newClusterSize[13] = 0x7ff4c80008c0, local_newClusters[13] = 0x7ff4c8000910
+local_newClusterSize[45] = 0x7ff4d80008c0, local_newClusters[45] = 0x7ff4d8000910
+local_newClusterSize[15] = 0x7ff4c00008c0, local_newClusters[15] = 0x7ff4c0000910
+local_newClusterSize[55] = 0x7ff4f80008c0, local_newClusters[55] = 0x7ff4f8000910
+local_newClusterSize[57] = 0x7ff5680008c0, local_newClusters[57] = 0x7ff568000910
+local_newClusterSize[23] = 0x7ff5000008c0, local_newClusters[23] = 0x7ff500000910
+local_newClusterSize[49] = 0x7ff5300008c0, local_newClusters[49] = 0x7ff530000910
+local_newClusterSize[8] = 0x7ff5c00008c0, local_newClusters[8] = 0x7ff5c0000910
+local_newClusterSize[20] = 0x7ff4a00008c0, local_newClusters[20] = 0x7ff4a0000910
+local_newClusterSize[10] = 0x7ff5a80008c0, local_newClusters[10] = 0x7ff5a8000910
+local_newClusterSize[24] = 0x7ff62c0008c0, local_newClusters[24] = 0x7ff62c000910
+local_newClusterSize[14] = 0x7ff5980008c0, local_newClusters[14] = 0x7ff598000910
+local_newClusterSize[12] = 0x7ff4e00008c0, local_newClusters[12] = 0x7ff4e0000910
+
+
+
+	completed loop 1	completed loop 2	completed loop 3	completed loop 4	completed loop 5	completed loop 6	completed loop 7	completed loop 8	completed loop 9	completed loop 10
+        nloops =  10   (total =  0.4245s)  (per loop =  0.0425s)
+
+Final cluster centers:
+clusters[0] =   2.80   6.93   6.09   2.60   6.17   5.87   6.09   6.99   5.50   4.80   5.65   4.60   5.51   3.67   5.25   3.60 
+clusters[1] =   4.89   4.97   5.58   4.94   2.35   6.65   5.24   3.59   7.48   4.90   3.65   6.65   4.82   5.43   4.12   2.93 
+clusters[2] =   2.81   5.32   6.36   4.45   3.20   3.31   5.14   3.57   2.27   5.87   4.11   6.22   5.12   6.19   4.59   5.17 
+clusters[3] =   5.11   3.96   7.39   6.20   5.71   6.21   6.73   4.19   5.51   3.47   6.83   7.01   4.77   5.49   6.51   6.46 
+clusters[4] =   3.61   5.80   3.33   7.08   5.33   5.09   3.65   4.52   5.26   4.85   7.26   6.64   5.48   3.52   5.85   4.12 
+clusters[5] =   4.50   3.46   6.65   5.24   7.16   5.74   3.58   4.71   6.15   4.98   3.08   2.65   4.38   6.85   4.70   3.34 
+clusters[6] =   4.26   4.14   3.41   4.86   6.37   3.84   5.38   6.00   7.00   6.88   3.30   7.20   5.05   5.95   4.04   6.07 
+clusters[7] =   4.26   3.34   3.20   5.44   3.24   7.00   6.59   6.59   4.45   4.01   4.52   3.39   4.51   4.90   6.04   7.31 
+clusters[8] =   5.24   4.32   6.44   6.58   2.84   4.66   3.10   7.02   4.56   5.60   5.05   2.91   5.33   3.45   6.03   4.21 
+clusters[9] =   5.55   3.33   5.83   3.52   5.12   3.82   4.46   2.88   6.49   6.84   7.28   3.27   5.04   5.09   4.80   6.06 
+clusters[10] =   5.84   6.84   5.73   5.97   6.41   6.60   4.93   3.27   4.01   4.61   3.30   4.19   4.70   3.12   2.87   6.84 
+clusters[11] =   5.94   3.64   3.18   5.42   6.45   4.19   7.31   3.68   3.89   5.64   3.57   3.99   5.41   3.22   6.78   3.74 
+clusters[12] =   6.05   6.94   2.95   3.35   2.95   3.30   4.13   4.20   6.12   2.89   4.89   4.23   4.96   5.16   5.32   6.04 
+clusters[13] =   6.65   4.68   2.90   4.69   5.35   6.93   3.99   5.28   2.81   4.36   5.79   5.54   4.36   6.94   3.91   2.72 
+clusters[14] =   7.00   6.74   5.30   5.71   5.01   4.17   7.02   6.73   4.12   6.04   6.87   4.52   5.35   6.63   3.41   5.20 
+clusters[15] =   7.21   4.74   5.86   3.52   6.76   3.24   3.06   6.72   4.36   3.46   3.85   6.46   4.78   4.52   6.12   6.22 

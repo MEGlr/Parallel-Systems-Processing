@@ -1,0 +1,281 @@
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 67108864    numCoords = 1    numClusters = 4
+Initial cluster centers:
+clusters[0] =   0.00
+clusters[1] =   2.22
+clusters[2] =   4.43
+clusters[3] =   6.66
+
+OpenMP Kmeans - Reduction	(number of threads: 1)
+local_newClusterSize[0] = 0x14f07a0, local_newClusters[0] = 0x14f07c0
+
+
+
+	completed loop 1	completed loop 2	completed loop 3	completed loop 4	completed loop 5	completed loop 6	completed loop 7	completed loop 8	completed loop 9	completed loop 10
+        nloops =  10   (total = 11.1231s)  (per loop =  1.1123s)
+
+Final cluster centers:
+clusters[0] =   0.34 
+clusters[1] =   0.96 
+clusters[2] =   1.05 
+clusters[3] =   0.97 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 67108864    numCoords = 1    numClusters = 4
+Initial cluster centers:
+clusters[0] =   0.00
+clusters[1] =   2.22
+clusters[2] =   4.43
+clusters[3] =   6.66
+
+OpenMP Kmeans - Reduction	(number of threads: 2)
+local_newClusterSize[0] = 0xc35890, local_newClusters[0] = 0xc359e0
+local_newClusterSize[1] = 0x7f18f00008c0, local_newClusters[1] = 0x7f18f00008e0
+
+
+
+	completed loop 1	completed loop 2	completed loop 3	completed loop 4	completed loop 5	completed loop 6	completed loop 7	completed loop 8	completed loop 9	completed loop 10
+        nloops =  10   (total =  5.5661s)  (per loop =  0.5566s)
+
+Final cluster centers:
+clusters[0] =   0.48 
+clusters[1] =   1.30 
+clusters[2] =   2.39 
+clusters[3] =   2.09 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 67108864    numCoords = 1    numClusters = 4
+Initial cluster centers:
+clusters[0] =   0.00
+clusters[1] =   2.22
+clusters[2] =   4.43
+clusters[3] =   6.66
+
+OpenMP Kmeans - Reduction	(number of threads: 4)
+local_newClusterSize[0] = 0x23e1a30, local_newClusters[0] = 0x23e1de0
+local_newClusterSize[2] = 0x7f8d0c0008c0, local_newClusters[2] = 0x7f8d0c0008e0
+local_newClusterSize[1] = 0x7f8d1c0008c0, local_newClusters[1] = 0x7f8d1c0008e0
+local_newClusterSize[3] = 0x7f8d140008c0, local_newClusters[3] = 0x7f8d140008e0
+
+
+
+	completed loop 1	completed loop 2	completed loop 3	completed loop 4	completed loop 5	completed loop 6	completed loop 7	completed loop 8	completed loop 9	completed loop 10
+        nloops =  10   (total =  2.9093s)  (per loop =  0.2909s)
+
+Final cluster centers:
+clusters[0] =   0.79 
+clusters[1] =   2.12 
+clusters[2] =   3.60 
+clusters[3] =   3.69 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 67108864    numCoords = 1    numClusters = 4
+Initial cluster centers:
+clusters[0] =   0.00
+clusters[1] =   2.22
+clusters[2] =   4.43
+clusters[3] =   6.66
+
+OpenMP Kmeans - Reduction	(number of threads: 8)
+local_newClusterSize[0] = 0x11ecd70, local_newClusters[0] = 0x11ed5e0
+local_newClusterSize[3] = 0x7f7d780008c0, local_newClusters[3] = 0x7f7d780008e0
+local_newClusterSize[1] = 0x7f7d800008c0, local_newClusters[1] = 0x7f7d800008e0
+local_newClusterSize[4] = 0x7f7d880008c0, local_newClusters[4] = 0x7f7d880008e0
+local_newClusterSize[6] = 0x7f7d900008c0, local_newClusters[6] = 0x7f7d900008e0
+local_newClusterSize[7] = 0x7f7d600008c0, local_newClusters[7] = 0x7f7d600008e0
+local_newClusterSize[2] = 0x7f7d700008c0, local_newClusters[2] = 0x7f7d700008e0
+local_newClusterSize[5] = 0x7f7d680008c0, local_newClusters[5] = 0x7f7d680008e0
+
+
+
+	completed loop 1	completed loop 2	completed loop 3	completed loop 4	completed loop 5	completed loop 6	completed loop 7	completed loop 8	completed loop 9	completed loop 10
+        nloops =  10   (total =  1.5847s)  (per loop =  0.1585s)
+
+Final cluster centers:
+clusters[0] =   0.85 
+clusters[1] =   2.66 
+clusters[2] =   5.55 
+clusters[3] =   8.51 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 67108864    numCoords = 1    numClusters = 4
+Initial cluster centers:
+clusters[0] =   0.00
+clusters[1] =   2.22
+clusters[2] =   4.43
+clusters[3] =   6.66
+
+OpenMP Kmeans - Reduction	(number of threads: 16)
+local_newClusterSize[0] = 0x22de3f0, local_newClusters[0] = 0x22df5e0
+local_newClusterSize[12] = 0x7f74380008c0, local_newClusters[12] = 0x7f74380008e0
+local_newClusterSize[14] = 0x7f74500008c0, local_newClusters[14] = 0x7f74500008e0
+local_newClusterSize[10] = 0x7f74600008c0, local_newClusters[10] = 0x7f74600008e0
+local_newClusterSize[8] = 0x7f74480008c0, local_newClusters[8] = 0x7f74480008e0
+local_newClusterSize[15] = 0x7f74580008c0, local_newClusters[15] = 0x7f74580008e0
+local_newClusterSize[9] = 0x7f74680008c0, local_newClusters[9] = 0x7f74680008e0
+local_newClusterSize[1] = 0x7f74880008c0, local_newClusters[1] = 0x7f74880008e0
+local_newClusterSize[6] = 0x7f74980008c0, local_newClusters[6] = 0x7f74980008e0
+local_newClusterSize[4] = 0x7f74700008c0, local_newClusters[4] = 0x7f74700008e0
+local_newClusterSize[11] = 0x7f74400008c0, local_newClusters[11] = 0x7f74400008e0
+local_newClusterSize[2] = 0x7f74780008c0, local_newClusters[2] = 0x7f74780008e0
+local_newClusterSize[7] = 0x7f74a00008c0, local_newClusters[7] = 0x7f74a00008e0
+local_newClusterSize[3] = 0x7f74800008c0, local_newClusters[3] = 0x7f74800008e0
+local_newClusterSize[5] = 0x7f74900008c0, local_newClusters[5] = 0x7f74900008e0
+local_newClusterSize[13] = 0x7f743c0008c0, local_newClusters[13] = 0x7f743c0008e0
+
+
+
+	completed loop 1	completed loop 2	completed loop 3	completed loop 4	completed loop 5	completed loop 6	completed loop 7	completed loop 8	completed loop 9	completed loop 10
+        nloops =  10   (total =  0.8510s)  (per loop =  0.0851s)
+
+Final cluster centers:
+clusters[0] =   0.84 
+clusters[1] =   2.53 
+clusters[2] =   4.74 
+clusters[3] =   7.99 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 67108864    numCoords = 1    numClusters = 4
+Initial cluster centers:
+clusters[0] =   0.00
+clusters[1] =   2.22
+clusters[2] =   4.43
+clusters[3] =   6.66
+
+OpenMP Kmeans - Reduction	(number of threads: 32)
+local_newClusterSize[0] = 0x138d0f0, local_newClusters[0] = 0x138f5e0
+local_newClusterSize[7] = 0x7f137c0008c0, local_newClusters[7] = 0x7f137c0008e0
+local_newClusterSize[22] = 0x7f13740008c0, local_newClusters[22] = 0x7f13740008e0
+local_newClusterSize[3] = 0x7f13640008c0, local_newClusters[3] = 0x7f13640008e0
+local_newClusterSize[5] = 0x7f134c0008c0, local_newClusters[5] = 0x7f134c0008e0
+local_newClusterSize[6] = 0x7f13540008c0, local_newClusters[6] = 0x7f13540008e0
+local_newClusterSize[20] = 0x7f13440008c0, local_newClusters[20] = 0x7f13440008e0
+local_newClusterSize[16] = 0x7f13340008c0, local_newClusters[16] = 0x7f13340008e0
+local_newClusterSize[19] = 0x7f13800008c0, local_newClusters[19] = 0x7f13800008e0
+local_newClusterSize[17] = 0x7f132c0008c0, local_newClusters[17] = 0x7f132c0008e0
+local_newClusterSize[21] = 0x7f13500008c0, local_newClusters[21] = 0x7f13500008e0
+local_newClusterSize[9] = 0x7f13680008c0, local_newClusters[9] = 0x7f13680008e0
+local_newClusterSize[8] = 0x7f13240008c0, local_newClusters[8] = 0x7f13240008e0
+local_newClusterSize[10] = 0x7f13140008c0, local_newClusters[10] = 0x7f13140008e0
+local_newClusterSize[14] = 0x7f13580008c0, local_newClusters[14] = 0x7f13580008e0
+local_newClusterSize[27] = 0x7f13480008c0, local_newClusters[27] = 0x7f13480008e0
+local_newClusterSize[29] = 0x7f12f40008c0, local_newClusters[29] = 0x7f12f40008e0
+local_newClusterSize[24] = 0x7f13300008c0, local_newClusters[24] = 0x7f13300008e0
+local_newClusterSize[13] = 0x7f13040008c0, local_newClusters[13] = 0x7f13040008e0
+local_newClusterSize[12] = 0x7f130c0008c0, local_newClusters[12] = 0x7f130c0008e0
+local_newClusterSize[31] = 0x7f131c0008c0, local_newClusters[31] = 0x7f131c0008e0
+local_newClusterSize[26] = 0x7f12f80008c0, local_newClusters[26] = 0x7f12f80008e0
+local_newClusterSize[25] = 0x7f12fc0008c0, local_newClusters[25] = 0x7f12fc0008e0
+local_newClusterSize[30] = 0x7f13780008c0, local_newClusters[30] = 0x7f13780008e0
+local_newClusterSize[28] = 0x7f12ec0008c0, local_newClusters[28] = 0x7f12ec0008e0
+local_newClusterSize[15] = 0x7f13700008c0, local_newClusters[15] = 0x7f13700008e0
+local_newClusterSize[2] = 0x7f13840008c0, local_newClusters[2] = 0x7f13840008e0
+local_newClusterSize[11] = 0x7f13600008c0, local_newClusters[11] = 0x7f13600008e0
+local_newClusterSize[18] = 0x7f13400008c0, local_newClusters[18] = 0x7f13400008e0
+local_newClusterSize[1] = 0x7f136c0008c0, local_newClusters[1] = 0x7f136c0008e0
+local_newClusterSize[4] = 0x7f135c0008c0, local_newClusters[4] = 0x7f135c0008e0
+local_newClusterSize[23] = 0x7f133c0008c0, local_newClusters[23] = 0x7f133c0008e0
+
+
+
+	completed loop 1	completed loop 2	completed loop 3	completed loop 4	completed loop 5	completed loop 6	completed loop 7	completed loop 8	completed loop 9	completed loop 10
+        nloops =  10   (total =  0.6707s)  (per loop =  0.0671s)
+
+Final cluster centers:
+clusters[0] =   0.84 
+clusters[1] =   2.54 
+clusters[2] =   4.92 
+clusters[3] =   8.03 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 67108864    numCoords = 1    numClusters = 4
+Initial cluster centers:
+clusters[0] =   0.00
+clusters[1] =   2.22
+clusters[2] =   4.43
+clusters[3] =   6.66
+
+OpenMP Kmeans - Reduction	(number of threads: 64)
+local_newClusterSize[0] = 0x1ebfaf0, local_newClusters[0] = 0x1ec45e0
+local_newClusterSize[32] = 0x7f2af40008c0, local_newClusters[32] = 0x7f2af40008e0
+local_newClusterSize[7] = 0x7f2aec0008c0, local_newClusters[7] = 0x7f2aec0008e0
+local_newClusterSize[36] = 0x7f2ae40008c0, local_newClusters[36] = 0x7f2ae40008e0
+local_newClusterSize[34] = 0x7f2acc0008c0, local_newClusters[34] = 0x7f2acc0008e0
+local_newClusterSize[6] = 0x7f2abc0008c0, local_newClusters[6] = 0x7f2abc0008e0
+local_newClusterSize[38] = 0x7f2ac40008c0, local_newClusters[38] = 0x7f2ac40008e0
+local_newClusterSize[39] = 0x7f2afc0008c0, local_newClusters[39] = 0x7f2afc0008e0
+local_newClusterSize[24] = 0x7f2b000008c0, local_newClusters[24] = 0x7f2b000008e0
+local_newClusterSize[1] = 0x7f2aa40008c0, local_newClusters[1] = 0x7f2aa40008e0
+local_newClusterSize[27] = 0x7f2ad00008c0, local_newClusters[27] = 0x7f2ad00008e0
+local_newClusterSize[48] = 0x7f2a980008c0, local_newClusters[48] = 0x7f2a980008e0
+local_newClusterSize[59] = 0x7f2aa80008c0, local_newClusters[59] = 0x7f2aa80008e0
+local_newClusterSize[12] = 0x7f2aa00008c0, local_newClusters[12] = 0x7f2aa00008e0
+local_newClusterSize[50] = 0x7f2a880008c0, local_newClusters[50] = 0x7f2a880008e0
+local_newClusterSize[29] = 0x7f2ac00008c0, local_newClusters[29] = 0x7f2ac00008e0
+local_newClusterSize[18] = 0x7f2a8c0008c0, local_newClusters[18] = 0x7f2a8c0008e0
+local_newClusterSize[22] = 0x7f2a840008c0, local_newClusters[22] = 0x7f2a840008e0
+local_newClusterSize[42] = 0x7f2a9c0008c0, local_newClusters[42] = 0x7f2a9c0008e0
+local_newClusterSize[19] = 0x7f2a900008c0, local_newClusters[19] = 0x7f2a900008e0
+local_newClusterSize[51] = 0x7f2a940008c0, local_newClusters[51] = 0x7f2a940008e0
+local_newClusterSize[54] = 0x7f2a740008c0, local_newClusters[54] = 0x7f2a740008e0
+local_newClusterSize[13] = 0x7f2a6c0008c0, local_newClusters[13] = 0x7f2a6c0008e0
+local_newClusterSize[61] = 0x7f2ac80008c0, local_newClusters[61] = 0x7f2ac80008e0
+local_newClusterSize[9] = 0x7f2a7c0008c0, local_newClusters[9] = 0x7f2a7c0008e0
+local_newClusterSize[17] = 0x7f2a700008c0, local_newClusters[17] = 0x7f2a700008e0
+local_newClusterSize[49] = 0x7f2ae00008c0, local_newClusters[49] = 0x7f2ae00008e0
+local_newClusterSize[53] = 0x7f2a780008c0, local_newClusters[53] = 0x7f2a780008e0
+local_newClusterSize[21] = 0x7f2a800008c0, local_newClusters[21] = 0x7f2a800008e0
+local_newClusterSize[25] = 0x7f2a640008c0, local_newClusters[25] = 0x7f2a640008e0
+local_newClusterSize[16] = 0x7f2ad80008c0, local_newClusters[16] = 0x7f2ad80008e0
+local_newClusterSize[8] = 0x7f2a340008c0, local_newClusters[8] = 0x7f2a340008e0
+local_newClusterSize[40] = 0x7f2a3c0008c0, local_newClusters[40] = 0x7f2a3c0008e0
+local_newClusterSize[41] = 0x7f2a2c0008c0, local_newClusters[41] = 0x7f2a2c0008e0
+local_newClusterSize[14] = 0x7f2a380008c0, local_newClusters[14] = 0x7f2a380008e0
+local_newClusterSize[28] = 0x7f2af80008c0, local_newClusters[28] = 0x7f2af80008e0
+local_newClusterSize[30] = 0x7f2af00008c0, local_newClusters[30] = 0x7f2af00008e0
+local_newClusterSize[62] = 0x7f2ae80008c0, local_newClusters[62] = 0x7f2ae80008e0
+local_newClusterSize[31] = 0x7f2a140008c0, local_newClusters[31] = 0x7f2a140008e0
+local_newClusterSize[63] = 0x7f2a1c0008c0, local_newClusters[63] = 0x7f2a1c0008e0
+local_newClusterSize[26] = 0x7f2a0c0008c0, local_newClusters[26] = 0x7f2a0c0008e0
+local_newClusterSize[58] = 0x7f2a040008c0, local_newClusters[58] = 0x7f2a040008e0
+local_newClusterSize[4] = 0x7f2adc0008c0, local_newClusters[4] = 0x7f2adc0008e0
+local_newClusterSize[45] = 0x7f2ab80008c0, local_newClusters[45] = 0x7f2ab80008e0
+local_newClusterSize[10] = 0x7f2a300008c0, local_newClusters[10] = 0x7f2a300008e0
+local_newClusterSize[46] = 0x7f2a600008c0, local_newClusters[46] = 0x7f2a600008e0
+local_newClusterSize[44] = 0x7f2a200008c0, local_newClusters[44] = 0x7f2a200008e0
+local_newClusterSize[23] = 0x7f2a440008c0, local_newClusters[23] = 0x7f2a440008e0
+local_newClusterSize[20] = 0x7f2a540008c0, local_newClusters[20] = 0x7f2a540008e0
+local_newClusterSize[5] = 0x7f2ad40008c0, local_newClusters[5] = 0x7f2ad40008e0
+local_newClusterSize[3] = 0x7f2a400008c0, local_newClusters[3] = 0x7f2a400008e0
+local_newClusterSize[47] = 0x7f2a680008c0, local_newClusters[47] = 0x7f2a680008e0
+local_newClusterSize[37] = 0x7f2b040008c0, local_newClusters[37] = 0x7f2b040008e0
+local_newClusterSize[35] = 0x7f2aac0008c0, local_newClusters[35] = 0x7f2aac0008e0
+local_newClusterSize[43] = 0x7f2a180008c0, local_newClusters[43] = 0x7f2a180008e0
+local_newClusterSize[60] = 0x7f2a480008c0, local_newClusters[60] = 0x7f2a480008e0
+local_newClusterSize[52] = 0x7f2a4c0008c0, local_newClusters[52] = 0x7f2a4c0008e0
+local_newClusterSize[15] = 0x7f2ab00008c0, local_newClusters[15] = 0x7f2ab00008e0
+local_newClusterSize[33] = 0x7f2ab40008c0, local_newClusters[33] = 0x7f2ab40008e0
+local_newClusterSize[2] = 0x7f29fc0008c0, local_newClusters[2] = 0x7f29fc0008e0
+local_newClusterSize[55] = 0x7f2a580008c0, local_newClusters[55] = 0x7f2a580008e0
+local_newClusterSize[57] = 0x7f2a5c0008c0, local_newClusters[57] = 0x7f2a5c0008e0
+local_newClusterSize[56] = 0x7f2a240008c0, local_newClusters[56] = 0x7f2a240008e0
+local_newClusterSize[11] = 0x7f2a100008c0, local_newClusters[11] = 0x7f2a100008e0
+
+
+
+	completed loop 1	completed loop 2	completed loop 3	completed loop 4	completed loop 5	completed loop 6	completed loop 7	completed loop 8	completed loop 9	completed loop 10
+        nloops =  10   (total =  0.6939s)  (per loop =  0.0694s)
+
+Final cluster centers:
+clusters[0] =   0.84 
+clusters[1] =   2.54 
+clusters[2] =   4.93 
+clusters[3] =   8.16 
