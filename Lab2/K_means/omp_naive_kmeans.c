@@ -87,7 +87,7 @@ void kmeans(float * objects,          /* in: [numObjs][numCoords] */
          * TODO: Detect parallelizable region and use appropriate OpenMP pragmas
          */
 	
-	    #pragma omp parallel for shared(objects,clusters,membership,delta,newClusterSize,newClusters) private(i, index, j) firstprivate(numObjs, numCoords, numClusters)
+	    #pragma omp parallel for shared(objects,clusters,membership,newClusterSize,newClusters) private(i, index, j) firstprivate(numObjs, numCoords, numClusters) reduction(+:delta)
         for (i=0; i<numObjs; i++) {
             // find the array index of nearest cluster center 
             index = find_nearest_cluster(numClusters, numCoords, &objects[i*numCoords], clusters);
