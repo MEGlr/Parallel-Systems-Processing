@@ -15,6 +15,7 @@ while line:
     line = fp.readline()
 fp.close() 
 
+
 def plot_time_speedup(title_, input_loc1, input_loc2, output, legend1, legend2 ):
     
         #  read & plot 1 ------------
