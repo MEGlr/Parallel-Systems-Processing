@@ -32,7 +32,10 @@ def plot_time_speedup():
         plt.title(str(lock))
         bar1_speedup = plt.bar(np.arange(len(threads)), values_time, color ='green',
             width =0.2)
+        plt.xlabel("Number of Threads")
+        plt.ylabel("time (in sec)")
         plt.savefig(str(lock)+"_time", bbox_inches="tight")
+
     fp.close() 
         
         #values_speedup = list(data_speedup.values())

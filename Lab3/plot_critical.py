@@ -37,7 +37,9 @@ def plot_time_speedup():
         legend_.append(plt.bar(np.arange(len(threads)) -0.3+index*0.1 , values_time, color =colors[index],
         width =0.1))
     plt.xticks(np.arange(len(threads)) , threads)
-    
+    plt.xlabel("Number of Threads")
+    plt.ylabel("time (in sec)")
+    plt.title("execution time per lock type")
     plt.legend((legend_[0], legend_[1], legend_[2], legend_[3], legend_[4], legend_[5], legend_[6]), ("nosync","pthread-mutex", "pthread-spinlock", "tas", "ttas", "array-based", "clh-queue"))
     plt.savefig("plot_time", bbox_inches="tight")
     fp.close() 
