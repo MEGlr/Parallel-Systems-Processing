@@ -34,6 +34,7 @@ def plot_time_speedup():
             width =0.2)
         plt.xlabel("Number of Threads")
         plt.ylabel("time (in sec)")
+        plt.xticks(np.arange(len(threads)) , threads)
         plt.savefig(str(lock)+"_time", bbox_inches="tight")
 
     fp.close() 
