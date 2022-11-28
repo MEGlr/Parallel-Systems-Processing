@@ -30,17 +30,20 @@ def plot_time_speedup():
         values_time = list(data_time[lock].values())
         print(values_time)
     fig = plt.figure(figsize = (10, 5))
-    colors= ["#588c7e", "#96ceb4" ,"#b5e7a0","#86af49", "#e3eaa7", "#588c7e", "#96ceb4" ,"#b5e7a0","#86af49"]
+    colors= ["#588c7e", "#96ceb4" ,"#b5e7a0","#86af49", "#e3eaa7",  "green","mediumaquamarine", "teal"]
     legend_ = []
     for index, lock in enumerate(locks):
         values_time = list(data_time[lock].values())
         legend_.append(plt.bar(np.arange(len(threads)) -0.3+index*0.1 , values_time, color =colors[index],
         width =0.1))
+    values_time = [0.8952, 1.8086, 3.0666, 4.4614, 6.8206, 6.8162, 6.006]
+    legend_.append(plt.bar(np.arange(len(threads)) -0.3+index*0.1+0.1 , values_time, color =colors[index+1],
+        width =0.1))
     plt.xticks(np.arange(len(threads)) , threads)
     plt.xlabel("Number of Threads")
     plt.ylabel("time (in sec)")
     plt.title("execution time per lock type")
-    plt.legend((legend_[0], legend_[1], legend_[2], legend_[3], legend_[4], legend_[5], legend_[6]), ("nosync","pthread-mutex", "pthread-spinlock", "tas", "ttas", "array-based", "clh-queue"))
+    plt.legend((legend_[0], legend_[1], legend_[2], legend_[3], legend_[4], legend_[5], legend_[6], legend_[7]), ("nosync","pthread-mutex", "pthread-spinlock", "tas", "ttas", "array-based", "clh-queue", "critical"))
     plt.savefig("plot_time", bbox_inches="tight")
     fp.close() 
         
