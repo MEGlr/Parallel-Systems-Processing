@@ -51,7 +51,7 @@ for impl in implementation[1:]:
                 line = fp.readline()
 print(throughputF["1024"]["0_50_50"])  
 
-def plot_one(input_, name):
+def plot_one(input_, name, title):
     fig = plt.figure(figsize = (10, 5))
     colors= ["#588c7e", "#96ceb4" ,"#b5e7a0","#86af49", "#e3eaa7",  "green","mediumaquamarine", "teal"]
     legend_ = []
@@ -62,15 +62,14 @@ def plot_one(input_, name):
     plt.xticks(np.arange(len(threads)) , threads)
     plt.xlabel("Number of Threads")
     plt.ylabel("throughput (Kops/sec)")
-    plt.title(f"{name[1:]} : throughput per implementation")
+    plt.title(f"{title} : throughput per implementation")
     plt.legend((legend_[0], legend_[1], legend_[2], legend_[3], legend_[4], legend_[5]), ("serial","Coarse-grain locking","Fine-grain locking","Optimistic synchronization","Lazy synchronization","Non-blocking synchronization"))
     plt.savefig(f"plot_throughput{name}", bbox_inches="tight")
 
 for size_ in list_size:
             for wl in workload:
                     input_ = throughputF[size_][wl]
-
-                    plot_one(input_, f"_{size_}_{wl}")
+                    plot_one(input_, f"_{size_}_{wl}", f"size: {size_}, workload:{wl}")
 # def plot_time_speedup():
 #     throughputF = {}
 #     for lock in implementation:
