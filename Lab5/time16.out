@@ -1,0 +1,2291 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 33554432    numCoords = 2    numClusters = 16
+
+
+|-------------Sequential Kmeans-------------|
+
+t_alloc: 43.407917 ms
+
+delta is 0.500000 - delta is 0.164757 - delta is 0.079560 - delta is 0.057736 - delta is 0.045600 - delta is 0.037125 - delta is 0.030387 - delta is 0.025688 - delta is 0.022821 - delta is 0.020870 - nloops = 10  : total = 17594.146013 ms
+        -> t_loop_avg = 1759.414601 ms
+        -> t_loop_min = 1751.581907 ms
+        -> t_loop_max = 1787.614107 ms
+
+|-------------------------------------------|
+
+Final cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 33554432    numCoords = 2    numClusters = 16    block_size = 32
+
+|-------------Sequential Kmeans-------------|
+
+t_alloc: 43.719053 ms
+
+delta is 0.500000 - delta is 0.164757 - delta is 0.079560 - delta is 0.057736 - delta is 0.045600 - delta is 0.037125 - delta is 0.030387 - delta is 0.025688 - delta is 0.022821 - delta is 0.020870 - nloops = 10  : total = 17653.759003 ms
+        -> t_loop_avg = 1765.375900 ms
+        -> t_loop_min = 1758.066893 ms
+        -> t_loop_max = 1795.031071 ms
+
+|-------------------------------------------|
+
+
+|-------------Naive GPU Kmeans--------------|
+
+t_alloc: 7.509947 ms
+
+t_alloc_gpu: 2589.686155 ms
+
+t_get_gpu: 127.421141 ms
+
+Launching find_nearest_cluster Kernel with grid_size = 1048576, block_size = 32, shared_mem = 0 KB
+Kernels complete for itter 0, updating data in CPU
+delta is 0.500000 - Launching find_nearest_cluster Kernel with grid_size = 1048576, block_size = 32, shared_mem = 0 KB
+Kernels complete for itter 1, updating data in CPU
+delta is 0.164757 - Launching find_nearest_cluster Kernel with grid_size = 1048576, block_size = 32, shared_mem = 0 KB
+Kernels complete for itter 2, updating data in CPU
+delta is 0.079560 - Launching find_nearest_cluster Kernel with grid_size = 1048576, block_size = 32, shared_mem = 0 KB
+Kernels complete for itter 3, updating data in CPU
+delta is 0.057736 - Launching find_nearest_cluster Kernel with grid_size = 1048576, block_size = 32, shared_mem = 0 KB
+Kernels complete for itter 4, updating data in CPU
+delta is 0.045599 - Launching find_nearest_cluster Kernel with grid_size = 1048576, block_size = 32, shared_mem = 0 KB
+Kernels complete for itter 5, updating data in CPU
+delta is 0.037125 - Launching find_nearest_cluster Kernel with grid_size = 1048576, block_size = 32, shared_mem = 0 KB
+Kernels complete for itter 6, updating data in CPU
+delta is 0.030387 - Launching find_nearest_cluster Kernel with grid_size = 1048576, block_size = 32, shared_mem = 0 KB
+Kernels complete for itter 7, updating data in CPU
+delta is 0.025688 - Launching find_nearest_cluster Kernel with grid_size = 1048576, block_size = 32, shared_mem = 0 KB
+Kernels complete for itter 8, updating data in CPU
+delta is 0.022821 - Launching find_nearest_cluster Kernel with grid_size = 1048576, block_size = 32, shared_mem = 0 KB
+Kernels complete for itter 9, updating data in CPU
+delta is 0.020870 - nloops = 10  : total = 2082.570076 ms
+        -> t_loop_avg = 208.257008 ms
+        -> t_loop_min = 199.724913 ms
+        -> t_loop_max = 280.216932 ms
+
+|-------------------------------------------|
+
+Final cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Final validation cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Performing validation....PASSED!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 33554432    numCoords = 2    numClusters = 16    block_size = 64
+
+|-------------Sequential Kmeans-------------|
+
+t_alloc: 43.870926 ms
+
+delta is 0.500000 - delta is 0.164757 - delta is 0.079560 - delta is 0.057736 - delta is 0.045600 - delta is 0.037125 - delta is 0.030387 - delta is 0.025688 - delta is 0.022821 - delta is 0.020870 - nloops = 10  : total = 17646.318913 ms
+        -> t_loop_avg = 1764.631891 ms
+        -> t_loop_min = 1754.565001 ms
+        -> t_loop_max = 1798.737049 ms
+
+|-------------------------------------------|
+
+
+|-------------Naive GPU Kmeans--------------|
+
+t_alloc: 7.558107 ms
+
+t_alloc_gpu: 2365.364075 ms
+
+t_get_gpu: 127.442837 ms
+
+Launching find_nearest_cluster Kernel with grid_size = 524288, block_size = 64, shared_mem = 0 KB
+Kernels complete for itter 0, updating data in CPU
+delta is 0.500000 - Launching find_nearest_cluster Kernel with grid_size = 524288, block_size = 64, shared_mem = 0 KB
+Kernels complete for itter 1, updating data in CPU
+delta is 0.164757 - Launching find_nearest_cluster Kernel with grid_size = 524288, block_size = 64, shared_mem = 0 KB
+Kernels complete for itter 2, updating data in CPU
+delta is 0.079560 - Launching find_nearest_cluster Kernel with grid_size = 524288, block_size = 64, shared_mem = 0 KB
+Kernels complete for itter 3, updating data in CPU
+delta is 0.057736 - Launching find_nearest_cluster Kernel with grid_size = 524288, block_size = 64, shared_mem = 0 KB
+Kernels complete for itter 4, updating data in CPU
+delta is 0.045599 - Launching find_nearest_cluster Kernel with grid_size = 524288, block_size = 64, shared_mem = 0 KB
+Kernels complete for itter 5, updating data in CPU
+delta is 0.037125 - Launching find_nearest_cluster Kernel with grid_size = 524288, block_size = 64, shared_mem = 0 KB
+Kernels complete for itter 6, updating data in CPU
+delta is 0.030387 - Launching find_nearest_cluster Kernel with grid_size = 524288, block_size = 64, shared_mem = 0 KB
+Kernels complete for itter 7, updating data in CPU
+delta is 0.025688 - Launching find_nearest_cluster Kernel with grid_size = 524288, block_size = 64, shared_mem = 0 KB
+Kernels complete for itter 8, updating data in CPU
+delta is 0.022821 - Launching find_nearest_cluster Kernel with grid_size = 524288, block_size = 64, shared_mem = 0 KB
+Kernels complete for itter 9, updating data in CPU
+delta is 0.020870 - nloops = 10  : total = 2050.704956 ms
+        -> t_loop_avg = 205.070496 ms
+        -> t_loop_min = 196.235895 ms
+        -> t_loop_max = 280.167103 ms
+
+|-------------------------------------------|
+
+Final cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Final validation cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Performing validation....PASSED!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 33554432    numCoords = 2    numClusters = 16    block_size = 128
+
+|-------------Sequential Kmeans-------------|
+
+t_alloc: 43.661118 ms
+
+delta is 0.500000 - delta is 0.164757 - delta is 0.079560 - delta is 0.057736 - delta is 0.045600 - delta is 0.037125 - delta is 0.030387 - delta is 0.025688 - delta is 0.022821 - delta is 0.020870 - nloops = 10  : total = 17625.061989 ms
+        -> t_loop_avg = 1762.506199 ms
+        -> t_loop_min = 1754.317999 ms
+        -> t_loop_max = 1794.234037 ms
+
+|-------------------------------------------|
+
+
+|-------------Naive GPU Kmeans--------------|
+
+t_alloc: 7.315874 ms
+
+t_alloc_gpu: 2406.831980 ms
+
+t_get_gpu: 127.583027 ms
+
+Launching find_nearest_cluster Kernel with grid_size = 262144, block_size = 128, shared_mem = 0 KB
+Kernels complete for itter 0, updating data in CPU
+delta is 0.500000 - Launching find_nearest_cluster Kernel with grid_size = 262144, block_size = 128, shared_mem = 0 KB
+Kernels complete for itter 1, updating data in CPU
+delta is 0.164757 - Launching find_nearest_cluster Kernel with grid_size = 262144, block_size = 128, shared_mem = 0 KB
+Kernels complete for itter 2, updating data in CPU
+delta is 0.079560 - Launching find_nearest_cluster Kernel with grid_size = 262144, block_size = 128, shared_mem = 0 KB
+Kernels complete for itter 3, updating data in CPU
+delta is 0.057736 - Launching find_nearest_cluster Kernel with grid_size = 262144, block_size = 128, shared_mem = 0 KB
+Kernels complete for itter 4, updating data in CPU
+delta is 0.045599 - Launching find_nearest_cluster Kernel with grid_size = 262144, block_size = 128, shared_mem = 0 KB
+Kernels complete for itter 5, updating data in CPU
+delta is 0.037125 - Launching find_nearest_cluster Kernel with grid_size = 262144, block_size = 128, shared_mem = 0 KB
+Kernels complete for itter 6, updating data in CPU
+delta is 0.030387 - Launching find_nearest_cluster Kernel with grid_size = 262144, block_size = 128, shared_mem = 0 KB
+Kernels complete for itter 7, updating data in CPU
+delta is 0.025688 - Launching find_nearest_cluster Kernel with grid_size = 262144, block_size = 128, shared_mem = 0 KB
+Kernels complete for itter 8, updating data in CPU
+delta is 0.022821 - Launching find_nearest_cluster Kernel with grid_size = 262144, block_size = 128, shared_mem = 0 KB
+Kernels complete for itter 9, updating data in CPU
+delta is 0.020870 - nloops = 10  : total = 2049.870014 ms
+        -> t_loop_avg = 204.987001 ms
+        -> t_loop_min = 196.382999 ms
+        -> t_loop_max = 280.230999 ms
+
+|-------------------------------------------|
+
+Final cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Final validation cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Performing validation....PASSED!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 33554432    numCoords = 2    numClusters = 16    block_size = 256
+
+|-------------Sequential Kmeans-------------|
+
+t_alloc: 43.580055 ms
+
+delta is 0.500000 - delta is 0.164757 - delta is 0.079560 - delta is 0.057736 - delta is 0.045600 - delta is 0.037125 - delta is 0.030387 - delta is 0.025688 - delta is 0.022821 - delta is 0.020870 - nloops = 10  : total = 17668.458939 ms
+        -> t_loop_avg = 1766.845894 ms
+        -> t_loop_min = 1756.795168 ms
+        -> t_loop_max = 1797.076941 ms
+
+|-------------------------------------------|
+
+
+|-------------Naive GPU Kmeans--------------|
+
+t_alloc: 7.529974 ms
+
+t_alloc_gpu: 2393.344879 ms
+
+t_get_gpu: 127.523899 ms
+
+Launching find_nearest_cluster Kernel with grid_size = 131072, block_size = 256, shared_mem = 0 KB
+Kernels complete for itter 0, updating data in CPU
+delta is 0.500000 - Launching find_nearest_cluster Kernel with grid_size = 131072, block_size = 256, shared_mem = 0 KB
+Kernels complete for itter 1, updating data in CPU
+delta is 0.164757 - Launching find_nearest_cluster Kernel with grid_size = 131072, block_size = 256, shared_mem = 0 KB
+Kernels complete for itter 2, updating data in CPU
+delta is 0.079560 - Launching find_nearest_cluster Kernel with grid_size = 131072, block_size = 256, shared_mem = 0 KB
+Kernels complete for itter 3, updating data in CPU
+delta is 0.057736 - Launching find_nearest_cluster Kernel with grid_size = 131072, block_size = 256, shared_mem = 0 KB
+Kernels complete for itter 4, updating data in CPU
+delta is 0.045599 - Launching find_nearest_cluster Kernel with grid_size = 131072, block_size = 256, shared_mem = 0 KB
+Kernels complete for itter 5, updating data in CPU
+delta is 0.037125 - Launching find_nearest_cluster Kernel with grid_size = 131072, block_size = 256, shared_mem = 0 KB
+Kernels complete for itter 6, updating data in CPU
+delta is 0.030387 - Launching find_nearest_cluster Kernel with grid_size = 131072, block_size = 256, shared_mem = 0 KB
+Kernels complete for itter 7, updating data in CPU
+delta is 0.025688 - Launching find_nearest_cluster Kernel with grid_size = 131072, block_size = 256, shared_mem = 0 KB
+Kernels complete for itter 8, updating data in CPU
+delta is 0.022821 - Launching find_nearest_cluster Kernel with grid_size = 131072, block_size = 256, shared_mem = 0 KB
+Kernels complete for itter 9, updating data in CPU
+delta is 0.020870 - nloops = 10  : total = 2050.504208 ms
+        -> t_loop_avg = 205.050421 ms
+        -> t_loop_min = 196.254015 ms
+        -> t_loop_max = 280.253172 ms
+
+|-------------------------------------------|
+
+Final cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Final validation cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Performing validation....PASSED!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 33554432    numCoords = 2    numClusters = 16    block_size = 512
+
+|-------------Sequential Kmeans-------------|
+
+t_alloc: 43.795109 ms
+
+delta is 0.500000 - delta is 0.164757 - delta is 0.079560 - delta is 0.057736 - delta is 0.045600 - delta is 0.037125 - delta is 0.030387 - delta is 0.025688 - delta is 0.022821 - delta is 0.020870 - nloops = 10  : total = 17649.815083 ms
+        -> t_loop_avg = 1764.981508 ms
+        -> t_loop_min = 1757.988930 ms
+        -> t_loop_max = 1796.279907 ms
+
+|-------------------------------------------|
+
+
+|-------------Naive GPU Kmeans--------------|
+
+t_alloc: 7.364035 ms
+
+t_alloc_gpu: 2395.672083 ms
+
+t_get_gpu: 127.629042 ms
+
+Launching find_nearest_cluster Kernel with grid_size = 65536, block_size = 512, shared_mem = 0 KB
+Kernels complete for itter 0, updating data in CPU
+delta is 0.500000 - Launching find_nearest_cluster Kernel with grid_size = 65536, block_size = 512, shared_mem = 0 KB
+Kernels complete for itter 1, updating data in CPU
+delta is 0.164757 - Launching find_nearest_cluster Kernel with grid_size = 65536, block_size = 512, shared_mem = 0 KB
+Kernels complete for itter 2, updating data in CPU
+delta is 0.079560 - Launching find_nearest_cluster Kernel with grid_size = 65536, block_size = 512, shared_mem = 0 KB
+Kernels complete for itter 3, updating data in CPU
+delta is 0.057736 - Launching find_nearest_cluster Kernel with grid_size = 65536, block_size = 512, shared_mem = 0 KB
+Kernels complete for itter 4, updating data in CPU
+delta is 0.045599 - Launching find_nearest_cluster Kernel with grid_size = 65536, block_size = 512, shared_mem = 0 KB
+Kernels complete for itter 5, updating data in CPU
+delta is 0.037125 - Launching find_nearest_cluster Kernel with grid_size = 65536, block_size = 512, shared_mem = 0 KB
+Kernels complete for itter 6, updating data in CPU
+delta is 0.030387 - Launching find_nearest_cluster Kernel with grid_size = 65536, block_size = 512, shared_mem = 0 KB
+Kernels complete for itter 7, updating data in CPU
+delta is 0.025688 - Launching find_nearest_cluster Kernel with grid_size = 65536, block_size = 512, shared_mem = 0 KB
+Kernels complete for itter 8, updating data in CPU
+delta is 0.022821 - Launching find_nearest_cluster Kernel with grid_size = 65536, block_size = 512, shared_mem = 0 KB
+Kernels complete for itter 9, updating data in CPU
+delta is 0.020870 - nloops = 10  : total = 2050.307035 ms
+        -> t_loop_avg = 205.030704 ms
+        -> t_loop_min = 196.529865 ms
+        -> t_loop_max = 280.156136 ms
+
+|-------------------------------------------|
+
+Final cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Final validation cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Performing validation....PASSED!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 33554432    numCoords = 2    numClusters = 16    block_size = 1024
+
+|-------------Sequential Kmeans-------------|
+
+t_alloc: 43.862104 ms
+
+delta is 0.500000 - delta is 0.164757 - delta is 0.079560 - delta is 0.057736 - delta is 0.045600 - delta is 0.037125 - delta is 0.030387 - delta is 0.025688 - delta is 0.022821 - delta is 0.020870 - nloops = 10  : total = 17656.361103 ms
+        -> t_loop_avg = 1765.636110 ms
+        -> t_loop_min = 1757.818937 ms
+        -> t_loop_max = 1797.348976 ms
+
+|-------------------------------------------|
+
+
+|-------------Naive GPU Kmeans--------------|
+
+t_alloc: 7.298231 ms
+
+t_alloc_gpu: 2373.512030 ms
+
+t_get_gpu: 127.666950 ms
+
+Launching find_nearest_cluster Kernel with grid_size = 32768, block_size = 1024, shared_mem = 0 KB
+Kernels complete for itter 0, updating data in CPU
+delta is 0.500000 - Launching find_nearest_cluster Kernel with grid_size = 32768, block_size = 1024, shared_mem = 0 KB
+Kernels complete for itter 1, updating data in CPU
+delta is 0.164757 - Launching find_nearest_cluster Kernel with grid_size = 32768, block_size = 1024, shared_mem = 0 KB
+Kernels complete for itter 2, updating data in CPU
+delta is 0.079560 - Launching find_nearest_cluster Kernel with grid_size = 32768, block_size = 1024, shared_mem = 0 KB
+Kernels complete for itter 3, updating data in CPU
+delta is 0.057736 - Launching find_nearest_cluster Kernel with grid_size = 32768, block_size = 1024, shared_mem = 0 KB
+Kernels complete for itter 4, updating data in CPU
+delta is 0.045599 - Launching find_nearest_cluster Kernel with grid_size = 32768, block_size = 1024, shared_mem = 0 KB
+Kernels complete for itter 5, updating data in CPU
+delta is 0.037125 - Launching find_nearest_cluster Kernel with grid_size = 32768, block_size = 1024, shared_mem = 0 KB
+Kernels complete for itter 6, updating data in CPU
+delta is 0.030387 - Launching find_nearest_cluster Kernel with grid_size = 32768, block_size = 1024, shared_mem = 0 KB
+Kernels complete for itter 7, updating data in CPU
+delta is 0.025688 - Launching find_nearest_cluster Kernel with grid_size = 32768, block_size = 1024, shared_mem = 0 KB
+Kernels complete for itter 8, updating data in CPU
+delta is 0.022821 - Launching find_nearest_cluster Kernel with grid_size = 32768, block_size = 1024, shared_mem = 0 KB
+Kernels complete for itter 9, updating data in CPU
+delta is 0.020870 - nloops = 10  : total = 2052.410841 ms
+        -> t_loop_avg = 205.241084 ms
+        -> t_loop_min = 196.400881 ms
+        -> t_loop_max = 280.488014 ms
+
+|-------------------------------------------|
+
+Final cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Final validation cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Performing validation....PASSED!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 33554432    numCoords = 2    numClusters = 16    block_size = 32
+
+|-------------Sequential Kmeans-------------|
+
+t_alloc: 43.884039 ms
+
+delta is 0.500000 - delta is 0.164757 - delta is 0.079560 - delta is 0.057736 - delta is 0.045600 - delta is 0.037125 - delta is 0.030387 - delta is 0.025688 - delta is 0.022821 - delta is 0.020870 - nloops = 10  : total = 18568.942070 ms
+        -> t_loop_avg = 1856.894207 ms
+        -> t_loop_min = 1829.055071 ms
+        -> t_loop_max = 1882.404089 ms
+
+|-------------------------------------------|
+
+
+|-----------Transpose GPU Kmeans------------|
+
+t_alloc: 130.226135 ms
+
+t_alloc_gpu: 2363.803148 ms
+
+t_get_gpu: 127.429962 ms
+
+nloops = 10  : total = 2005.156994 ms
+        -> t_loop_avg = 200.515699 ms
+        -> t_loop_min = 192.111015 ms
+        -> t_loop_max = 270.735979 ms
+
+|-------------------------------------------|
+
+Final cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Final validation cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Performing validation....PASSED!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 33554432    numCoords = 2    numClusters = 16    block_size = 64
+
+|-------------Sequential Kmeans-------------|
+
+t_alloc: 43.531179 ms
+
+delta is 0.500000 - delta is 0.164757 - delta is 0.079560 - delta is 0.057736 - delta is 0.045600 - delta is 0.037125 - delta is 0.030387 - delta is 0.025688 - delta is 0.022821 - delta is 0.020870 - nloops = 10  : total = 18550.892115 ms
+        -> t_loop_avg = 1855.089211 ms
+        -> t_loop_min = 1825.427055 ms
+        -> t_loop_max = 1882.733107 ms
+
+|-------------------------------------------|
+
+
+|-----------Transpose GPU Kmeans------------|
+
+t_alloc: 129.520178 ms
+
+t_alloc_gpu: 2423.664093 ms
+
+t_get_gpu: 127.589941 ms
+
+nloops = 10  : total = 1885.025024 ms
+        -> t_loop_avg = 188.502502 ms
+        -> t_loop_min = 178.913116 ms
+        -> t_loop_max = 271.298170 ms
+
+|-------------------------------------------|
+
+Final cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Final validation cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Performing validation....PASSED!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 33554432    numCoords = 2    numClusters = 16    block_size = 128
+
+|-------------Sequential Kmeans-------------|
+
+t_alloc: 43.525934 ms
+
+delta is 0.500000 - delta is 0.164757 - delta is 0.079560 - delta is 0.057736 - delta is 0.045600 - delta is 0.037125 - delta is 0.030387 - delta is 0.025688 - delta is 0.022821 - delta is 0.020870 - nloops = 10  : total = 18566.976070 ms
+        -> t_loop_avg = 1856.697607 ms
+        -> t_loop_min = 1827.687025 ms
+        -> t_loop_max = 1887.142181 ms
+
+|-------------------------------------------|
+
+
+|-----------Transpose GPU Kmeans------------|
+
+t_alloc: 129.137993 ms
+
+t_alloc_gpu: 2397.912025 ms
+
+t_get_gpu: 127.475977 ms
+
+nloops = 10  : total = 1885.943890 ms
+        -> t_loop_avg = 188.594389 ms
+        -> t_loop_min = 179.277897 ms
+        -> t_loop_max = 271.044016 ms
+
+|-------------------------------------------|
+
+Final cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Final validation cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Performing validation....PASSED!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 33554432    numCoords = 2    numClusters = 16    block_size = 256
+
+|-------------Sequential Kmeans-------------|
+
+t_alloc: 43.651104 ms
+
+delta is 0.500000 - delta is 0.164757 - delta is 0.079560 - delta is 0.057736 - delta is 0.045600 - delta is 0.037125 - delta is 0.030387 - delta is 0.025688 - delta is 0.022821 - delta is 0.020870 - nloops = 10  : total = 18547.736168 ms
+        -> t_loop_avg = 1854.773617 ms
+        -> t_loop_min = 1828.773975 ms
+        -> t_loop_max = 1881.537199 ms
+
+|-------------------------------------------|
+
+
+|-----------Transpose GPU Kmeans------------|
+
+t_alloc: 129.861116 ms
+
+t_alloc_gpu: 2414.829969 ms
+
+t_get_gpu: 127.548933 ms
+
+nloops = 10  : total = 1883.848906 ms
+        -> t_loop_avg = 188.384891 ms
+        -> t_loop_min = 178.784132 ms
+        -> t_loop_max = 271.132946 ms
+
+|-------------------------------------------|
+
+Final cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Final validation cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Performing validation....PASSED!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 33554432    numCoords = 2    numClusters = 16    block_size = 512
+
+|-------------Sequential Kmeans-------------|
+
+t_alloc: 43.909073 ms
+
+delta is 0.500000 - delta is 0.164757 - delta is 0.079560 - delta is 0.057736 - delta is 0.045600 - delta is 0.037125 - delta is 0.030387 - delta is 0.025688 - delta is 0.022821 - delta is 0.020870 - nloops = 10  : total = 18542.706013 ms
+        -> t_loop_avg = 1854.270601 ms
+        -> t_loop_min = 1826.921940 ms
+        -> t_loop_max = 1883.882999 ms
+
+|-------------------------------------------|
+
+
+|-----------Transpose GPU Kmeans------------|
+
+t_alloc: 130.094051 ms
+
+t_alloc_gpu: 2406.069040 ms
+
+t_get_gpu: 127.482891 ms
+
+nloops = 10  : total = 1883.422852 ms
+        -> t_loop_avg = 188.342285 ms
+        -> t_loop_min = 178.793907 ms
+        -> t_loop_max = 270.683050 ms
+
+|-------------------------------------------|
+
+Final cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Final validation cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Performing validation....PASSED!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 33554432    numCoords = 2    numClusters = 16    block_size = 1024
+
+|-------------Sequential Kmeans-------------|
+
+t_alloc: 44.057846 ms
+
+delta is 0.500000 - delta is 0.164757 - delta is 0.079560 - delta is 0.057736 - delta is 0.045600 - delta is 0.037125 - delta is 0.030387 - delta is 0.025688 - delta is 0.022821 - delta is 0.020870 - nloops = 10  : total = 18555.446863 ms
+        -> t_loop_avg = 1855.544686 ms
+        -> t_loop_min = 1827.617884 ms
+        -> t_loop_max = 1885.052919 ms
+
+|-------------------------------------------|
+
+
+|-----------Transpose GPU Kmeans------------|
+
+t_alloc: 129.333019 ms
+
+t_alloc_gpu: 2436.652184 ms
+
+t_get_gpu: 127.541065 ms
+
+nloops = 10  : total = 1885.585070 ms
+        -> t_loop_avg = 188.558507 ms
+        -> t_loop_min = 178.941011 ms
+        -> t_loop_max = 270.813942 ms
+
+|-------------------------------------------|
+
+Final cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Final validation cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Performing validation....PASSED!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 33554432    numCoords = 2    numClusters = 16    block_size = 32
+
+|-------------Sequential Kmeans-------------|
+
+t_alloc: 43.573856 ms
+
+delta is 0.500000 - delta is 0.164757 - delta is 0.079560 - delta is 0.057736 - delta is 0.045600 - delta is 0.037125 - delta is 0.030387 - delta is 0.025688 - delta is 0.022821 - delta is 0.020870 - nloops = 10  : total = 18545.630217 ms
+        -> t_loop_avg = 1854.563022 ms
+        -> t_loop_min = 1824.131966 ms
+        -> t_loop_max = 1881.742954 ms
+
+|-------------------------------------------|
+
+
+|-----------Shared GPU Kmeans------------|
+
+t_alloc: 129.235983 ms
+
+t_alloc_gpu: 2437.193155 ms
+
+t_get_gpu: 127.421856 ms
+
+nloops = 10  : total = 1987.715006 ms
+        -> t_loop_avg = 198.771501 ms
+        -> t_loop_min = 190.377951 ms
+        -> t_loop_max = 271.213055 ms
+
+|-------------------------------------------|
+
+Final cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Final validation cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Performing validation....PASSED!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 33554432    numCoords = 2    numClusters = 16    block_size = 64
+
+|-------------Sequential Kmeans-------------|
+
+t_alloc: 44.041157 ms
+
+delta is 0.500000 - delta is 0.164757 - delta is 0.079560 - delta is 0.057736 - delta is 0.045600 - delta is 0.037125 - delta is 0.030387 - delta is 0.025688 - delta is 0.022821 - delta is 0.020870 - nloops = 10  : total = 18539.119005 ms
+        -> t_loop_avg = 1853.911901 ms
+        -> t_loop_min = 1827.220917 ms
+        -> t_loop_max = 1880.445004 ms
+
+|-------------------------------------------|
+
+
+|-----------Shared GPU Kmeans------------|
+
+t_alloc: 129.902840 ms
+
+t_alloc_gpu: 2356.621027 ms
+
+t_get_gpu: 127.360106 ms
+
+nloops = 10  : total = 1685.706139 ms
+        -> t_loop_avg = 168.570614 ms
+        -> t_loop_min = 156.690121 ms
+        -> t_loop_max = 271.316051 ms
+
+|-------------------------------------------|
+
+Final cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Final validation cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Performing validation....PASSED!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 33554432    numCoords = 2    numClusters = 16    block_size = 128
+
+|-------------Sequential Kmeans-------------|
+
+t_alloc: 44.360876 ms
+
+delta is 0.500000 - delta is 0.164757 - delta is 0.079560 - delta is 0.057736 - delta is 0.045600 - delta is 0.037125 - delta is 0.030387 - delta is 0.025688 - delta is 0.022821 - delta is 0.020870 - nloops = 10  : total = 18537.874937 ms
+        -> t_loop_avg = 1853.787494 ms
+        -> t_loop_min = 1825.405121 ms
+        -> t_loop_max = 1879.698992 ms
+
+|-------------------------------------------|
+
+
+|-----------Shared GPU Kmeans------------|
+
+t_alloc: 130.774975 ms
+
+t_alloc_gpu: 2378.077030 ms
+
+t_get_gpu: 127.306938 ms
+
+nloops = 10  : total = 1592.838049 ms
+        -> t_loop_avg = 159.283805 ms
+        -> t_loop_min = 146.646023 ms
+        -> t_loop_max = 270.581961 ms
+
+|-------------------------------------------|
+
+Final cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Final validation cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Performing validation....PASSED!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 33554432    numCoords = 2    numClusters = 16    block_size = 256
+
+|-------------Sequential Kmeans-------------|
+
+t_alloc: 44.193029 ms
+
+delta is 0.500000 - delta is 0.164757 - delta is 0.079560 - delta is 0.057736 - delta is 0.045600 - delta is 0.037125 - delta is 0.030387 - delta is 0.025688 - delta is 0.022821 - delta is 0.020870 - nloops = 10  : total = 18530.547142 ms
+        -> t_loop_avg = 1853.054714 ms
+        -> t_loop_min = 1823.616982 ms
+        -> t_loop_max = 1877.540112 ms
+
+|-------------------------------------------|
+
+
+|-----------Shared GPU Kmeans------------|
+
+t_alloc: 129.975080 ms
+
+t_alloc_gpu: 2385.736942 ms
+
+t_get_gpu: 127.621889 ms
+
+nloops = 10  : total = 1594.434023 ms
+        -> t_loop_avg = 159.443402 ms
+        -> t_loop_min = 146.691084 ms
+        -> t_loop_max = 270.864964 ms
+
+|-------------------------------------------|
+
+Final cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Final validation cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Performing validation....PASSED!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 33554432    numCoords = 2    numClusters = 16    block_size = 512
+
+|-------------Sequential Kmeans-------------|
+
+t_alloc: 44.056892 ms
+
+delta is 0.500000 - delta is 0.164757 - delta is 0.079560 - delta is 0.057736 - delta is 0.045600 - delta is 0.037125 - delta is 0.030387 - delta is 0.025688 - delta is 0.022821 - delta is 0.020870 - nloops = 10  : total = 18543.642998 ms
+        -> t_loop_avg = 1854.364300 ms
+        -> t_loop_min = 1821.527004 ms
+        -> t_loop_max = 1882.925034 ms
+
+|-------------------------------------------|
+
+
+|-----------Shared GPU Kmeans------------|
+
+t_alloc: 130.349874 ms
+
+t_alloc_gpu: 2363.909006 ms
+
+t_get_gpu: 127.439022 ms
+
+nloops = 10  : total = 1598.078012 ms
+        -> t_loop_avg = 159.807801 ms
+        -> t_loop_min = 147.203922 ms
+        -> t_loop_max = 270.663977 ms
+
+|-------------------------------------------|
+
+Final cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Final validation cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Performing validation....PASSED!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 33554432    numCoords = 2    numClusters = 16    block_size = 1024
+
+|-------------Sequential Kmeans-------------|
+
+t_alloc: 44.259071 ms
+
+delta is 0.500000 - delta is 0.164757 - delta is 0.079560 - delta is 0.057736 - delta is 0.045600 - delta is 0.037125 - delta is 0.030387 - delta is 0.025688 - delta is 0.022821 - delta is 0.020870 - nloops = 10  : total = 18518.810987 ms
+        -> t_loop_avg = 1851.881099 ms
+        -> t_loop_min = 1828.812122 ms
+        -> t_loop_max = 1887.276888 ms
+
+|-------------------------------------------|
+
+
+|-----------Shared GPU Kmeans------------|
+
+t_alloc: 129.276037 ms
+
+t_alloc_gpu: 2364.725113 ms
+
+t_get_gpu: 127.299070 ms
+
+nloops = 10  : total = 1705.775976 ms
+        -> t_loop_avg = 170.577598 ms
+        -> t_loop_min = 158.838034 ms
+        -> t_loop_max = 271.156073 ms
+
+|-------------------------------------------|
+
+Final cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Final validation cluster centers:
+clusters[0] =   1.53   8.77
+clusters[1] =   4.00   6.31
+clusters[2] =   6.33   4.02
+clusters[3] =   8.81   1.47
+clusters[4] =   9.11   8.16
+clusters[5] =   1.17   6.19
+clusters[6] =   4.20   3.59
+clusters[7] =   6.38   1.35
+clusters[8] =   6.95   8.89
+clusters[9] =   8.93   4.45
+clusters[10] =   2.28   4.03
+clusters[11] =   3.90   1.21
+clusters[12] =   4.43   8.76
+clusters[13] =   7.06   6.36
+clusters[14] =   0.78   3.14
+clusters[15] =   1.42   1.05
+Performing validation....PASSED!
+parlab14@orion:~/lab5$ cat run_kmeans_all_cuda_with_val.out
+run_kmeans_16_all_cuda.out        Sz-256_Coo-16_Cl-16.csv
+run_kmeans_all_cuda_with_val.out  Sz-256_Coo-2_Cl-16_with_val.csv
+parlab14@orion:~/lab5$ cat run_kmeans_16_all_cuda.out
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16
+
+
+|-------------Sequential Kmeans-------------|
+
+t_alloc: 5.476952 ms
+
+delta is 1.000000 - delta is 0.206364 - delta is 0.093726 - delta is 0.058352 - delta is 0.043357 - delta is 0.035537 - delta is 0.030530 - delta is 0.026545 - delta is 0.023217 - delta is 0.020498 - nloops = 10  : total = 5498.512030 ms
+        -> t_loop_avg = 549.851203 ms
+        -> t_loop_min = 545.931101 ms
+        -> t_loop_max = 557.548046 ms
+
+|-------------------------------------------|
+
+Final cluster centers:
+clusters[0] =   3.00   6.88   6.32   2.55   6.08   6.13   6.15   7.01   5.55   4.64   5.24   4.80   5.47   3.58   5.28   3.51
+clusters[1] =   3.10   6.29   3.00   7.09   6.00   4.53   3.21   4.48   5.13   5.06   7.21   6.40   5.39   3.63   5.75   4.29
+clusters[2] =   5.48   4.24   6.69   6.76   2.57   4.54   3.09   6.98   4.73   5.93   4.86   3.54   5.20   3.26   5.64   3.83
+clusters[3] =   6.13   3.87   3.32   5.18   6.08   3.79   7.26   3.53   3.81   5.54   3.61   4.23   5.36   3.35   6.47   3.02
+clusters[4] =   6.92   6.91   5.63   6.35   5.03   3.83   7.19   6.88   4.87   5.99   6.87   4.26   5.28   6.57   3.75   4.84
+clusters[5] =   2.89   5.42   6.51   4.35   3.19   3.37   5.47   3.38   2.38   5.90   4.29   6.16   5.08   6.39   4.40   5.27
+clusters[6] =   4.16   4.10   3.18   5.19   6.16   3.90   5.48   6.53   6.92   6.84   3.24   7.07   5.06   5.72   3.85   6.54
+clusters[7] =   5.35   3.22   5.68   2.99   5.39   4.39   4.26   3.18   6.42   6.85   7.41   3.33   5.11   4.50   4.55   6.29
+clusters[8] =   5.89   7.18   3.14   3.64   3.14   3.16   4.35   3.96   6.43   3.02   4.82   3.77   5.04   5.58   5.71   5.99
+clusters[9] =   6.85   4.38   6.33   3.52   6.35   3.38   3.17   6.63   3.96   3.54   4.01   6.88   4.80   4.48   6.06   6.27
+clusters[10] =   5.23   3.95   7.05   6.51   5.47   6.39   6.93   3.98   5.48   3.52   6.77   6.92   4.80   5.06   6.59   6.53
+clusters[11] =   3.70   3.46   3.00   5.08   3.35   6.82   6.30   6.73   4.14   4.16   4.71   3.26   4.69   5.17   5.65   7.11
+clusters[12] =   5.96   6.92   5.51   5.99   6.10   6.88   4.56   3.31   4.07   5.08   3.32   4.13   4.84   3.18   3.11   6.88
+clusters[13] =   6.55   4.41   3.10   3.86   5.28   6.97   3.71   5.30   2.75   4.66   6.33   5.89   4.56   6.63   3.96   3.18
+clusters[14] =   4.97   4.63   5.25   4.84   2.56   6.70   5.04   3.44   7.53   4.83   3.76   6.78   4.72   5.61   4.16   2.89
+clusters[15] =   4.02   4.01   6.36   6.16   7.32   5.19   3.73   4.73   6.00   4.33   3.47   2.74   4.59   7.31   5.13   3.65
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16    block_size = 32
+
+
+|-------------Naive GPU Kmeans--------------|
+
+t_alloc: 5.474091 ms
+
+t_alloc_gpu: 2404.848099 ms
+
+t_get_gpu: 90.372086 ms
+
+Launching find_nearest_cluster Kernel with grid_size = 131072, block_size = 32, shared_mem = 0 KB
+Kernels complete for itter 0, updating data in CPU
+delta is 1.000000 - Launching find_nearest_cluster Kernel with grid_size = 131072, block_size = 32, shared_mem = 0 KB
+Kernels complete for itter 1, updating data in CPU
+delta is 0.206364 - Launching find_nearest_cluster Kernel with grid_size = 131072, block_size = 32, shared_mem = 0 KB
+Kernels complete for itter 2, updating data in CPU
+delta is 0.093726 - Launching find_nearest_cluster Kernel with grid_size = 131072, block_size = 32, shared_mem = 0 KB
+Kernels complete for itter 3, updating data in CPU
+delta is 0.058352 - Launching find_nearest_cluster Kernel with grid_size = 131072, block_size = 32, shared_mem = 0 KB
+Kernels complete for itter 4, updating data in CPU
+delta is 0.043357 - Launching find_nearest_cluster Kernel with grid_size = 131072, block_size = 32, shared_mem = 0 KB
+Kernels complete for itter 5, updating data in CPU
+delta is 0.035536 - Launching find_nearest_cluster Kernel with grid_size = 131072, block_size = 32, shared_mem = 0 KB
+Kernels complete for itter 6, updating data in CPU
+delta is 0.030528 - Launching find_nearest_cluster Kernel with grid_size = 131072, block_size = 32, shared_mem = 0 KB
+Kernels complete for itter 7, updating data in CPU
+delta is 0.026543 - Launching find_nearest_cluster Kernel with grid_size = 131072, block_size = 32, shared_mem = 0 KB
+Kernels complete for itter 8, updating data in CPU
+delta is 0.023216 - Launching find_nearest_cluster Kernel with grid_size = 131072, block_size = 32, shared_mem = 0 KB
+Kernels complete for itter 9, updating data in CPU
+delta is 0.020502 - nloops = 10  : total = 1326.357126 ms
+        -> t_loop_avg = 132.635713 ms
+        -> t_loop_min = 132.448912 ms
+        -> t_loop_max = 133.455038 ms
+
+|-------------------------------------------|
+cudaMemcpy clusters (CPU-GPU): average_time = 0.081658 ms, min_time = 0.030994 ms, max_time = 0.506163 ms
+cudaMemset dev_delta_ptr and find_nearest_cluster (GPU): average_time = 106.048846 ms, min_time = 105.973959 ms, max_time = 106.471777 ms
+cudaMemcpy for membership and delta (CPU-GPU): average_time = 5.216455 ms, min_time = 5.189896 ms, max_time = 5.239964 ms
+rest of while (CPU): average_time = 21.287441 ms, min_time = 21.223068 ms, max_time = 21.422863 ms
+total CPU-GPU in while: average_time = 5.298114 ms, min_time = 5.220890 ms, max_time = 5.746126 ms
+
+Final cluster centers:
+clusters[0] =   3.00   6.88   6.32   2.55   6.08   6.13   6.15   7.01   5.55   4.64   5.24   4.80   5.47   3.58   5.28   3.51
+clusters[1] =   3.10   6.29   3.00   7.09   6.00   4.53   3.21   4.48   5.13   5.06   7.21   6.40   5.39   3.63   5.75   4.29
+clusters[2] =   5.48   4.24   6.69   6.76   2.57   4.54   3.09   6.98   4.73   5.93   4.86   3.54   5.20   3.26   5.64   3.83
+clusters[3] =   6.13   3.87   3.32   5.18   6.08   3.79   7.26   3.53   3.81   5.54   3.61   4.23   5.36   3.35   6.47   3.02
+clusters[4] =   6.92   6.91   5.63   6.35   5.03   3.83   7.19   6.88   4.87   5.99   6.87   4.26   5.28   6.57   3.75   4.84
+clusters[5] =   2.89   5.42   6.51   4.35   3.19   3.37   5.47   3.38   2.38   5.90   4.29   6.16   5.08   6.39   4.40   5.27
+clusters[6] =   4.16   4.10   3.18   5.19   6.16   3.90   5.48   6.53   6.92   6.84   3.24   7.07   5.06   5.72   3.85   6.54
+clusters[7] =   5.35   3.22   5.68   2.99   5.39   4.39   4.26   3.18   6.42   6.85   7.41   3.33   5.11   4.50   4.55   6.29
+clusters[8] =   5.89   7.18   3.14   3.64   3.14   3.16   4.35   3.96   6.43   3.02   4.82   3.77   5.04   5.58   5.71   5.99
+clusters[9] =   6.85   4.38   6.33   3.52   6.35   3.38   3.17   6.63   3.96   3.54   4.01   6.88   4.80   4.48   6.06   6.27
+clusters[10] =   5.23   3.95   7.05   6.51   5.47   6.39   6.93   3.98   5.48   3.52   6.77   6.92   4.80   5.06   6.59   6.53
+clusters[11] =   3.70   3.46   3.00   5.08   3.35   6.82   6.30   6.73   4.14   4.16   4.71   3.26   4.69   5.17   5.65   7.11
+clusters[12] =   5.96   6.92   5.51   5.99   6.10   6.88   4.56   3.31   4.07   5.08   3.32   4.13   4.84   3.18   3.11   6.88
+clusters[13] =   6.55   4.41   3.10   3.86   5.28   6.97   3.71   5.30   2.75   4.66   6.33   5.89   4.56   6.63   3.96   3.18
+clusters[14] =   4.97   4.63   5.25   4.84   2.56   6.70   5.04   3.44   7.53   4.83   3.76   6.78   4.72   5.61   4.16   2.89
+clusters[15] =   4.02   4.01   6.36   6.16   7.32   5.19   3.73   4.73   6.00   4.33   3.47   2.74   4.59   7.31   5.13   3.65
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16    block_size = 64
+
+
+|-------------Naive GPU Kmeans--------------|
+
+t_alloc: 5.483866 ms
+
+t_alloc_gpu: 2432.175875 ms
+
+t_get_gpu: 90.271950 ms
+
+Launching find_nearest_cluster Kernel with grid_size = 65536, block_size = 64, shared_mem = 0 KB
+Kernels complete for itter 0, updating data in CPU
+delta is 1.000000 - Launching find_nearest_cluster Kernel with grid_size = 65536, block_size = 64, shared_mem = 0 KB
+Kernels complete for itter 1, updating data in CPU
+delta is 0.206364 - Launching find_nearest_cluster Kernel with grid_size = 65536, block_size = 64, shared_mem = 0 KB
+Kernels complete for itter 2, updating data in CPU
+delta is 0.093726 - Launching find_nearest_cluster Kernel with grid_size = 65536, block_size = 64, shared_mem = 0 KB
+Kernels complete for itter 3, updating data in CPU
+delta is 0.058352 - Launching find_nearest_cluster Kernel with grid_size = 65536, block_size = 64, shared_mem = 0 KB
+Kernels complete for itter 4, updating data in CPU
+delta is 0.043357 - Launching find_nearest_cluster Kernel with grid_size = 65536, block_size = 64, shared_mem = 0 KB
+Kernels complete for itter 5, updating data in CPU
+delta is 0.035536 - Launching find_nearest_cluster Kernel with grid_size = 65536, block_size = 64, shared_mem = 0 KB
+Kernels complete for itter 6, updating data in CPU
+delta is 0.030528 - Launching find_nearest_cluster Kernel with grid_size = 65536, block_size = 64, shared_mem = 0 KB
+Kernels complete for itter 7, updating data in CPU
+delta is 0.026543 - Launching find_nearest_cluster Kernel with grid_size = 65536, block_size = 64, shared_mem = 0 KB
+Kernels complete for itter 8, updating data in CPU
+delta is 0.023216 - Launching find_nearest_cluster Kernel with grid_size = 65536, block_size = 64, shared_mem = 0 KB
+Kernels complete for itter 9, updating data in CPU
+delta is 0.020502 - nloops = 10  : total = 1327.799082 ms
+        -> t_loop_avg = 132.779908 ms
+        -> t_loop_min = 132.514954 ms
+        -> t_loop_max = 133.811951 ms
+
+|-------------------------------------------|
+cudaMemcpy clusters (CPU-GPU): average_time = 0.078297 ms, min_time = 0.025988 ms, max_time = 0.505924 ms
+cudaMemset dev_delta_ptr and find_nearest_cluster (GPU): average_time = 106.141996 ms, min_time = 106.053829 ms, max_time = 106.585979 ms
+cudaMemcpy for membership and delta (CPU-GPU): average_time = 5.213332 ms, min_time = 5.190134 ms, max_time = 5.259991 ms
+rest of while (CPU): average_time = 21.345282 ms, min_time = 21.183968 ms, max_time = 21.598816 ms
+total CPU-GPU in while: average_time = 5.291629 ms, min_time = 5.216122 ms, max_time = 5.765915 ms
+
+Final cluster centers:
+clusters[0] =   3.00   6.88   6.32   2.55   6.08   6.13   6.15   7.01   5.55   4.64   5.24   4.80   5.47   3.58   5.28   3.51
+clusters[1] =   3.10   6.29   3.00   7.09   6.00   4.53   3.21   4.48   5.13   5.06   7.21   6.40   5.39   3.63   5.75   4.29
+clusters[2] =   5.48   4.24   6.69   6.76   2.57   4.54   3.09   6.98   4.73   5.93   4.86   3.54   5.20   3.26   5.64   3.83
+clusters[3] =   6.13   3.87   3.32   5.18   6.08   3.79   7.26   3.53   3.81   5.54   3.61   4.23   5.36   3.35   6.47   3.02
+clusters[4] =   6.92   6.91   5.63   6.35   5.03   3.83   7.19   6.88   4.87   5.99   6.87   4.26   5.28   6.57   3.75   4.84
+clusters[5] =   2.89   5.42   6.51   4.35   3.19   3.37   5.47   3.38   2.38   5.90   4.29   6.16   5.08   6.39   4.40   5.27
+clusters[6] =   4.16   4.10   3.18   5.19   6.16   3.90   5.48   6.53   6.92   6.84   3.24   7.07   5.06   5.72   3.85   6.54
+clusters[7] =   5.35   3.22   5.68   2.99   5.39   4.39   4.26   3.18   6.42   6.85   7.41   3.33   5.11   4.50   4.55   6.29
+clusters[8] =   5.89   7.18   3.14   3.64   3.14   3.16   4.35   3.96   6.43   3.02   4.82   3.77   5.04   5.58   5.71   5.99
+clusters[9] =   6.85   4.38   6.33   3.52   6.35   3.38   3.17   6.63   3.96   3.54   4.01   6.88   4.80   4.48   6.06   6.27
+clusters[10] =   5.23   3.95   7.05   6.51   5.47   6.39   6.93   3.98   5.48   3.52   6.77   6.92   4.80   5.06   6.59   6.53
+clusters[11] =   3.70   3.46   3.00   5.08   3.35   6.82   6.30   6.73   4.14   4.16   4.71   3.26   4.69   5.17   5.65   7.11
+clusters[12] =   5.96   6.92   5.51   5.99   6.10   6.88   4.56   3.31   4.07   5.08   3.32   4.13   4.84   3.18   3.11   6.88
+clusters[13] =   6.55   4.41   3.10   3.86   5.28   6.97   3.71   5.30   2.75   4.66   6.33   5.89   4.56   6.63   3.96   3.18
+clusters[14] =   4.97   4.63   5.25   4.84   2.56   6.70   5.04   3.44   7.53   4.83   3.76   6.78   4.72   5.61   4.16   2.89
+clusters[15] =   4.02   4.01   6.36   6.16   7.32   5.19   3.73   4.73   6.00   4.33   3.47   2.74   4.59   7.31   5.13   3.65
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16    block_size = 128
+
+
+|-------------Naive GPU Kmeans--------------|
+
+t_alloc: 5.520105 ms
+
+t_alloc_gpu: 2369.884968 ms
+
+t_get_gpu: 90.352058 ms
+
+Launching find_nearest_cluster Kernel with grid_size = 32768, block_size = 128, shared_mem = 0 KB
+Kernels complete for itter 0, updating data in CPU
+delta is 1.000000 - Launching find_nearest_cluster Kernel with grid_size = 32768, block_size = 128, shared_mem = 0 KB
+Kernels complete for itter 1, updating data in CPU
+delta is 0.206364 - Launching find_nearest_cluster Kernel with grid_size = 32768, block_size = 128, shared_mem = 0 KB
+Kernels complete for itter 2, updating data in CPU
+delta is 0.093726 - Launching find_nearest_cluster Kernel with grid_size = 32768, block_size = 128, shared_mem = 0 KB
+Kernels complete for itter 3, updating data in CPU
+delta is 0.058352 - Launching find_nearest_cluster Kernel with grid_size = 32768, block_size = 128, shared_mem = 0 KB
+Kernels complete for itter 4, updating data in CPU
+delta is 0.043357 - Launching find_nearest_cluster Kernel with grid_size = 32768, block_size = 128, shared_mem = 0 KB
+Kernels complete for itter 5, updating data in CPU
+delta is 0.035536 - Launching find_nearest_cluster Kernel with grid_size = 32768, block_size = 128, shared_mem = 0 KB
+Kernels complete for itter 6, updating data in CPU
+delta is 0.030528 - Launching find_nearest_cluster Kernel with grid_size = 32768, block_size = 128, shared_mem = 0 KB
+Kernels complete for itter 7, updating data in CPU
+delta is 0.026543 - Launching find_nearest_cluster Kernel with grid_size = 32768, block_size = 128, shared_mem = 0 KB
+Kernels complete for itter 8, updating data in CPU
+delta is 0.023216 - Launching find_nearest_cluster Kernel with grid_size = 32768, block_size = 128, shared_mem = 0 KB
+Kernels complete for itter 9, updating data in CPU
+delta is 0.020502 - nloops = 10  : total = 1316.268921 ms
+        -> t_loop_avg = 131.626892 ms
+        -> t_loop_min = 131.330013 ms
+        -> t_loop_max = 132.484913 ms
+
+|-------------------------------------------|
+cudaMemcpy clusters (CPU-GPU): average_time = 0.080299 ms, min_time = 0.030041 ms, max_time = 0.504971 ms
+cudaMemset dev_delta_ptr and find_nearest_cluster (GPU): average_time = 104.991603 ms, min_time = 104.894876 ms, max_time = 105.471849 ms
+cudaMemcpy for membership and delta (CPU-GPU): average_time = 5.213118 ms, min_time = 5.190849 ms, max_time = 5.228996 ms
+rest of while (CPU): average_time = 21.340322 ms, min_time = 21.182060 ms, max_time = 21.476030 ms
+total CPU-GPU in while: average_time = 5.293417 ms, min_time = 5.220890 ms, max_time = 5.733967 ms
+
+Final cluster centers:
+clusters[0] =   3.00   6.88   6.32   2.55   6.08   6.13   6.15   7.01   5.55   4.64   5.24   4.80   5.47   3.58   5.28   3.51
+clusters[1] =   3.10   6.29   3.00   7.09   6.00   4.53   3.21   4.48   5.13   5.06   7.21   6.40   5.39   3.63   5.75   4.29
+clusters[2] =   5.48   4.24   6.69   6.76   2.57   4.54   3.09   6.98   4.73   5.93   4.86   3.54   5.20   3.26   5.64   3.83
+clusters[3] =   6.13   3.87   3.32   5.18   6.08   3.79   7.26   3.53   3.81   5.54   3.61   4.23   5.36   3.35   6.47   3.02
+clusters[4] =   6.92   6.91   5.63   6.35   5.03   3.83   7.19   6.88   4.87   5.99   6.87   4.26   5.28   6.57   3.75   4.84
+clusters[5] =   2.89   5.42   6.51   4.35   3.19   3.37   5.47   3.38   2.38   5.90   4.29   6.16   5.08   6.39   4.40   5.27
+clusters[6] =   4.16   4.10   3.18   5.19   6.16   3.90   5.48   6.53   6.92   6.84   3.24   7.07   5.06   5.72   3.85   6.54
+clusters[7] =   5.35   3.22   5.68   2.99   5.39   4.39   4.26   3.18   6.42   6.85   7.41   3.33   5.11   4.50   4.55   6.29
+clusters[8] =   5.89   7.18   3.14   3.64   3.14   3.16   4.35   3.96   6.43   3.02   4.82   3.77   5.04   5.58   5.71   5.99
+clusters[9] =   6.85   4.38   6.33   3.52   6.35   3.38   3.17   6.63   3.96   3.54   4.01   6.88   4.80   4.48   6.06   6.27
+clusters[10] =   5.23   3.95   7.05   6.51   5.47   6.39   6.93   3.98   5.48   3.52   6.77   6.92   4.80   5.06   6.59   6.53
+clusters[11] =   3.70   3.46   3.00   5.08   3.35   6.82   6.30   6.73   4.14   4.16   4.71   3.26   4.69   5.17   5.65   7.11
+clusters[12] =   5.96   6.92   5.51   5.99   6.10   6.88   4.56   3.31   4.07   5.08   3.32   4.13   4.84   3.18   3.11   6.88
+clusters[13] =   6.55   4.41   3.10   3.86   5.28   6.97   3.71   5.30   2.75   4.66   6.33   5.89   4.56   6.63   3.96   3.18
+clusters[14] =   4.97   4.63   5.25   4.84   2.56   6.70   5.04   3.44   7.53   4.83   3.76   6.78   4.72   5.61   4.16   2.89
+clusters[15] =   4.02   4.01   6.36   6.16   7.32   5.19   3.73   4.73   6.00   4.33   3.47   2.74   4.59   7.31   5.13   3.65
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16    block_size = 256
+
+
+|-------------Naive GPU Kmeans--------------|
+
+t_alloc: 5.460978 ms
+
+t_alloc_gpu: 2408.969879 ms
+
+t_get_gpu: 90.473175 ms
+
+Launching find_nearest_cluster Kernel with grid_size = 16384, block_size = 256, shared_mem = 0 KB
+Kernels complete for itter 0, updating data in CPU
+delta is 1.000000 - Launching find_nearest_cluster Kernel with grid_size = 16384, block_size = 256, shared_mem = 0 KB
+Kernels complete for itter 1, updating data in CPU
+delta is 0.206364 - Launching find_nearest_cluster Kernel with grid_size = 16384, block_size = 256, shared_mem = 0 KB
+Kernels complete for itter 2, updating data in CPU
+delta is 0.093726 - Launching find_nearest_cluster Kernel with grid_size = 16384, block_size = 256, shared_mem = 0 KB
+Kernels complete for itter 3, updating data in CPU
+delta is 0.058352 - Launching find_nearest_cluster Kernel with grid_size = 16384, block_size = 256, shared_mem = 0 KB
+Kernels complete for itter 4, updating data in CPU
+delta is 0.043357 - Launching find_nearest_cluster Kernel with grid_size = 16384, block_size = 256, shared_mem = 0 KB
+Kernels complete for itter 5, updating data in CPU
+delta is 0.035536 - Launching find_nearest_cluster Kernel with grid_size = 16384, block_size = 256, shared_mem = 0 KB
+Kernels complete for itter 6, updating data in CPU
+delta is 0.030528 - Launching find_nearest_cluster Kernel with grid_size = 16384, block_size = 256, shared_mem = 0 KB
+Kernels complete for itter 7, updating data in CPU
+delta is 0.026543 - Launching find_nearest_cluster Kernel with grid_size = 16384, block_size = 256, shared_mem = 0 KB
+Kernels complete for itter 8, updating data in CPU
+delta is 0.023216 - Launching find_nearest_cluster Kernel with grid_size = 16384, block_size = 256, shared_mem = 0 KB
+Kernels complete for itter 9, updating data in CPU
+delta is 0.020502 - nloops = 10  : total = 1319.128990 ms
+        -> t_loop_avg = 131.912899 ms
+        -> t_loop_min = 131.728172 ms
+        -> t_loop_max = 132.740021 ms
+
+|-------------------------------------------|
+cudaMemcpy clusters (CPU-GPU): average_time = 0.079608 ms, min_time = 0.030994 ms, max_time = 0.509024 ms
+cudaMemset dev_delta_ptr and find_nearest_cluster (GPU): average_time = 105.223012 ms, min_time = 105.144024 ms, max_time = 105.659962 ms
+cudaMemcpy for membership and delta (CPU-GPU): average_time = 5.204797 ms, min_time = 5.187988 ms, max_time = 5.213022 ms
+rest of while (CPU): average_time = 21.404505 ms, min_time = 21.323919 ms, max_time = 21.529913 ms
+total CPU-GPU in while: average_time = 5.284405 ms, min_time = 5.218983 ms, max_time = 5.722046 ms
+
+Final cluster centers:
+clusters[0] =   3.00   6.88   6.32   2.55   6.08   6.13   6.15   7.01   5.55   4.64   5.24   4.80   5.47   3.58   5.28   3.51
+clusters[1] =   3.10   6.29   3.00   7.09   6.00   4.53   3.21   4.48   5.13   5.06   7.21   6.40   5.39   3.63   5.75   4.29
+clusters[2] =   5.48   4.24   6.69   6.76   2.57   4.54   3.09   6.98   4.73   5.93   4.86   3.54   5.20   3.26   5.64   3.83
+clusters[3] =   6.13   3.87   3.32   5.18   6.08   3.79   7.26   3.53   3.81   5.54   3.61   4.23   5.36   3.35   6.47   3.02
+clusters[4] =   6.92   6.91   5.63   6.35   5.03   3.83   7.19   6.88   4.87   5.99   6.87   4.26   5.28   6.57   3.75   4.84
+clusters[5] =   2.89   5.42   6.51   4.35   3.19   3.37   5.47   3.38   2.38   5.90   4.29   6.16   5.08   6.39   4.40   5.27
+clusters[6] =   4.16   4.10   3.18   5.19   6.16   3.90   5.48   6.53   6.92   6.84   3.24   7.07   5.06   5.72   3.85   6.54
+clusters[7] =   5.35   3.22   5.68   2.99   5.39   4.39   4.26   3.18   6.42   6.85   7.41   3.33   5.11   4.50   4.55   6.29
+clusters[8] =   5.89   7.18   3.14   3.64   3.14   3.16   4.35   3.96   6.43   3.02   4.82   3.77   5.04   5.58   5.71   5.99
+clusters[9] =   6.85   4.38   6.33   3.52   6.35   3.38   3.17   6.63   3.96   3.54   4.01   6.88   4.80   4.48   6.06   6.27
+clusters[10] =   5.23   3.95   7.05   6.51   5.47   6.39   6.93   3.98   5.48   3.52   6.77   6.92   4.80   5.06   6.59   6.53
+clusters[11] =   3.70   3.46   3.00   5.08   3.35   6.82   6.30   6.73   4.14   4.16   4.71   3.26   4.69   5.17   5.65   7.11
+clusters[12] =   5.96   6.92   5.51   5.99   6.10   6.88   4.56   3.31   4.07   5.08   3.32   4.13   4.84   3.18   3.11   6.88
+clusters[13] =   6.55   4.41   3.10   3.86   5.28   6.97   3.71   5.30   2.75   4.66   6.33   5.89   4.56   6.63   3.96   3.18
+clusters[14] =   4.97   4.63   5.25   4.84   2.56   6.70   5.04   3.44   7.53   4.83   3.76   6.78   4.72   5.61   4.16   2.89
+clusters[15] =   4.02   4.01   6.36   6.16   7.32   5.19   3.73   4.73   6.00   4.33   3.47   2.74   4.59   7.31   5.13   3.65
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16    block_size = 512
+
+
+|-------------Naive GPU Kmeans--------------|
+
+t_alloc: 5.510092 ms
+
+t_alloc_gpu: 2437.119007 ms
+
+t_get_gpu: 90.201139 ms
+
+Launching find_nearest_cluster Kernel with grid_size = 8192, block_size = 512, shared_mem = 0 KB
+Kernels complete for itter 0, updating data in CPU
+delta is 1.000000 - Launching find_nearest_cluster Kernel with grid_size = 8192, block_size = 512, shared_mem = 0 KB
+Kernels complete for itter 1, updating data in CPU
+delta is 0.206364 - Launching find_nearest_cluster Kernel with grid_size = 8192, block_size = 512, shared_mem = 0 KB
+Kernels complete for itter 2, updating data in CPU
+delta is 0.093726 - Launching find_nearest_cluster Kernel with grid_size = 8192, block_size = 512, shared_mem = 0 KB
+Kernels complete for itter 3, updating data in CPU
+delta is 0.058352 - Launching find_nearest_cluster Kernel with grid_size = 8192, block_size = 512, shared_mem = 0 KB
+Kernels complete for itter 4, updating data in CPU
+delta is 0.043357 - Launching find_nearest_cluster Kernel with grid_size = 8192, block_size = 512, shared_mem = 0 KB
+Kernels complete for itter 5, updating data in CPU
+delta is 0.035536 - Launching find_nearest_cluster Kernel with grid_size = 8192, block_size = 512, shared_mem = 0 KB
+Kernels complete for itter 6, updating data in CPU
+delta is 0.030528 - Launching find_nearest_cluster Kernel with grid_size = 8192, block_size = 512, shared_mem = 0 KB
+Kernels complete for itter 7, updating data in CPU
+delta is 0.026543 - Launching find_nearest_cluster Kernel with grid_size = 8192, block_size = 512, shared_mem = 0 KB
+Kernels complete for itter 8, updating data in CPU
+delta is 0.023216 - Launching find_nearest_cluster Kernel with grid_size = 8192, block_size = 512, shared_mem = 0 KB
+Kernels complete for itter 9, updating data in CPU
+delta is 0.020502 - nloops = 10  : total = 1323.079109 ms
+        -> t_loop_avg = 132.307911 ms
+        -> t_loop_min = 132.012844 ms
+        -> t_loop_max = 133.311033 ms
+
+|-------------------------------------------|
+cudaMemcpy clusters (CPU-GPU): average_time = 0.078440 ms, min_time = 0.030041 ms, max_time = 0.506163 ms
+cudaMemset dev_delta_ptr and find_nearest_cluster (GPU): average_time = 105.670166 ms, min_time = 105.562925 ms, max_time = 106.117964 ms
+cudaMemcpy for membership and delta (CPU-GPU): average_time = 5.210996 ms, min_time = 5.188942 ms, max_time = 5.266905 ms
+rest of while (CPU): average_time = 21.346998 ms, min_time = 21.199942 ms, max_time = 21.567106 ms
+total CPU-GPU in while: average_time = 5.289435 ms, min_time = 5.218983 ms, max_time = 5.773067 ms
+
+Final cluster centers:
+clusters[0] =   3.00   6.88   6.32   2.55   6.08   6.13   6.15   7.01   5.55   4.64   5.24   4.80   5.47   3.58   5.28   3.51
+clusters[1] =   3.10   6.29   3.00   7.09   6.00   4.53   3.21   4.48   5.13   5.06   7.21   6.40   5.39   3.63   5.75   4.29
+clusters[2] =   5.48   4.24   6.69   6.76   2.57   4.54   3.09   6.98   4.73   5.93   4.86   3.54   5.20   3.26   5.64   3.83
+clusters[3] =   6.13   3.87   3.32   5.18   6.08   3.79   7.26   3.53   3.81   5.54   3.61   4.23   5.36   3.35   6.47   3.02
+clusters[4] =   6.92   6.91   5.63   6.35   5.03   3.83   7.19   6.88   4.87   5.99   6.87   4.26   5.28   6.57   3.75   4.84
+clusters[5] =   2.89   5.42   6.51   4.35   3.19   3.37   5.47   3.38   2.38   5.90   4.29   6.16   5.08   6.39   4.40   5.27
+clusters[6] =   4.16   4.10   3.18   5.19   6.16   3.90   5.48   6.53   6.92   6.84   3.24   7.07   5.06   5.72   3.85   6.54
+clusters[7] =   5.35   3.22   5.68   2.99   5.39   4.39   4.26   3.18   6.42   6.85   7.41   3.33   5.11   4.50   4.55   6.29
+clusters[8] =   5.89   7.18   3.14   3.64   3.14   3.16   4.35   3.96   6.43   3.02   4.82   3.77   5.04   5.58   5.71   5.99
+clusters[9] =   6.85   4.38   6.33   3.52   6.35   3.38   3.17   6.63   3.96   3.54   4.01   6.88   4.80   4.48   6.06   6.27
+clusters[10] =   5.23   3.95   7.05   6.51   5.47   6.39   6.93   3.98   5.48   3.52   6.77   6.92   4.80   5.06   6.59   6.53
+clusters[11] =   3.70   3.46   3.00   5.08   3.35   6.82   6.30   6.73   4.14   4.16   4.71   3.26   4.69   5.17   5.65   7.11
+clusters[12] =   5.96   6.92   5.51   5.99   6.10   6.88   4.56   3.31   4.07   5.08   3.32   4.13   4.84   3.18   3.11   6.88
+clusters[13] =   6.55   4.41   3.10   3.86   5.28   6.97   3.71   5.30   2.75   4.66   6.33   5.89   4.56   6.63   3.96   3.18
+clusters[14] =   4.97   4.63   5.25   4.84   2.56   6.70   5.04   3.44   7.53   4.83   3.76   6.78   4.72   5.61   4.16   2.89
+clusters[15] =   4.02   4.01   6.36   6.16   7.32   5.19   3.73   4.73   6.00   4.33   3.47   2.74   4.59   7.31   5.13   3.65
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16    block_size = 1024
+
+
+|-------------Naive GPU Kmeans--------------|
+
+t_alloc: 5.491972 ms
+
+t_alloc_gpu: 2425.625086 ms
+
+t_get_gpu: 90.378046 ms
+
+Launching find_nearest_cluster Kernel with grid_size = 4096, block_size = 1024, shared_mem = 0 KB
+Kernels complete for itter 0, updating data in CPU
+delta is 1.000000 - Launching find_nearest_cluster Kernel with grid_size = 4096, block_size = 1024, shared_mem = 0 KB
+Kernels complete for itter 1, updating data in CPU
+delta is 0.206364 - Launching find_nearest_cluster Kernel with grid_size = 4096, block_size = 1024, shared_mem = 0 KB
+Kernels complete for itter 2, updating data in CPU
+delta is 0.093726 - Launching find_nearest_cluster Kernel with grid_size = 4096, block_size = 1024, shared_mem = 0 KB
+Kernels complete for itter 3, updating data in CPU
+delta is 0.058352 - Launching find_nearest_cluster Kernel with grid_size = 4096, block_size = 1024, shared_mem = 0 KB
+Kernels complete for itter 4, updating data in CPU
+delta is 0.043357 - Launching find_nearest_cluster Kernel with grid_size = 4096, block_size = 1024, shared_mem = 0 KB
+Kernels complete for itter 5, updating data in CPU
+delta is 0.035536 - Launching find_nearest_cluster Kernel with grid_size = 4096, block_size = 1024, shared_mem = 0 KB
+Kernels complete for itter 6, updating data in CPU
+delta is 0.030528 - Launching find_nearest_cluster Kernel with grid_size = 4096, block_size = 1024, shared_mem = 0 KB
+Kernels complete for itter 7, updating data in CPU
+delta is 0.026543 - Launching find_nearest_cluster Kernel with grid_size = 4096, block_size = 1024, shared_mem = 0 KB
+Kernels complete for itter 8, updating data in CPU
+delta is 0.023216 - Launching find_nearest_cluster Kernel with grid_size = 4096, block_size = 1024, shared_mem = 0 KB
+Kernels complete for itter 9, updating data in CPU
+delta is 0.020502 - nloops = 10  : total = 1345.580816 ms
+        -> t_loop_avg = 134.558082 ms
+        -> t_loop_min = 134.191036 ms
+        -> t_loop_max = 135.547876 ms
+
+|-------------------------------------------|
+cudaMemcpy clusters (CPU-GPU): average_time = 0.080681 ms, min_time = 0.030994 ms, max_time = 0.520945 ms
+cudaMemset dev_delta_ptr and find_nearest_cluster (GPU): average_time = 107.825494 ms, min_time = 107.656956 ms, max_time = 108.422995 ms
+cudaMemcpy for membership and delta (CPU-GPU): average_time = 5.223322 ms, min_time = 5.199194 ms, max_time = 5.266905 ms
+rest of while (CPU): average_time = 21.427441 ms, min_time = 21.229029 ms, max_time = 21.648884 ms
+total CPU-GPU in while: average_time = 5.304003 ms, min_time = 5.230188 ms, max_time = 5.787849 ms
+
+Final cluster centers:
+clusters[0] =   3.00   6.88   6.32   2.55   6.08   6.13   6.15   7.01   5.55   4.64   5.24   4.80   5.47   3.58   5.28   3.51
+clusters[1] =   3.10   6.29   3.00   7.09   6.00   4.53   3.21   4.48   5.13   5.06   7.21   6.40   5.39   3.63   5.75   4.29
+clusters[2] =   5.48   4.24   6.69   6.76   2.57   4.54   3.09   6.98   4.73   5.93   4.86   3.54   5.20   3.26   5.64   3.83
+clusters[3] =   6.13   3.87   3.32   5.18   6.08   3.79   7.26   3.53   3.81   5.54   3.61   4.23   5.36   3.35   6.47   3.02
+clusters[4] =   6.92   6.91   5.63   6.35   5.03   3.83   7.19   6.88   4.87   5.99   6.87   4.26   5.28   6.57   3.75   4.84
+clusters[5] =   2.89   5.42   6.51   4.35   3.19   3.37   5.47   3.38   2.38   5.90   4.29   6.16   5.08   6.39   4.40   5.27
+clusters[6] =   4.16   4.10   3.18   5.19   6.16   3.90   5.48   6.53   6.92   6.84   3.24   7.07   5.06   5.72   3.85   6.54
+clusters[7] =   5.35   3.22   5.68   2.99   5.39   4.39   4.26   3.18   6.42   6.85   7.41   3.33   5.11   4.50   4.55   6.29
+clusters[8] =   5.89   7.18   3.14   3.64   3.14   3.16   4.35   3.96   6.43   3.02   4.82   3.77   5.04   5.58   5.71   5.99
+clusters[9] =   6.85   4.38   6.33   3.52   6.35   3.38   3.17   6.63   3.96   3.54   4.01   6.88   4.80   4.48   6.06   6.27
+clusters[10] =   5.23   3.95   7.05   6.51   5.47   6.39   6.93   3.98   5.48   3.52   6.77   6.92   4.80   5.06   6.59   6.53
+clusters[11] =   3.70   3.46   3.00   5.08   3.35   6.82   6.30   6.73   4.14   4.16   4.71   3.26   4.69   5.17   5.65   7.11
+clusters[12] =   5.96   6.92   5.51   5.99   6.10   6.88   4.56   3.31   4.07   5.08   3.32   4.13   4.84   3.18   3.11   6.88
+clusters[13] =   6.55   4.41   3.10   3.86   5.28   6.97   3.71   5.30   2.75   4.66   6.33   5.89   4.56   6.63   3.96   3.18
+clusters[14] =   4.97   4.63   5.25   4.84   2.56   6.70   5.04   3.44   7.53   4.83   3.76   6.78   4.72   5.61   4.16   2.89
+clusters[15] =   4.02   4.01   6.36   6.16   7.32   5.19   3.73   4.73   6.00   4.33   3.47   2.74   4.59   7.31   5.13   3.65
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16    block_size = 32
+
+
+|-----------Transpose GPU Kmeans------------|
+
+t_alloc: 318.655014 ms
+
+t_alloc_gpu: 2373.739004 ms
+
+t_get_gpu: 90.340853 ms
+
+delta is 1.000000 - delta is 0.206364 - delta is 0.093726 - delta is 0.058352 - delta is 0.043357 - delta is 0.035536 - delta is 0.030528 - delta is 0.026543 - delta is 0.023216 - delta is 0.020502 - nloops = 10  : total = 863.734007 ms
+        -> t_loop_avg = 86.373401 ms
+        -> t_loop_min = 85.983038 ms
+        -> t_loop_max = 87.295055 ms
+
+|-------------------------------------------|
+cudaMemcpy clusters (CPU-GPU): average_time = 0.079083 ms, min_time = 0.030041 ms, max_time = 0.496149 ms
+cudaMemset dev_delta_ptr and find_nearest_cluster (GPU): average_time = 26.084805 ms, min_time = 26.010036 ms, max_time = 26.551962 ms
+cudaMemcpy for membership and delta (CPU-GPU): average_time = 5.221581 ms, min_time = 5.193949 ms, max_time = 5.255938 ms
+rest of while (CPU): average_time = 54.987597 ms, min_time = 54.622889 ms, max_time = 55.319071 ms
+total CPU-GPU in while: average_time = 5.300665 ms, min_time = 5.223989 ms, max_time = 5.752087 ms
+
+Final cluster centers:
+clusters[0] =   3.00   6.88   6.32   2.55   6.08   6.13   6.15   7.01   5.55   4.64   5.24   4.80   5.47   3.58   5.28   3.51
+clusters[1] =   3.10   6.29   3.00   7.09   6.00   4.53   3.21   4.48   5.13   5.06   7.21   6.40   5.39   3.63   5.75   4.29
+clusters[2] =   5.48   4.24   6.69   6.76   2.57   4.54   3.09   6.98   4.73   5.93   4.86   3.54   5.20   3.26   5.64   3.83
+clusters[3] =   6.13   3.87   3.32   5.18   6.08   3.79   7.26   3.53   3.81   5.54   3.61   4.23   5.36   3.35   6.47   3.02
+clusters[4] =   6.92   6.91   5.63   6.35   5.03   3.83   7.19   6.88   4.87   5.99   6.87   4.26   5.28   6.57   3.75   4.84
+clusters[5] =   2.89   5.42   6.51   4.35   3.19   3.37   5.47   3.38   2.38   5.90   4.29   6.16   5.08   6.39   4.40   5.27
+clusters[6] =   4.16   4.10   3.18   5.19   6.16   3.90   5.48   6.53   6.92   6.84   3.24   7.07   5.06   5.72   3.85   6.54
+clusters[7] =   5.35   3.22   5.68   2.99   5.39   4.39   4.26   3.18   6.42   6.85   7.41   3.33   5.11   4.50   4.55   6.29
+clusters[8] =   5.89   7.18   3.14   3.64   3.14   3.16   4.35   3.96   6.43   3.02   4.82   3.77   5.04   5.58   5.71   5.99
+clusters[9] =   6.85   4.38   6.33   3.52   6.35   3.38   3.17   6.63   3.96   3.54   4.01   6.88   4.80   4.48   6.06   6.27
+clusters[10] =   5.23   3.95   7.05   6.51   5.47   6.39   6.93   3.98   5.48   3.52   6.77   6.92   4.80   5.06   6.59   6.53
+clusters[11] =   3.70   3.46   3.00   5.08   3.35   6.82   6.30   6.73   4.14   4.16   4.71   3.26   4.69   5.17   5.65   7.11
+clusters[12] =   5.96   6.92   5.51   5.99   6.10   6.88   4.56   3.31   4.07   5.08   3.32   4.13   4.84   3.18   3.11   6.88
+clusters[13] =   6.55   4.41   3.10   3.86   5.28   6.97   3.71   5.30   2.75   4.66   6.33   5.89   4.56   6.63   3.96   3.18
+clusters[14] =   4.97   4.63   5.25   4.84   2.56   6.70   5.04   3.44   7.53   4.83   3.76   6.78   4.72   5.61   4.16   2.89
+clusters[15] =   4.02   4.01   6.36   6.16   7.32   5.19   3.73   4.73   6.00   4.33   3.47   2.74   4.59   7.31   5.13   3.65
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16    block_size = 64
+
+
+|-----------Transpose GPU Kmeans------------|
+
+t_alloc: 320.794821 ms
+
+t_alloc_gpu: 2366.384983 ms
+
+t_get_gpu: 90.312958 ms
+
+delta is 1.000000 - delta is 0.206364 - delta is 0.093726 - delta is 0.058352 - delta is 0.043357 - delta is 0.035536 - delta is 0.030528 - delta is 0.026543 - delta is 0.023216 - delta is 0.020502 - nloops = 10  : total = 777.042866 ms
+        -> t_loop_avg = 77.704287 ms
+        -> t_loop_min = 77.180862 ms
+        -> t_loop_max = 79.984903 ms
+
+|-------------------------------------------|
+cudaMemcpy clusters (CPU-GPU): average_time = 0.078988 ms, min_time = 0.030041 ms, max_time = 0.509024 ms
+cudaMemset dev_delta_ptr and find_nearest_cluster (GPU): average_time = 17.433619 ms, min_time = 17.222881 ms, max_time = 19.197941 ms
+cudaMemcpy for membership and delta (CPU-GPU): average_time = 5.207181 ms, min_time = 5.188942 ms, max_time = 5.229950 ms
+rest of while (CPU): average_time = 54.984212 ms, min_time = 54.687977 ms, max_time = 55.285931 ms
+total CPU-GPU in while: average_time = 5.286169 ms, min_time = 5.218983 ms, max_time = 5.738974 ms
+
+Final cluster centers:
+clusters[0] =   3.00   6.88   6.32   2.55   6.08   6.13   6.15   7.01   5.55   4.64   5.24   4.80   5.47   3.58   5.28   3.51
+clusters[1] =   3.10   6.29   3.00   7.09   6.00   4.53   3.21   4.48   5.13   5.06   7.21   6.40   5.39   3.63   5.75   4.29
+clusters[2] =   5.48   4.24   6.69   6.76   2.57   4.54   3.09   6.98   4.73   5.93   4.86   3.54   5.20   3.26   5.64   3.83
+clusters[3] =   6.13   3.87   3.32   5.18   6.08   3.79   7.26   3.53   3.81   5.54   3.61   4.23   5.36   3.35   6.47   3.02
+clusters[4] =   6.92   6.91   5.63   6.35   5.03   3.83   7.19   6.88   4.87   5.99   6.87   4.26   5.28   6.57   3.75   4.84
+clusters[5] =   2.89   5.42   6.51   4.35   3.19   3.37   5.47   3.38   2.38   5.90   4.29   6.16   5.08   6.39   4.40   5.27
+clusters[6] =   4.16   4.10   3.18   5.19   6.16   3.90   5.48   6.53   6.92   6.84   3.24   7.07   5.06   5.72   3.85   6.54
+clusters[7] =   5.35   3.22   5.68   2.99   5.39   4.39   4.26   3.18   6.42   6.85   7.41   3.33   5.11   4.50   4.55   6.29
+clusters[8] =   5.89   7.18   3.14   3.64   3.14   3.16   4.35   3.96   6.43   3.02   4.82   3.77   5.04   5.58   5.71   5.99
+clusters[9] =   6.85   4.38   6.33   3.52   6.35   3.38   3.17   6.63   3.96   3.54   4.01   6.88   4.80   4.48   6.06   6.27
+clusters[10] =   5.23   3.95   7.05   6.51   5.47   6.39   6.93   3.98   5.48   3.52   6.77   6.92   4.80   5.06   6.59   6.53
+clusters[11] =   3.70   3.46   3.00   5.08   3.35   6.82   6.30   6.73   4.14   4.16   4.71   3.26   4.69   5.17   5.65   7.11
+clusters[12] =   5.96   6.92   5.51   5.99   6.10   6.88   4.56   3.31   4.07   5.08   3.32   4.13   4.84   3.18   3.11   6.88
+clusters[13] =   6.55   4.41   3.10   3.86   5.28   6.97   3.71   5.30   2.75   4.66   6.33   5.89   4.56   6.63   3.96   3.18
+clusters[14] =   4.97   4.63   5.25   4.84   2.56   6.70   5.04   3.44   7.53   4.83   3.76   6.78   4.72   5.61   4.16   2.89
+clusters[15] =   4.02   4.01   6.36   6.16   7.32   5.19   3.73   4.73   6.00   4.33   3.47   2.74   4.59   7.31   5.13   3.65
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16    block_size = 128
+
+
+|-----------Transpose GPU Kmeans------------|
+
+t_alloc: 323.052883 ms
+
+t_alloc_gpu: 2380.723000 ms
+
+t_get_gpu: 90.451956 ms
+
+delta is 1.000000 - delta is 0.206364 - delta is 0.093726 - delta is 0.058352 - delta is 0.043357 - delta is 0.035536 - delta is 0.030528 - delta is 0.026543 - delta is 0.023216 - delta is 0.020502 - nloops = 10  : total = 772.188902 ms
+        -> t_loop_avg = 77.218890 ms
+        -> t_loop_min = 76.436996 ms
+        -> t_loop_max = 79.866886 ms
+
+|-------------------------------------------|
+cudaMemcpy clusters (CPU-GPU): average_time = 0.078678 ms, min_time = 0.030994 ms, max_time = 0.504017 ms
+cudaMemset dev_delta_ptr and find_nearest_cluster (GPU): average_time = 16.953373 ms, min_time = 16.685009 ms, max_time = 19.224882 ms
+cudaMemcpy for membership and delta (CPU-GPU): average_time = 5.214620 ms, min_time = 5.193949 ms, max_time = 5.245924 ms
+rest of while (CPU): average_time = 54.971743 ms, min_time = 54.520130 ms, max_time = 55.357933 ms
+total CPU-GPU in while: average_time = 5.293298 ms, min_time = 5.224943 ms, max_time = 5.749941 ms
+
+Final cluster centers:
+clusters[0] =   3.00   6.88   6.32   2.55   6.08   6.13   6.15   7.01   5.55   4.64   5.24   4.80   5.47   3.58   5.28   3.51
+clusters[1] =   3.10   6.29   3.00   7.09   6.00   4.53   3.21   4.48   5.13   5.06   7.21   6.40   5.39   3.63   5.75   4.29
+clusters[2] =   5.48   4.24   6.69   6.76   2.57   4.54   3.09   6.98   4.73   5.93   4.86   3.54   5.20   3.26   5.64   3.83
+clusters[3] =   6.13   3.87   3.32   5.18   6.08   3.79   7.26   3.53   3.81   5.54   3.61   4.23   5.36   3.35   6.47   3.02
+clusters[4] =   6.92   6.91   5.63   6.35   5.03   3.83   7.19   6.88   4.87   5.99   6.87   4.26   5.28   6.57   3.75   4.84
+clusters[5] =   2.89   5.42   6.51   4.35   3.19   3.37   5.47   3.38   2.38   5.90   4.29   6.16   5.08   6.39   4.40   5.27
+clusters[6] =   4.16   4.10   3.18   5.19   6.16   3.90   5.48   6.53   6.92   6.84   3.24   7.07   5.06   5.72   3.85   6.54
+clusters[7] =   5.35   3.22   5.68   2.99   5.39   4.39   4.26   3.18   6.42   6.85   7.41   3.33   5.11   4.50   4.55   6.29
+clusters[8] =   5.89   7.18   3.14   3.64   3.14   3.16   4.35   3.96   6.43   3.02   4.82   3.77   5.04   5.58   5.71   5.99
+clusters[9] =   6.85   4.38   6.33   3.52   6.35   3.38   3.17   6.63   3.96   3.54   4.01   6.88   4.80   4.48   6.06   6.27
+clusters[10] =   5.23   3.95   7.05   6.51   5.47   6.39   6.93   3.98   5.48   3.52   6.77   6.92   4.80   5.06   6.59   6.53
+clusters[11] =   3.70   3.46   3.00   5.08   3.35   6.82   6.30   6.73   4.14   4.16   4.71   3.26   4.69   5.17   5.65   7.11
+clusters[12] =   5.96   6.92   5.51   5.99   6.10   6.88   4.56   3.31   4.07   5.08   3.32   4.13   4.84   3.18   3.11   6.88
+clusters[13] =   6.55   4.41   3.10   3.86   5.28   6.97   3.71   5.30   2.75   4.66   6.33   5.89   4.56   6.63   3.96   3.18
+clusters[14] =   4.97   4.63   5.25   4.84   2.56   6.70   5.04   3.44   7.53   4.83   3.76   6.78   4.72   5.61   4.16   2.89
+clusters[15] =   4.02   4.01   6.36   6.16   7.32   5.19   3.73   4.73   6.00   4.33   3.47   2.74   4.59   7.31   5.13   3.65
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16    block_size = 256
+
+
+|-----------Transpose GPU Kmeans------------|
+
+t_alloc: 319.715977 ms
+
+t_alloc_gpu: 2408.143997 ms
+
+t_get_gpu: 90.370178 ms
+
+delta is 1.000000 - delta is 0.206364 - delta is 0.093726 - delta is 0.058352 - delta is 0.043357 - delta is 0.035536 - delta is 0.030528 - delta is 0.026543 - delta is 0.023216 - delta is 0.020502 - nloops = 10  : total = 773.785114 ms
+        -> t_loop_avg = 77.378511 ms
+        -> t_loop_min = 76.484203 ms
+        -> t_loop_max = 80.820084 ms
+
+|-------------------------------------------|
+cudaMemcpy clusters (CPU-GPU): average_time = 0.078845 ms, min_time = 0.029087 ms, max_time = 0.506163 ms
+cudaMemset dev_delta_ptr and find_nearest_cluster (GPU): average_time = 17.007041 ms, min_time = 16.695976 ms, max_time = 19.667864 ms
+cudaMemcpy for membership and delta (CPU-GPU): average_time = 5.215931 ms, min_time = 5.190134 ms, max_time = 5.253077 ms
+rest of while (CPU): average_time = 55.076385 ms, min_time = 54.530144 ms, max_time = 55.416107 ms
+total CPU-GPU in while: average_time = 5.294776 ms, min_time = 5.219221 ms, max_time = 5.759239 ms
+
+Final cluster centers:
+clusters[0] =   3.00   6.88   6.32   2.55   6.08   6.13   6.15   7.01   5.55   4.64   5.24   4.80   5.47   3.58   5.28   3.51
+clusters[1] =   3.10   6.29   3.00   7.09   6.00   4.53   3.21   4.48   5.13   5.06   7.21   6.40   5.39   3.63   5.75   4.29
+clusters[2] =   5.48   4.24   6.69   6.76   2.57   4.54   3.09   6.98   4.73   5.93   4.86   3.54   5.20   3.26   5.64   3.83
+clusters[3] =   6.13   3.87   3.32   5.18   6.08   3.79   7.26   3.53   3.81   5.54   3.61   4.23   5.36   3.35   6.47   3.02
+clusters[4] =   6.92   6.91   5.63   6.35   5.03   3.83   7.19   6.88   4.87   5.99   6.87   4.26   5.28   6.57   3.75   4.84
+clusters[5] =   2.89   5.42   6.51   4.35   3.19   3.37   5.47   3.38   2.38   5.90   4.29   6.16   5.08   6.39   4.40   5.27
+clusters[6] =   4.16   4.10   3.18   5.19   6.16   3.90   5.48   6.53   6.92   6.84   3.24   7.07   5.06   5.72   3.85   6.54
+clusters[7] =   5.35   3.22   5.68   2.99   5.39   4.39   4.26   3.18   6.42   6.85   7.41   3.33   5.11   4.50   4.55   6.29
+clusters[8] =   5.89   7.18   3.14   3.64   3.14   3.16   4.35   3.96   6.43   3.02   4.82   3.77   5.04   5.58   5.71   5.99
+clusters[9] =   6.85   4.38   6.33   3.52   6.35   3.38   3.17   6.63   3.96   3.54   4.01   6.88   4.80   4.48   6.06   6.27
+clusters[10] =   5.23   3.95   7.05   6.51   5.47   6.39   6.93   3.98   5.48   3.52   6.77   6.92   4.80   5.06   6.59   6.53
+clusters[11] =   3.70   3.46   3.00   5.08   3.35   6.82   6.30   6.73   4.14   4.16   4.71   3.26   4.69   5.17   5.65   7.11
+clusters[12] =   5.96   6.92   5.51   5.99   6.10   6.88   4.56   3.31   4.07   5.08   3.32   4.13   4.84   3.18   3.11   6.88
+clusters[13] =   6.55   4.41   3.10   3.86   5.28   6.97   3.71   5.30   2.75   4.66   6.33   5.89   4.56   6.63   3.96   3.18
+clusters[14] =   4.97   4.63   5.25   4.84   2.56   6.70   5.04   3.44   7.53   4.83   3.76   6.78   4.72   5.61   4.16   2.89
+clusters[15] =   4.02   4.01   6.36   6.16   7.32   5.19   3.73   4.73   6.00   4.33   3.47   2.74   4.59   7.31   5.13   3.65
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16    block_size = 512
+
+
+|-----------Transpose GPU Kmeans------------|
+
+t_alloc: 318.703175 ms
+
+t_alloc_gpu: 2363.702059 ms
+
+t_get_gpu: 90.481997 ms
+
+delta is 1.000000 - delta is 0.206364 - delta is 0.093726 - delta is 0.058352 - delta is 0.043357 - delta is 0.035536 - delta is 0.030528 - delta is 0.026543 - delta is 0.023216 - delta is 0.020502 - nloops = 10  : total = 774.914980 ms
+        -> t_loop_avg = 77.491498 ms
+        -> t_loop_min = 76.820850 ms
+        -> t_loop_max = 81.115007 ms
+
+|-------------------------------------------|
+cudaMemcpy clusters (CPU-GPU): average_time = 0.078321 ms, min_time = 0.030041 ms, max_time = 0.508070 ms
+cudaMemset dev_delta_ptr and find_nearest_cluster (GPU): average_time = 17.150664 ms, min_time = 16.775846 ms, max_time = 20.297050 ms
+cudaMemcpy for membership and delta (CPU-GPU): average_time = 5.213141 ms, min_time = 5.192041 ms, max_time = 5.265951 ms
+rest of while (CPU): average_time = 55.048895 ms, min_time = 54.767847 ms, max_time = 55.519104 ms
+total CPU-GPU in while: average_time = 5.291462 ms, min_time = 5.222082 ms, max_time = 5.774021 ms
+
+Final cluster centers:
+clusters[0] =   3.00   6.88   6.32   2.55   6.08   6.13   6.15   7.01   5.55   4.64   5.24   4.80   5.47   3.58   5.28   3.51
+clusters[1] =   3.10   6.29   3.00   7.09   6.00   4.53   3.21   4.48   5.13   5.06   7.21   6.40   5.39   3.63   5.75   4.29
+clusters[2] =   5.48   4.24   6.69   6.76   2.57   4.54   3.09   6.98   4.73   5.93   4.86   3.54   5.20   3.26   5.64   3.83
+clusters[3] =   6.13   3.87   3.32   5.18   6.08   3.79   7.26   3.53   3.81   5.54   3.61   4.23   5.36   3.35   6.47   3.02
+clusters[4] =   6.92   6.91   5.63   6.35   5.03   3.83   7.19   6.88   4.87   5.99   6.87   4.26   5.28   6.57   3.75   4.84
+clusters[5] =   2.89   5.42   6.51   4.35   3.19   3.37   5.47   3.38   2.38   5.90   4.29   6.16   5.08   6.39   4.40   5.27
+clusters[6] =   4.16   4.10   3.18   5.19   6.16   3.90   5.48   6.53   6.92   6.84   3.24   7.07   5.06   5.72   3.85   6.54
+clusters[7] =   5.35   3.22   5.68   2.99   5.39   4.39   4.26   3.18   6.42   6.85   7.41   3.33   5.11   4.50   4.55   6.29
+clusters[8] =   5.89   7.18   3.14   3.64   3.14   3.16   4.35   3.96   6.43   3.02   4.82   3.77   5.04   5.58   5.71   5.99
+clusters[9] =   6.85   4.38   6.33   3.52   6.35   3.38   3.17   6.63   3.96   3.54   4.01   6.88   4.80   4.48   6.06   6.27
+clusters[10] =   5.23   3.95   7.05   6.51   5.47   6.39   6.93   3.98   5.48   3.52   6.77   6.92   4.80   5.06   6.59   6.53
+clusters[11] =   3.70   3.46   3.00   5.08   3.35   6.82   6.30   6.73   4.14   4.16   4.71   3.26   4.69   5.17   5.65   7.11
+clusters[12] =   5.96   6.92   5.51   5.99   6.10   6.88   4.56   3.31   4.07   5.08   3.32   4.13   4.84   3.18   3.11   6.88
+clusters[13] =   6.55   4.41   3.10   3.86   5.28   6.97   3.71   5.30   2.75   4.66   6.33   5.89   4.56   6.63   3.96   3.18
+clusters[14] =   4.97   4.63   5.25   4.84   2.56   6.70   5.04   3.44   7.53   4.83   3.76   6.78   4.72   5.61   4.16   2.89
+clusters[15] =   4.02   4.01   6.36   6.16   7.32   5.19   3.73   4.73   6.00   4.33   3.47   2.74   4.59   7.31   5.13   3.65
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16    block_size = 1024
+
+
+|-----------Transpose GPU Kmeans------------|
+
+t_alloc: 320.521832 ms
+
+t_alloc_gpu: 2364.279985 ms
+
+t_get_gpu: 90.275049 ms
+
+delta is 1.000000 - delta is 0.206364 - delta is 0.093726 - delta is 0.058352 - delta is 0.043357 - delta is 0.035536 - delta is 0.030528 - delta is 0.026543 - delta is 0.023216 - delta is 0.020502 - nloops = 10  : total = 783.176899 ms
+        -> t_loop_avg = 78.317690 ms
+        -> t_loop_min = 77.814102 ms
+        -> t_loop_max = 80.489874 ms
+
+|-------------------------------------------|
+cudaMemcpy clusters (CPU-GPU): average_time = 0.078154 ms, min_time = 0.029802 ms, max_time = 0.501871 ms
+cudaMemset dev_delta_ptr and find_nearest_cluster (GPU): average_time = 18.060327 ms, min_time = 17.818928 ms, max_time = 20.069122 ms
+cudaMemcpy for membership and delta (CPU-GPU): average_time = 5.223227 ms, min_time = 5.196095 ms, max_time = 5.256176 ms
+rest of while (CPU): average_time = 54.955602 ms, min_time = 54.702997 ms, max_time = 55.158854 ms
+total CPU-GPU in while: average_time = 5.301380 ms, min_time = 5.225897 ms, max_time = 5.758047 ms
+
+Final cluster centers:
+clusters[0] =   3.00   6.88   6.32   2.55   6.08   6.13   6.15   7.01   5.55   4.64   5.24   4.80   5.47   3.58   5.28   3.51
+clusters[1] =   3.10   6.29   3.00   7.09   6.00   4.53   3.21   4.48   5.13   5.06   7.21   6.40   5.39   3.63   5.75   4.29
+clusters[2] =   5.48   4.24   6.69   6.76   2.57   4.54   3.09   6.98   4.73   5.93   4.86   3.54   5.20   3.26   5.64   3.83
+clusters[3] =   6.13   3.87   3.32   5.18   6.08   3.79   7.26   3.53   3.81   5.54   3.61   4.23   5.36   3.35   6.47   3.02
+clusters[4] =   6.92   6.91   5.63   6.35   5.03   3.83   7.19   6.88   4.87   5.99   6.87   4.26   5.28   6.57   3.75   4.84
+clusters[5] =   2.89   5.42   6.51   4.35   3.19   3.37   5.47   3.38   2.38   5.90   4.29   6.16   5.08   6.39   4.40   5.27
+clusters[6] =   4.16   4.10   3.18   5.19   6.16   3.90   5.48   6.53   6.92   6.84   3.24   7.07   5.06   5.72   3.85   6.54
+clusters[7] =   5.35   3.22   5.68   2.99   5.39   4.39   4.26   3.18   6.42   6.85   7.41   3.33   5.11   4.50   4.55   6.29
+clusters[8] =   5.89   7.18   3.14   3.64   3.14   3.16   4.35   3.96   6.43   3.02   4.82   3.77   5.04   5.58   5.71   5.99
+clusters[9] =   6.85   4.38   6.33   3.52   6.35   3.38   3.17   6.63   3.96   3.54   4.01   6.88   4.80   4.48   6.06   6.27
+clusters[10] =   5.23   3.95   7.05   6.51   5.47   6.39   6.93   3.98   5.48   3.52   6.77   6.92   4.80   5.06   6.59   6.53
+clusters[11] =   3.70   3.46   3.00   5.08   3.35   6.82   6.30   6.73   4.14   4.16   4.71   3.26   4.69   5.17   5.65   7.11
+clusters[12] =   5.96   6.92   5.51   5.99   6.10   6.88   4.56   3.31   4.07   5.08   3.32   4.13   4.84   3.18   3.11   6.88
+clusters[13] =   6.55   4.41   3.10   3.86   5.28   6.97   3.71   5.30   2.75   4.66   6.33   5.89   4.56   6.63   3.96   3.18
+clusters[14] =   4.97   4.63   5.25   4.84   2.56   6.70   5.04   3.44   7.53   4.83   3.76   6.78   4.72   5.61   4.16   2.89
+clusters[15] =   4.02   4.01   6.36   6.16   7.32   5.19   3.73   4.73   6.00   4.33   3.47   2.74   4.59   7.31   5.13   3.65
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16    block_size = 32
+
+
+|-----------Shared GPU Kmeans------------|
+
+t_alloc: 322.092056 ms
+
+t_alloc_gpu: 2371.152878 ms
+
+t_get_gpu: 90.137005 ms
+
+delta is 1.000000 - delta is 0.206364 - delta is 0.093726 - delta is 0.058352 - delta is 0.043357 - delta is 0.035536 - delta is 0.030528 - delta is 0.026543 - delta is 0.023216 - delta is 0.020502 - nloops = 10  : total = 793.251038 ms
+        -> t_loop_avg = 79.325104 ms
+        -> t_loop_min = 79.015970 ms
+        -> t_loop_max = 80.425978 ms
+
+|-------------------------------------------|
+cudaMemcpy clusters (CPU-GPU): average_time = 0.079918 ms, min_time = 0.030041 ms, max_time = 0.507116 ms
+cudaMemset dev_delta_ptr and find_nearest_cluster (GPU): average_time = 19.220138 ms, min_time = 19.117117 ms, max_time = 19.975901 ms
+cudaMemcpy for membership and delta (CPU-GPU): average_time = 5.213070 ms, min_time = 5.195856 ms, max_time = 5.251884 ms
+rest of while (CPU): average_time = 54.811502 ms, min_time = 54.632902 ms, max_time = 55.166006 ms
+total CPU-GPU in while: average_time = 5.292988 ms, min_time = 5.225897 ms, max_time = 5.759001 ms
+
+Final cluster centers:
+clusters[0] =   3.00   6.88   6.32   2.55   6.08   6.13   6.15   7.01   5.55   4.64   5.24   4.80   5.47   3.58   5.28   3.51
+clusters[1] =   3.10   6.29   3.00   7.09   6.00   4.53   3.21   4.48   5.13   5.06   7.21   6.40   5.39   3.63   5.75   4.29
+clusters[2] =   5.48   4.24   6.69   6.76   2.57   4.54   3.09   6.98   4.73   5.93   4.86   3.54   5.20   3.26   5.64   3.83
+clusters[3] =   6.13   3.87   3.32   5.18   6.08   3.79   7.26   3.53   3.81   5.54   3.61   4.23   5.36   3.35   6.47   3.02
+clusters[4] =   6.92   6.91   5.63   6.35   5.03   3.83   7.19   6.88   4.87   5.99   6.87   4.26   5.28   6.57   3.75   4.84
+clusters[5] =   2.89   5.42   6.51   4.35   3.19   3.37   5.47   3.38   2.38   5.90   4.29   6.16   5.08   6.39   4.40   5.27
+clusters[6] =   4.16   4.10   3.18   5.19   6.16   3.90   5.48   6.53   6.92   6.84   3.24   7.07   5.06   5.72   3.85   6.54
+clusters[7] =   5.35   3.22   5.68   2.99   5.39   4.39   4.26   3.18   6.42   6.85   7.41   3.33   5.11   4.50   4.55   6.29
+clusters[8] =   5.89   7.18   3.14   3.64   3.14   3.16   4.35   3.96   6.43   3.02   4.82   3.77   5.04   5.58   5.71   5.99
+clusters[9] =   6.85   4.38   6.33   3.52   6.35   3.38   3.17   6.63   3.96   3.54   4.01   6.88   4.80   4.48   6.06   6.27
+clusters[10] =   5.23   3.95   7.05   6.51   5.47   6.39   6.93   3.98   5.48   3.52   6.77   6.92   4.80   5.06   6.59   6.53
+clusters[11] =   3.70   3.46   3.00   5.08   3.35   6.82   6.30   6.73   4.14   4.16   4.71   3.26   4.69   5.17   5.65   7.11
+clusters[12] =   5.96   6.92   5.51   5.99   6.10   6.88   4.56   3.31   4.07   5.08   3.32   4.13   4.84   3.18   3.11   6.88
+clusters[13] =   6.55   4.41   3.10   3.86   5.28   6.97   3.71   5.30   2.75   4.66   6.33   5.89   4.56   6.63   3.96   3.18
+clusters[14] =   4.97   4.63   5.25   4.84   2.56   6.70   5.04   3.44   7.53   4.83   3.76   6.78   4.72   5.61   4.16   2.89
+clusters[15] =   4.02   4.01   6.36   6.16   7.32   5.19   3.73   4.73   6.00   4.33   3.47   2.74   4.59   7.31   5.13   3.65
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16    block_size = 64
+
+
+|-----------Shared GPU Kmeans------------|
+
+t_alloc: 318.329096 ms
+
+t_alloc_gpu: 2362.703800 ms
+
+t_get_gpu: 90.187788 ms
+
+delta is 1.000000 - delta is 0.206364 - delta is 0.093726 - delta is 0.058352 - delta is 0.043357 - delta is 0.035536 - delta is 0.030528 - delta is 0.026543 - delta is 0.023216 - delta is 0.020502 - nloops = 10  : total = 744.674921 ms
+        -> t_loop_avg = 74.467492 ms
+        -> t_loop_min = 73.636055 ms
+        -> t_loop_max = 79.751015 ms
+
+|-------------------------------------------|
+cudaMemcpy clusters (CPU-GPU): average_time = 0.078678 ms, min_time = 0.029802 ms, max_time = 0.506878 ms
+cudaMemset dev_delta_ptr and find_nearest_cluster (GPU): average_time = 14.122963 ms, min_time = 13.578892 ms, max_time = 18.875122 ms
+cudaMemcpy for membership and delta (CPU-GPU): average_time = 5.216289 ms, min_time = 5.192995 ms, max_time = 5.239010 ms
+rest of while (CPU): average_time = 55.049181 ms, min_time = 54.833174 ms, max_time = 55.321217 ms
+total CPU-GPU in while: average_time = 5.294967 ms, min_time = 5.222797 ms, max_time = 5.745888 ms
+
+Final cluster centers:
+clusters[0] =   3.00   6.88   6.32   2.55   6.08   6.13   6.15   7.01   5.55   4.64   5.24   4.80   5.47   3.58   5.28   3.51
+clusters[1] =   3.10   6.29   3.00   7.09   6.00   4.53   3.21   4.48   5.13   5.06   7.21   6.40   5.39   3.63   5.75   4.29
+clusters[2] =   5.48   4.24   6.69   6.76   2.57   4.54   3.09   6.98   4.73   5.93   4.86   3.54   5.20   3.26   5.64   3.83
+clusters[3] =   6.13   3.87   3.32   5.18   6.08   3.79   7.26   3.53   3.81   5.54   3.61   4.23   5.36   3.35   6.47   3.02
+clusters[4] =   6.92   6.91   5.63   6.35   5.03   3.83   7.19   6.88   4.87   5.99   6.87   4.26   5.28   6.57   3.75   4.84
+clusters[5] =   2.89   5.42   6.51   4.35   3.19   3.37   5.47   3.38   2.38   5.90   4.29   6.16   5.08   6.39   4.40   5.27
+clusters[6] =   4.16   4.10   3.18   5.19   6.16   3.90   5.48   6.53   6.92   6.84   3.24   7.07   5.06   5.72   3.85   6.54
+clusters[7] =   5.35   3.22   5.68   2.99   5.39   4.39   4.26   3.18   6.42   6.85   7.41   3.33   5.11   4.50   4.55   6.29
+clusters[8] =   5.89   7.18   3.14   3.64   3.14   3.16   4.35   3.96   6.43   3.02   4.82   3.77   5.04   5.58   5.71   5.99
+clusters[9] =   6.85   4.38   6.33   3.52   6.35   3.38   3.17   6.63   3.96   3.54   4.01   6.88   4.80   4.48   6.06   6.27
+clusters[10] =   5.23   3.95   7.05   6.51   5.47   6.39   6.93   3.98   5.48   3.52   6.77   6.92   4.80   5.06   6.59   6.53
+clusters[11] =   3.70   3.46   3.00   5.08   3.35   6.82   6.30   6.73   4.14   4.16   4.71   3.26   4.69   5.17   5.65   7.11
+clusters[12] =   5.96   6.92   5.51   5.99   6.10   6.88   4.56   3.31   4.07   5.08   3.32   4.13   4.84   3.18   3.11   6.88
+clusters[13] =   6.55   4.41   3.10   3.86   5.28   6.97   3.71   5.30   2.75   4.66   6.33   5.89   4.56   6.63   3.96   3.18
+clusters[14] =   4.97   4.63   5.25   4.84   2.56   6.70   5.04   3.44   7.53   4.83   3.76   6.78   4.72   5.61   4.16   2.89
+clusters[15] =   4.02   4.01   6.36   6.16   7.32   5.19   3.73   4.73   6.00   4.33   3.47   2.74   4.59   7.31   5.13   3.65
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16    block_size = 128
+
+
+|-----------Shared GPU Kmeans------------|
+
+t_alloc: 320.080042 ms
+
+t_alloc_gpu: 2429.891109 ms
+
+t_get_gpu: 90.405941 ms
+
+delta is 1.000000 - delta is 0.206364 - delta is 0.093726 - delta is 0.058352 - delta is 0.043357 - delta is 0.035536 - delta is 0.030528 - delta is 0.026543 - delta is 0.023216 - delta is 0.020502 - nloops = 10  : total = 738.140821 ms
+        -> t_loop_avg = 73.814082 ms
+        -> t_loop_min = 72.837830 ms
+        -> t_loop_max = 79.864025 ms
+
+|-------------------------------------------|
+cudaMemcpy clusters (CPU-GPU): average_time = 0.077891 ms, min_time = 0.028849 ms, max_time = 0.501871 ms
+cudaMemset dev_delta_ptr and find_nearest_cluster (GPU): average_time = 13.537693 ms, min_time = 12.927055 ms, max_time = 18.872976 ms
+cudaMemcpy for membership and delta (CPU-GPU): average_time = 5.221796 ms, min_time = 5.192995 ms, max_time = 5.237103 ms
+rest of while (CPU): average_time = 54.976225 ms, min_time = 54.652929 ms, max_time = 55.252075 ms
+total CPU-GPU in while: average_time = 5.299687 ms, min_time = 5.221844 ms, max_time = 5.738974 ms
+
+Final cluster centers:
+clusters[0] =   3.00   6.88   6.32   2.55   6.08   6.13   6.15   7.01   5.55   4.64   5.24   4.80   5.47   3.58   5.28   3.51
+clusters[1] =   3.10   6.29   3.00   7.09   6.00   4.53   3.21   4.48   5.13   5.06   7.21   6.40   5.39   3.63   5.75   4.29
+clusters[2] =   5.48   4.24   6.69   6.76   2.57   4.54   3.09   6.98   4.73   5.93   4.86   3.54   5.20   3.26   5.64   3.83
+clusters[3] =   6.13   3.87   3.32   5.18   6.08   3.79   7.26   3.53   3.81   5.54   3.61   4.23   5.36   3.35   6.47   3.02
+clusters[4] =   6.92   6.91   5.63   6.35   5.03   3.83   7.19   6.88   4.87   5.99   6.87   4.26   5.28   6.57   3.75   4.84
+clusters[5] =   2.89   5.42   6.51   4.35   3.19   3.37   5.47   3.38   2.38   5.90   4.29   6.16   5.08   6.39   4.40   5.27
+clusters[6] =   4.16   4.10   3.18   5.19   6.16   3.90   5.48   6.53   6.92   6.84   3.24   7.07   5.06   5.72   3.85   6.54
+clusters[7] =   5.35   3.22   5.68   2.99   5.39   4.39   4.26   3.18   6.42   6.85   7.41   3.33   5.11   4.50   4.55   6.29
+clusters[8] =   5.89   7.18   3.14   3.64   3.14   3.16   4.35   3.96   6.43   3.02   4.82   3.77   5.04   5.58   5.71   5.99
+clusters[9] =   6.85   4.38   6.33   3.52   6.35   3.38   3.17   6.63   3.96   3.54   4.01   6.88   4.80   4.48   6.06   6.27
+clusters[10] =   5.23   3.95   7.05   6.51   5.47   6.39   6.93   3.98   5.48   3.52   6.77   6.92   4.80   5.06   6.59   6.53
+clusters[11] =   3.70   3.46   3.00   5.08   3.35   6.82   6.30   6.73   4.14   4.16   4.71   3.26   4.69   5.17   5.65   7.11
+clusters[12] =   5.96   6.92   5.51   5.99   6.10   6.88   4.56   3.31   4.07   5.08   3.32   4.13   4.84   3.18   3.11   6.88
+clusters[13] =   6.55   4.41   3.10   3.86   5.28   6.97   3.71   5.30   2.75   4.66   6.33   5.89   4.56   6.63   3.96   3.18
+clusters[14] =   4.97   4.63   5.25   4.84   2.56   6.70   5.04   3.44   7.53   4.83   3.76   6.78   4.72   5.61   4.16   2.89
+clusters[15] =   4.02   4.01   6.36   6.16   7.32   5.19   3.73   4.73   6.00   4.33   3.47   2.74   4.59   7.31   5.13   3.65
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16    block_size = 256
+
+
+|-----------Shared GPU Kmeans------------|
+
+t_alloc: 320.897102 ms
+
+t_alloc_gpu: 2364.304781 ms
+
+t_get_gpu: 90.211868 ms
+
+delta is 1.000000 - delta is 0.206364 - delta is 0.093726 - delta is 0.058352 - delta is 0.043357 - delta is 0.035536 - delta is 0.030528 - delta is 0.026543 - delta is 0.023216 - delta is 0.020502 - nloops = 10  : total = 737.923861 ms
+        -> t_loop_avg = 73.792386 ms
+        -> t_loop_min = 73.046923 ms
+        -> t_loop_max = 79.692841 ms
+
+|-------------------------------------------|
+cudaMemcpy clusters (CPU-GPU): average_time = 0.078392 ms, min_time = 0.030041 ms, max_time = 0.505924 ms
+cudaMemset dev_delta_ptr and find_nearest_cluster (GPU): average_time = 13.598609 ms, min_time = 12.995958 ms, max_time = 18.877983 ms
+cudaMemcpy for membership and delta (CPU-GPU): average_time = 5.220723 ms, min_time = 5.194187 ms, max_time = 5.252123 ms
+rest of while (CPU): average_time = 54.894447 ms, min_time = 54.770947 ms, max_time = 55.058956 ms
+total CPU-GPU in while: average_time = 5.299115 ms, min_time = 5.224228 ms, max_time = 5.758047 ms
+
+Final cluster centers:
+clusters[0] =   3.00   6.88   6.32   2.55   6.08   6.13   6.15   7.01   5.55   4.64   5.24   4.80   5.47   3.58   5.28   3.51
+clusters[1] =   3.10   6.29   3.00   7.09   6.00   4.53   3.21   4.48   5.13   5.06   7.21   6.40   5.39   3.63   5.75   4.29
+clusters[2] =   5.48   4.24   6.69   6.76   2.57   4.54   3.09   6.98   4.73   5.93   4.86   3.54   5.20   3.26   5.64   3.83
+clusters[3] =   6.13   3.87   3.32   5.18   6.08   3.79   7.26   3.53   3.81   5.54   3.61   4.23   5.36   3.35   6.47   3.02
+clusters[4] =   6.92   6.91   5.63   6.35   5.03   3.83   7.19   6.88   4.87   5.99   6.87   4.26   5.28   6.57   3.75   4.84
+clusters[5] =   2.89   5.42   6.51   4.35   3.19   3.37   5.47   3.38   2.38   5.90   4.29   6.16   5.08   6.39   4.40   5.27
+clusters[6] =   4.16   4.10   3.18   5.19   6.16   3.90   5.48   6.53   6.92   6.84   3.24   7.07   5.06   5.72   3.85   6.54
+clusters[7] =   5.35   3.22   5.68   2.99   5.39   4.39   4.26   3.18   6.42   6.85   7.41   3.33   5.11   4.50   4.55   6.29
+clusters[8] =   5.89   7.18   3.14   3.64   3.14   3.16   4.35   3.96   6.43   3.02   4.82   3.77   5.04   5.58   5.71   5.99
+clusters[9] =   6.85   4.38   6.33   3.52   6.35   3.38   3.17   6.63   3.96   3.54   4.01   6.88   4.80   4.48   6.06   6.27
+clusters[10] =   5.23   3.95   7.05   6.51   5.47   6.39   6.93   3.98   5.48   3.52   6.77   6.92   4.80   5.06   6.59   6.53
+clusters[11] =   3.70   3.46   3.00   5.08   3.35   6.82   6.30   6.73   4.14   4.16   4.71   3.26   4.69   5.17   5.65   7.11
+clusters[12] =   5.96   6.92   5.51   5.99   6.10   6.88   4.56   3.31   4.07   5.08   3.32   4.13   4.84   3.18   3.11   6.88
+clusters[13] =   6.55   4.41   3.10   3.86   5.28   6.97   3.71   5.30   2.75   4.66   6.33   5.89   4.56   6.63   3.96   3.18
+clusters[14] =   4.97   4.63   5.25   4.84   2.56   6.70   5.04   3.44   7.53   4.83   3.76   6.78   4.72   5.61   4.16   2.89
+clusters[15] =   4.02   4.01   6.36   6.16   7.32   5.19   3.73   4.73   6.00   4.33   3.47   2.74   4.59   7.31   5.13   3.65
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16    block_size = 512
+
+
+|-----------Shared GPU Kmeans------------|
+
+t_alloc: 320.333958 ms
+
+t_alloc_gpu: 2395.056009 ms
+
+t_get_gpu: 90.296984 ms
+
+delta is 1.000000 - delta is 0.206364 - delta is 0.093726 - delta is 0.058352 - delta is 0.043357 - delta is 0.035536 - delta is 0.030528 - delta is 0.026543 - delta is 0.023216 - delta is 0.020502 - nloops = 10  : total = 740.741968 ms
+        -> t_loop_avg = 74.074197 ms
+        -> t_loop_min = 73.260069 ms
+        -> t_loop_max = 79.190969 ms
+
+|-------------------------------------------|
+cudaMemcpy clusters (CPU-GPU): average_time = 0.078893 ms, min_time = 0.030994 ms, max_time = 0.508070 ms
+cudaMemset dev_delta_ptr and find_nearest_cluster (GPU): average_time = 13.889432 ms, min_time = 13.304949 ms, max_time = 18.954992 ms
+cudaMemcpy for membership and delta (CPU-GPU): average_time = 5.214834 ms, min_time = 5.192995 ms, max_time = 5.260944 ms
+rest of while (CPU): average_time = 54.890823 ms, min_time = 54.512024 ms, max_time = 55.132151 ms
+total CPU-GPU in while: average_time = 5.293727 ms, min_time = 5.223989 ms, max_time = 5.769014 ms
+
+Final cluster centers:
+clusters[0] =   3.00   6.88   6.32   2.55   6.08   6.13   6.15   7.01   5.55   4.64   5.24   4.80   5.47   3.58   5.28   3.51
+clusters[1] =   3.10   6.29   3.00   7.09   6.00   4.53   3.21   4.48   5.13   5.06   7.21   6.40   5.39   3.63   5.75   4.29
+clusters[2] =   5.48   4.24   6.69   6.76   2.57   4.54   3.09   6.98   4.73   5.93   4.86   3.54   5.20   3.26   5.64   3.83
+clusters[3] =   6.13   3.87   3.32   5.18   6.08   3.79   7.26   3.53   3.81   5.54   3.61   4.23   5.36   3.35   6.47   3.02
+clusters[4] =   6.92   6.91   5.63   6.35   5.03   3.83   7.19   6.88   4.87   5.99   6.87   4.26   5.28   6.57   3.75   4.84
+clusters[5] =   2.89   5.42   6.51   4.35   3.19   3.37   5.47   3.38   2.38   5.90   4.29   6.16   5.08   6.39   4.40   5.27
+clusters[6] =   4.16   4.10   3.18   5.19   6.16   3.90   5.48   6.53   6.92   6.84   3.24   7.07   5.06   5.72   3.85   6.54
+clusters[7] =   5.35   3.22   5.68   2.99   5.39   4.39   4.26   3.18   6.42   6.85   7.41   3.33   5.11   4.50   4.55   6.29
+clusters[8] =   5.89   7.18   3.14   3.64   3.14   3.16   4.35   3.96   6.43   3.02   4.82   3.77   5.04   5.58   5.71   5.99
+clusters[9] =   6.85   4.38   6.33   3.52   6.35   3.38   3.17   6.63   3.96   3.54   4.01   6.88   4.80   4.48   6.06   6.27
+clusters[10] =   5.23   3.95   7.05   6.51   5.47   6.39   6.93   3.98   5.48   3.52   6.77   6.92   4.80   5.06   6.59   6.53
+clusters[11] =   3.70   3.46   3.00   5.08   3.35   6.82   6.30   6.73   4.14   4.16   4.71   3.26   4.69   5.17   5.65   7.11
+clusters[12] =   5.96   6.92   5.51   5.99   6.10   6.88   4.56   3.31   4.07   5.08   3.32   4.13   4.84   3.18   3.11   6.88
+clusters[13] =   6.55   4.41   3.10   3.86   5.28   6.97   3.71   5.30   2.75   4.66   6.33   5.89   4.56   6.63   3.96   3.18
+clusters[14] =   4.97   4.63   5.25   4.84   2.56   6.70   5.04   3.44   7.53   4.83   3.76   6.78   4.72   5.61   4.16   2.89
+clusters[15] =   4.02   4.01   6.36   6.16   7.32   5.19   3.73   4.73   6.00   4.33   3.47   2.74   4.59   7.31   5.13   3.65
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dataset_size = 256.00 MB    numObjs = 4194304    numCoords = 16    numClusters = 16    block_size = 1024
+
+
+|-----------Shared GPU Kmeans------------|
+
+t_alloc: 320.489168 ms
+
+t_alloc_gpu: 2352.831125 ms
+
+t_get_gpu: 90.311050 ms
+
+delta is 1.000000 - delta is 0.206364 - delta is 0.093726 - delta is 0.058352 - delta is 0.043357 - delta is 0.035536 - delta is 0.030528 - delta is 0.026543 - delta is 0.023216 - delta is 0.020502 - nloops = 10  : total = 759.428024 ms
+        -> t_loop_avg = 75.942802 ms
+        -> t_loop_min = 75.166941 ms
+        -> t_loop_max = 79.623938 ms
+
+|-------------------------------------------|
+cudaMemcpy clusters (CPU-GPU): average_time = 0.078607 ms, min_time = 0.030041 ms, max_time = 0.507116 ms
+cudaMemset dev_delta_ptr and find_nearest_cluster (GPU): average_time = 15.732908 ms, min_time = 15.352011 ms, max_time = 19.022942 ms
+cudaMemcpy for membership and delta (CPU-GPU): average_time = 5.213213 ms, min_time = 5.194902 ms, max_time = 5.237103 ms
+rest of while (CPU): average_time = 54.917765 ms, min_time = 54.571867 ms, max_time = 55.186033 ms
+total CPU-GPU in while: average_time = 5.291820 ms, min_time = 5.224943 ms, max_time = 5.744219 ms
+
+Final cluster centers:
+clusters[0] =   3.00   6.88   6.32   2.55   6.08   6.13   6.15   7.01   5.55   4.64   5.24   4.80   5.47   3.58   5.28   3.51
+clusters[1] =   3.10   6.29   3.00   7.09   6.00   4.53   3.21   4.48   5.13   5.06   7.21   6.40   5.39   3.63   5.75   4.29
+clusters[2] =   5.48   4.24   6.69   6.76   2.57   4.54   3.09   6.98   4.73   5.93   4.86   3.54   5.20   3.26   5.64   3.83
+clusters[3] =   6.13   3.87   3.32   5.18   6.08   3.79   7.26   3.53   3.81   5.54   3.61   4.23   5.36   3.35   6.47   3.02
+clusters[4] =   6.92   6.91   5.63   6.35   5.03   3.83   7.19   6.88   4.87   5.99   6.87   4.26   5.28   6.57   3.75   4.84
+clusters[5] =   2.89   5.42   6.51   4.35   3.19   3.37   5.47   3.38   2.38   5.90   4.29   6.16   5.08   6.39   4.40   5.27
+clusters[6] =   4.16   4.10   3.18   5.19   6.16   3.90   5.48   6.53   6.92   6.84   3.24   7.07   5.06   5.72   3.85   6.54
+clusters[7] =   5.35   3.22   5.68   2.99   5.39   4.39   4.26   3.18   6.42   6.85   7.41   3.33   5.11   4.50   4.55   6.29
+clusters[8] =   5.89   7.18   3.14   3.64   3.14   3.16   4.35   3.96   6.43   3.02   4.82   3.77   5.04   5.58   5.71   5.99
+clusters[9] =   6.85   4.38   6.33   3.52   6.35   3.38   3.17   6.63   3.96   3.54   4.01   6.88   4.80   4.48   6.06   6.27
+clusters[10] =   5.23   3.95   7.05   6.51   5.47   6.39   6.93   3.98   5.48   3.52   6.77   6.92   4.80   5.06   6.59   6.53
+clusters[11] =   3.70   3.46   3.00   5.08   3.35   6.82   6.30   6.73   4.14   4.16   4.71   3.26   4.69   5.17   5.65   7.11
+clusters[12] =   5.96   6.92   5.51   5.99   6.10   6.88   4.56   3.31   4.07   5.08   3.32   4.13   4.84   3.18   3.11   6.88
+clusters[13] =   6.55   4.41   3.10   3.86   5.28   6.97   3.71   5.30   2.75   4.66   6.33   5.89   4.56   6.63   3.96   3.18
+clusters[14] =   4.97   4.63   5.25   4.84   2.56   6.70   5.04   3.44   7.53   4.83   3.76   6.78   4.72   5.61   4.16   2.89
+clusters[15] =   4.02   4.01   6.36   6.16   7.32   5.19   3.73   4.73   6.00   4.33   3.47   2.74   4.59   7.31   5.13   3.65
