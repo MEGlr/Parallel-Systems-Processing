@@ -83,7 +83,7 @@ def plot_time_distribution(input_file, max_, coo_ = 16):
     fp.readline()  #ignore headers
     # coo_ = input_file.split("Coo-")[1]
     # coo_ = coo_.split("_Cl")[0]
-    fig, ax = plt.subplots(3, 1,figsize=(18, 15))
+    fig, ax = plt.subplots(3, 1,figsize=(13, 7))
     for i, version in enumerate(versions[:max_]):
         index = 0
         while index < len(block_size):
@@ -100,6 +100,7 @@ def plot_time_distribution(input_file, max_, coo_ = 16):
                 index+=1
         print(data_time)
         data  = {}
+        times_plots = {"CPU":time_points[3], "GPU":time_points[1], "CPU-GPU":time_points[4]}
         for time_type in time_points:
             data[time_type] = {}
         for block_size_, diction_ in data_time.items():     
@@ -107,12 +108,12 @@ def plot_time_distribution(input_file, max_, coo_ = 16):
                 data[time_type][block_size_] = value
         
         
-        for j, (time_type, value) in enumerate(diction_.items()):
-            values_time = list(data[time_type].values())   
+        for j, (time_name, time_type) in enumerate(times_plots.items()):
+            values_time = list(data[time_type].values())  
             print (values_time)
-            offset = (j-2)*0.1
+            offset = (j-1)*0.1
             bar_time = ax[i].bar(np.arange(len(block_size))+offset,  values_time, color =color[j],
-                width =0.1, label = time_type)    
+                width =0.1, label = time_name)    
 
         # values_time = list(data_time.values())
         # print("values", values_time)
