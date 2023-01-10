@@ -126,9 +126,10 @@ def plot_time_distribution(input_file, max_, coo_ = 16):
         ax[i].set_xticks(np.arange(len(block_size)) , block_size)
         ax[i].legend()
         plt.tight_layout()
-        plt.savefig("time_distribution.png", bbox_inches="tight")
+        plt.savefig(f"time_distribution_{coo_}.png", bbox_inches="tight")
     fp.close() 
 
 
 
 plot_time_distribution("time16.out", 3)
+plot_time_distribution("time2.out", 3, 2)
