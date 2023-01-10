@@ -5,9 +5,9 @@ import matplotlib
 #matplotlib.use('Agg')
 color = ["#588c7e", "#96ceb4" ,"#b5e7a0", "#588c7e", "#96ceb4" ,"#b5e7a0"]
 block_size = ["32", "64", "128", "256", "512", "1024"]
-versions = ["Naive version", "Transpose version", "Shared version"]
+versions = ["Naive version", "Transpose version", "Shared version", "All_GPU version"]
 
-def plot_time_speedup(input_file, max_):
+def plot_time_speedup(input_file, max_, min_=0):
     fp = open(str(input_file))
     data_time = {}
     data_speedup = {}
@@ -17,12 +17,13 @@ def plot_time_speedup(input_file, max_):
     coo_ = input_file.split("Coo-")[1]
     coo_ = coo_.split("_Cl")[0]
     fig, ax = plt.subplots(2, 1,figsize=(10, 8))
-    for i, version in enumerate(versions[:max_]):
+    for i, version in enumerate(versions[min_:max_]):
         index = 0
         while index < len(block_size):
             size = block_size[index]
-            line = fp.readline()  
+            line = fp.readline() 
             if("Sequential" not in line):
+                print("line", line, version)
                 time = line.split(",")[2]  #TODO
                 data_speedup[size] = seq_time/float(time)
                 data_time[size] = float(time)
@@ -62,11 +63,12 @@ def plot_time_speedup(input_file, max_):
 plot_time_speedup("Sz-256_Coo-2_Cl-16_with_val.csv", 1)
 plot_time_speedup("Sz-256_Coo-2_Cl-16_with_val.csv", 2)
 plot_time_speedup("Sz-256_Coo-2_Cl-16_with_val.csv", 3)
+print("#################################################")
+plot_time_speedup("Sz-256_Coo-2_Cl-16_with_val.csv", 4, 0)
 
 # plot_time_speedup("Sz-256_Coo-16_Cl-16.csv", 1)
 # plot_time_speedup("Sz-256_Coo-16_Cl-16.csv", 2)
-plot_time_speedup("Sz-256_Coo-16_Cl-16.csv", 3)
-
+plot_time_speedup("Sz-256_Coo-16_Cl-16.csv", 4,0)
 
 # temp = input_file.split("Sz-")[1]
 # size_ = temp.split("Coo-")[0]
